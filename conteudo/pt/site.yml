@@ -1,0 +1,37 @@
+# Textos fixos da interface (português).
+nome: Philip Russo
+coordenadas: 22°19′S 49°05′W
+atlas: Atlas de projetos
+email: russo.bio@gmail.com
+linkedin: https://www.linkedin.com/in/philip-russo1
+ui:
+  menu_principal: Principal
+  projetos: Projetos
+  idioma: Idioma
+  prancha: Prancha
+  pranchas: Pranchas
+  anterior: Prancha anterior
+  proxima: Próxima prancha
+  mapa_interativo: Mapa interativo
+  vendo: O que você está vendo
+  numeros: Números
+  aplica: Onde isso se aplica
+  outras: Outras pranchas
+  voltar: Voltar
+  fim: Fim das pranchas
+  voltar_atlas: Voltar ao atlas
+legendas:
+  ceratium:
+    titulo: Adequabilidade climática
+    baixa: 0 · baixa
+    alta: 1 · alta
+  adequabilidade:
+    titulo: Adequabilidade relativa
+    baixa: baixa
+    alta: alta
+  presenca:
+    sim: Presença prevista
+    nao: Ausência prevista
+  limiar:
+    sim: Acima do limiar
+    nao: Abaixo do limiar

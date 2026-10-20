@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 6 — Scinax aff. machadoi · Philip Russo</title>
+<meta name="description" content="Revisão de coleções, três algoritmos de aprendizado de máquina e um consenso para orientar o trabalho de campo numa região de mineração.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/scinax.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/scinax.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/araneoidea-americas.html" aria-label="Prancha anterior">←</a><span>06 / 08</span>
+<a class="circulo" href="../pranchas/bicudo.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/scinax.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/scinax.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 6 · Quadrilátero Ferrífero, MG · Modelagem de distribuição · 2021</span>
+<h1 class="cabeca__titulo"><em>Scinax</em> aff. <em>machadoi</em>: onde procurar novas populações de uma perereca endêmica</h1>
+<p class="cabeca__resumo">Revisão de coleções, três algoritmos de aprendizado de máquina e um consenso para orientar o trabalho de campo numa região de mineração.</p>
+<dl class="ficha">
+<div><dt>Entrega</dt><dd>Relatório técnico sob demanda, 2021</dd></div>
+<div><dt>Região</dt><dd>Quadrilátero Ferrífero, MG</dd></div>
+<div><dt>Meu papel</dt><dd>Compilação dos registros, modelagem e mapas</dd></div>
+<div><dt>Ferramentas</dt><dd>BioDinamica · MaxEnt · ArcGIS Pro · QGIS</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-relevo" data-camada="relevo" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_relevo.jpg" alt="Mapa hipsométrico do Quadrilátero Ferrífero com os registros da espécie" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-ann" data-camada="ann" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_ann.jpg" alt="Adequabilidade prevista pela rede neural artificial" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-svm" data-camada="svm" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_svm.jpg" alt="Adequabilidade prevista pela máquina de vetores de suporte" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-maxent" data-camada="maxent" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_maxent.jpg" alt="Adequabilidade prevista pelo MaxEnt" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-consenso" data-camada="consenso">
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_consenso.jpg" alt="Consenso de adequabilidade entre os três algoritmos">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-dist" data-camada="dist" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/qf_dist.jpg" alt="Distribuição potencial em presença e ausência" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Dados">
+<span class="visor__grupo-rotulo">Dados</span>
+<button type="button" class="pilula" data-alvo="relevo" aria-controls="camada-relevo" aria-pressed="false">Registros e relevo</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Modelos">
+<span class="visor__grupo-rotulo">Modelos</span>
+<button type="button" class="pilula" data-alvo="ann" aria-controls="camada-ann" aria-pressed="false">Rede neural</button>
+<button type="button" class="pilula" data-alvo="svm" aria-controls="camada-svm" aria-pressed="false">SVM</button>
+<button type="button" class="pilula" data-alvo="maxent" aria-controls="camada-maxent" aria-pressed="false">MaxEnt</button>
+<button type="button" class="pilula" data-alvo="consenso" aria-controls="camada-consenso" aria-pressed="true">Consenso</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Resultado">
+<span class="visor__grupo-rotulo">Resultado</span>
+<button type="button" class="pilula" data-alvo="dist" aria-controls="camada-dist" aria-pressed="false">Distribuição potencial</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="relevo" hidden>
+<p>Hipsometria do Quadrilátero Ferrífero com os registros e as principais serras. A espécie ocorre no maciço das serras do Gandarela, Capanema e Caraça e na Serra do Garimpo.</p>
+</div>
+<div data-texto="ann" hidden>
+<p>Rede neural artificial: uma das previsões mais amplas dos três algoritmos.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+</div>
+</div>
+<div data-texto="svm" hidden>
+<p>Máquina de vetores de suporte: também prevê uma área ampla, com gradiente mais suave.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+</div>
+</div>
+<div data-texto="maxent" hidden>
+<p>MaxEnt: o algoritmo mais restritivo, concentrado no maciço do Caraça e arredores.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+</div>
+</div>
+<div data-texto="consenso">
+<p>Média dos três algoritmos. A adequabilidade alta se restringe aos topos das serras da encosta leste do Quadrilátero.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+</div>
+</div>
+<div data-texto="dist" hidden>
+<p>Consenso convertido em presença e ausência pelo menor limiar de presença. As manchas fora das serras conhecidas indicam onde buscar novas populações.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>Presença prevista</span><span><i class="legenda__cor legenda__cor--claro"></i>Ausência prevista</span></span>
+</div>
+</div>
+</div>
+</div>
+<p class="visor__nota">Modelos com cerca de 1 km de resolução. Adequabilidade normalizada em cada algoritmo para permitir a comparação.</p></section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">130</span><span class="numero__texto">espécimes ou lotes encontrados em 5 de 8 coleções</span></div>
+<div class="numero"><span class="numero__valor">14</span><span class="numero__texto">estudos com registros primários revisados</span></div>
+<div class="numero"><span class="numero__valor">1.015–1.976 m</span><span class="numero__texto">faixa de altitude dos registros</span></div>
+<div class="numero"><span class="numero__valor">606 km²</span><span class="numero__texto">de extensão de ocorrência (EOO, critério da IUCN)</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo">Uma perereca do grupo <em>Scinax catharinae</em>, possivelmente uma espécie ainda não descrita, é conhecida só no Quadrilátero Ferrífero, região de mineração intensa em Minas Gerais. Antes das campanhas de campo, o projeto precisava saber onde a espécie já foi registrada e onde vale procurá-la.</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<p class="secao__corpo">Revisão de oito coleções herpetológicas e de 14 estudos: 130 espécimes ou lotes em sete municípios. Coordenadas das coleções, dos coletores ou georreferenciadas a partir da descrição da localidade. Como preditores, as 19 variáveis bioclimáticas do WorldClim e a altitude, recortadas para o Quadrilátero Ferrífero.</p>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>PCA das variáveis, com os componentes que somam mais de 98% da variância.</li><li>Três algoritmos de aprendizado de máquina: rede neural artificial, SVM e MaxEnt.</li><li>Consenso entre os três (ensemble forecasting), com o pacote BioDinamica no Dinamica EGO.</li><li>Mapa de presença e ausência pelo menor limiar de presença.</li><li>Extensão de ocorrência pelo mínimo polígono convexo, segundo a IUCN.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">A área adequada se restringe aos topos das serras da encosta leste. Fora das serras já conhecidas, o consenso aponta três frentes para buscar novas populações.</p>
+<ul><li>Serra da Piedade.</li><li>Serras perto de Itatiaia, Lavras Novas e Santo Antônio do Salto, em Ouro Preto, incluindo o Monumento Natural de Itatiaia.</li><li>Serrinha e Pico do Itacolomi, também em Ouro Preto.</li><li>Registros em duas unidades de conservação: PARNA Serra do Gandarela e RPPN Santuário do Caraça.</li><li>O modelo também prevê áreas bem amostradas onde a espécie provavelmente não ocorre, como a Serra do Rola-Moça: história e dispersão ficam fora de um modelo climático.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Licenciamento ambiental e planos de ação para espécies ameaçadas em áreas de mineração, e planejamento de campanhas de campo. O projeto original, em ArcGIS Pro, foi migrado para o QGIS com o conversor da seção Ferramentas.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/araneoidea-americas.html"><span class="mono-rotulo">← Prancha 5</span><span class="vizinhas__nome">Araneoidea das Américas, 1757–2017</span></a>
+<a class="vizinhas--dir" href="../pranchas/bicudo.html"><span class="mono-rotulo">Prancha 7 →</span><span class="vizinhas__nome">Bicudo</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

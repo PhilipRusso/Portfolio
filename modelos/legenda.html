@@ -1,0 +1,21 @@
+{% set L = site.legendas %}
+{% if c.legenda == 'ceratium' %}
+<div class="legenda">
+<span class="mono-rotulo">{{ L.ceratium.titulo }}</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>{{ L.ceratium.baixa }}</span><span>{{ L.ceratium.alta }}</span></span>
+</div>
+{% elif c.legenda in ['adequabilidade', 'limiar'] %}
+<div class="legenda">
+<span class="mono-rotulo">{{ L.adequabilidade.titulo }}</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>{{ L.adequabilidade.baixa }}</span><span>{{ L.adequabilidade.alta }}</span></span>
+{% if c.legenda == 'limiar' %}
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>{{ L.limiar.sim }}</span><span><i class="legenda__cor legenda__cor--claro"></i>{{ L.limiar.nao }}</span></span>
+{% endif %}
+</div>
+{% elif c.legenda == 'presenca' %}
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>{{ L.presenca.sim }}</span><span><i class="legenda__cor legenda__cor--claro"></i>{{ L.presenca.nao }}</span></span>
+</div>
+{% endif %}

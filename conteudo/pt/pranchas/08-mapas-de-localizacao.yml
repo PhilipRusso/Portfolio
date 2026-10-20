@@ -1,0 +1,75 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Mapas de localização
+nome_curto: Mapas de localização
+rotulo: Brasil · Cartografia sob demanda · 2018
+titulo: 'Mapas de localização: reservatórios do país inteiro e um lago amazônico'
+resumo: >-
+  Mapas feitos sob demanda para dois estudos de ecologia aquática, do recorte por ecorregião e por bacia ao detalhe
+  dos pontos de coleta.
+ficha:
+- rotulo: Entrega
+  valor: Mapas de localização sob demanda
+- rotulo: Período
+  valor: '2018'
+- rotulo: Meu papel
+  valor: 'Cartografia: base, recortes, símbolos e layout'
+- rotulo: Ferramentas
+  valor: ArcMap · Adobe Illustrator
+cartao:
+  titulo: 'Mapas de localização: reservatórios e um lago amazônico'
+  etiqueta: Brasil · ArcMap · Illustrator · sob demanda
+  imagem: pub_puruzinho.jpg
+  alt: Mapa de localização do lago Puruzinho, no Amazonas, com pontos de coleta
+visor:
+  proporcao: 1.5 / 1
+  margem: 16px
+  inicial: reserv
+camadas:
+- id: reserv
+  grupo: Reservatórios
+  rotulo: Ecorregiões e bacias
+  fundo: '#F0F0F0'
+  texto: >-
+    À esquerda, 28 reservatórios sobre ecorregiões de água doce; à direita, 13 deles sobre bacias hidrográficas.
+    Os quadros ampliam o Sudeste, onde os pontos se sobrepõem na escala do país.
+  imagens:
+  - src: pub_rot_feow.jpg
+    alt: Mapa do Brasil com 28 reservatórios numerados sobre ecorregiões de água doce e quadros de detalhe do Sudeste
+    legenda: Ecorregiões de água doce (FEOW)
+  - src: pub_rot_bacias.jpg
+    alt: Mapa do Brasil com 13 reservatórios numerados sobre bacias hidrográficas e quadro de detalhe
+    legenda: Bacias hidrográficas
+- id: puru
+  grupo: Amazônia
+  rotulo: Lago Puruzinho
+  texto: >-
+    Duas escalas no mesmo layout: a posição no Amazonas e no Brasil, e o lago Puruzinho, perto de Humaitá, com os
+    dez pontos de coleta, de E01 a E10, até o rio Madeira.
+  imagens:
+  - src: pub_puruzinho.jpg
+    alt: Mapa do lago Puruzinho, perto de Humaitá, no Amazonas, com dez pontos de coleta até o rio Madeira
+numeros:
+- valor: '28'
+  texto: reservatórios localizados no mapa por ecorregião
+- valor: '10'
+  texto: pontos de coleta ao longo do lago Puruzinho
+- valor: '2'
+  texto: escalas combinadas em cada layout, do país ao ponto
+secoes:
+- titulo: O pedido
+  texto: >-
+    Dois projetos paralelos de ecologia aquática precisavam de mapas de localização claros: dezenas de reservatórios
+    espalhados pelo país, com agrupamentos densos no Sudeste, e uma série de pontos de coleta ao longo de um lago
+    estreito na Amazônia.
+- titulo: A solução
+  lista:
+  - Reservatórios numerados, com a lista na legenda, sobre ecorregiões de água doce e sobre bacias hidrográficas.
+  - Quadros de detalhe onde os pontos se sobrepõem na escala nacional.
+  - >-
+    Para o lago Puruzinho, um mapa de situação no Amazonas e no Brasil ligado ao detalhe do lago, com os pontos
+    rotulados e a escala gráfica.
+  - Base e símbolos no ArcMap, com acabamento do layout no Illustrator.
+aplicacao: Mapas de localização e de área de estudo para artigos, relatórios técnicos e estudos ambientais.

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 4 — Aranhas da Mata Atlântica · Philip Russo</title>
+<meta name="description" content="Riqueza, endemismo e composição de espécies em todo o bioma e na sua porção menos conhecida, ao norte do rio São Francisco.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/aranhas-mata-atlantica.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/aranhas-mata-atlantica.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/ceratium.html" aria-label="Prancha anterior">←</a><span>04 / 08</span>
+<a class="circulo" href="../pranchas/araneoidea-americas.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/aranhas-mata-atlantica.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/aranhas-mata-atlantica.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 4 · Mata Atlântica · Capítulo de livro</span>
+<h1 class="cabeca__titulo">Aranhas da Mata Atlântica: o que é padrão e o que é falta de coleta</h1>
+<p class="cabeca__resumo">Riqueza, endemismo e composição de espécies em todo o bioma e na sua porção menos conhecida, ao norte do rio São Francisco.</p>
+<dl class="ficha">
+<div><dt>Publicação</dt><dd>Capítulo de livro, 2º autor</dd></div>
+<div><dt>Equipe</dt><dd>Carvalho LS, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ</dd></div>
+<div><dt>Meu papel</dt><dd>Análises espaciais e mapas</dd></div>
+<div><dt>Ferramentas</dt><dd>BioDinamica (Dinamica EGO) · R · ArcMap</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-area" data-camada="area" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/afs_layout.jpg" alt="Mapa de localização da Mata Atlântica com o detalhe da porção ao norte do rio São Francisco" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sr" data-camada="sr" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_sr.jpg" alt="Riqueza de aranhas em toda a Mata Atlântica" loading="lazy">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_sr.jpg" alt="Riqueza de aranhas na Mata Atlântica ao norte do rio São Francisco" loading="lazy">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-we" data-camada="we" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_we.jpg" alt="Endemismo ponderado de aranhas em toda a Mata Atlântica" loading="lazy">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_we.jpg" alt="Endemismo ponderado de aranhas na Mata Atlântica ao norte do rio São Francisco" loading="lazy">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-nmds" data-camada="nmds">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_nmds.jpg" alt="Composição de espécies de aranhas em toda a Mata Atlântica">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_nmds.jpg" alt="Composição de espécies de aranhas na Mata Atlântica ao norte do rio São Francisco">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-turn" data-camada="turn" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_turn.jpg" alt="Turnover de aranhas em toda a Mata Atlântica" loading="lazy">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_turn.jpg" alt="Turnover de aranhas na Mata Atlântica ao norte do rio São Francisco" loading="lazy">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-nest" data-camada="nest" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_nest.jpg" alt="Aninhamento de aranhas em toda a Mata Atlântica" loading="lazy">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_nest.jpg" alt="Aninhamento de aranhas na Mata Atlântica ao norte do rio São Francisco" loading="lazy">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-gdm" data-camada="gdm" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/af_gdm.jpg" alt="Composição prevista pelo GDM de aranhas em toda a Mata Atlântica" loading="lazy">
+<span class="visor__leg">Mata Atlântica inteira</span></div>
+<div class="visor__img">
+<img src="../assets/img/afs_gdm.jpg" alt="Composição prevista pelo GDM de aranhas na Mata Atlântica ao norte do rio São Francisco" loading="lazy">
+<span class="visor__leg">Ao norte do rio São Francisco</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Contexto">
+<span class="visor__grupo-rotulo">Contexto</span>
+<button type="button" class="pilula" data-alvo="area" aria-controls="camada-area" aria-pressed="false">Área de estudo</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Diversidade">
+<span class="visor__grupo-rotulo">Diversidade</span>
+<button type="button" class="pilula" data-alvo="sr" aria-controls="camada-sr" aria-pressed="false">Riqueza</button>
+<button type="button" class="pilula" data-alvo="we" aria-controls="camada-we" aria-pressed="false">Endemismo ponderado</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Composição">
+<span class="visor__grupo-rotulo">Composição</span>
+<button type="button" class="pilula" data-alvo="nmds" aria-controls="camada-nmds" aria-pressed="true">Composição</button>
+<button type="button" class="pilula" data-alvo="turn" aria-controls="camada-turn" aria-pressed="false">Turnover</button>
+<button type="button" class="pilula" data-alvo="nest" aria-controls="camada-nest" aria-pressed="false">Aninhamento</button>
+<button type="button" class="pilula" data-alvo="gdm" aria-controls="camada-gdm" aria-pressed="false">GDM</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="area" hidden>
+<p>A Mata Atlântica e, em detalhe, a porção ao norte do rio São Francisco, a parte menos amostrada do bioma.</p>
+</div>
+<div data-texto="sr" hidden>
+<p>Número de espécies por hexágono, interpolado por krigagem. Os picos coincidem com as áreas mais amostradas, perto de cidades e instituições de pesquisa.</p>
+</div>
+<div data-texto="we" hidden>
+<p>Riqueza ponderada pelo inverso da área de distribuição de cada espécie: destaca áreas com muitas espécies de distribuição restrita.</p>
+</div>
+<div data-texto="nmds">
+<p>Três eixos de uma ordenação NMDS interpolados e combinados em RGB. Cores diferentes indicam comunidades de aranhas diferentes.</p>
+</div>
+<div data-texto="turn" hidden>
+<p>Parte da diferença entre comunidades causada pela substituição de espécies de um lugar para outro.</p>
+</div>
+<div data-texto="nest" hidden>
+<p>Parte da diferença causada pela perda de espécies: comunidades mais pobres como subconjuntos das mais ricas.</p>
+</div>
+<div data-texto="gdm" hidden>
+<p>Composição prevista pelo modelo de dissimilaridade generalizada a partir da distância geográfica e do clima. A distância geográfica foi o preditor mais importante.</p>
+</div>
+</div>
+</div>
+<p class="visor__nota">Hexágonos de 0,5°. Riqueza e endemismo interpolados por krigagem; composição por spline. Nos mapas de composição, cores diferentes indicam comunidades diferentes.</p></section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">5.482</span><span class="numero__texto">registros não duplicados no bioma</span></div>
+<div class="numero"><span class="numero__valor">842</span><span class="numero__texto">espécies de 12 famílias (Araneoidea e Pholcidae)</span></div>
+<div class="numero"><span class="numero__valor"><4%</span><span class="numero__texto">dos registros na porção setentrional: 212 registros, 70 espécies</span></div>
+<div class="numero"><span class="numero__valor">102</span><span class="numero__texto">áreas de endemismo no bioma, 5 delas no norte</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo">Os registros de aranhas no Brasil se concentram perto de grandes cidades e de instituições de pesquisa antigas, o chamado efeito museu. A Mata Atlântica ao norte do rio São Francisco é a parte menos amostrada do bioma. A questão era separar os padrões de diversidade que refletem a biologia dos que refletem só onde se coletou mais.</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<p class="secao__corpo">Bancos de ocorrência de Araneoidea e Pholcidae compilados da literatura e recortados para a Mata Atlântica: 5.482 registros não duplicados de 842 espécies. Menos de 4% estão na porção setentrional. Para o modelo de dissimilaridade, 19 variáveis bioclimáticas do WorldClim.</p>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>Esforço amostral e riqueza de espécies em hexágonos de 0,5°, com o pacote BioDinamica no Dinamica EGO.</li><li>Diversidade beta por ordenação NMDS interpolada, separada em turnover e aninhamento.</li><li>Modelo de dissimilaridade generalizada (GDM) com a distância geográfica e os cinco primeiros eixos de uma PCA das variáveis bioclimáticas.</li><li>Áreas de endemismo por interpolação geográfica (GIE) e endemismo ponderado pela área de distribuição das espécies.</li><li>Padronização dos mapas finais no ArcMap.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">102 áreas de endemismo, coerentes com as quatro grandes regiões já descritas para aranhas. No norte, as áreas de endemismo coincidem com os poucos locais bem amostrados.</p>
+<ul><li>A riqueza acompanha o número de registros em todo o bioma: parte do padrão é efeito de coleta.</li><li>No GDM, a distância geográfica foi o preditor mais importante, seguida pelo primeiro eixo climático.</li><li>Dos 19 endêmicos da porção setentrional, 12 foram descritos a partir de 2015 ou ainda não têm nome.</li><li>Os mapas indicam onde priorizar novas coletas.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publicação</h2>
+<ul class="secao__corpo secao__pubs"><li>Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Capítulo em [livro, editora, ano].</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Diagnóstico de lacunas de dados antes de estudos de impacto, priorização de áreas para inventário de fauna e seleção de áreas para conservação.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/ceratium.html"><span class="mono-rotulo">← Prancha 3</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
+<a class="vizinhas--dir" href="../pranchas/araneoidea-americas.html"><span class="mono-rotulo">Prancha 5 →</span><span class="vizinhas__nome">Araneoidea das Américas, 1757–2017</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

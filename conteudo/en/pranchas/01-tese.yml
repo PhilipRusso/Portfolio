@@ -1,0 +1,131 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Spider biogeography of the Americas
+nome_curto: Spider biogeography of the Americas
+rotulo: Americas · PhD thesis, 2024
+titulo: 'Spider biogeography of the Americas: from literature data to diversity patterns'
+resumo: >-
+  A database of published records and maps of richness, endemism and composition for the whole continent, with the
+  weight of sampling bias measured in each pattern.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: ArcGIS Pro · Dinamica EGO · R · MySQL
+cartao:
+  titulo: 'Spider biogeography of the Americas: from literature data to diversity patterns'
+  etiqueta: Americas · PhD thesis · 148k records
+  imagem: am_composition.jpg
+  alt: >-
+    Three maps of the Americas showing spider species composition in colour, composition predicted by GDM and the
+    biogeographic regionalization
+  ajuste: cover
+visor:
+  proporcao: 2.6 / 1
+  margem: 0px
+  inicial: riqueza
+camadas:
+- id: registros
+  grupo: Data
+  rotulo: Records and effort
+  texto: a. spider records; b. record density; c. sampling effort. Red marks high density or effort, grey marks
+    low.
+  imagens:
+  - src: am_distribution.jpg
+    alt: 'Three maps of the Americas: records, record density and sampling effort'
+- id: riqueza
+  grupo: Diversity
+  rotulo: Richness
+  texto: >-
+    a. observed richness; b. richness predicted by MARS; c. richness predicted by Random Forest. Observed peaks
+    follow the most sampled areas.
+  imagens:
+  - src: am_richness.jpg
+    alt: Three maps of spider species richness in the Americas
+- id: endemicidade
+  grupo: Diversity
+  rotulo: Endemicity
+  texto: a. observed endemism index; b. predicted by MARS; c. predicted by Random Forest.
+  imagens:
+  - src: am_endemicity.jpg
+    alt: Three maps of spider endemicity in the Americas
+- id: endemismo
+  grupo: Diversity
+  rotulo: Areas of endemism
+  texto: >-
+    a. consensus of the areas of endemism (GIE); b. classes 1 and 2, species with ranges up to 50 km and from 51
+    to 200 km; c. classes 3 and 4, from 201 to 400 km and from 401 to 600 km.
+  imagens:
+  - src: am_endemism.jpg
+    alt: Three maps of areas of spider endemism in the Americas
+- id: composicao
+  grupo: Composition
+  rotulo: Composition
+  texto: >-
+    a. composition from interpolated NMDS, in RGB colours; b. composition predicted by GDM along environmental gradients;
+    c. biogeographic regionalization, with the Caribbean highlighted.
+  imagens:
+  - src: am_composition.jpg
+    alt: Three maps of spider species composition and regionalization in the Americas
+- id: latitude
+  grupo: Composition
+  rotulo: Latitudinal gradient
+  proporcao: 2.78 / 1
+  texto: >-
+    Richness in latitude bands of 1°, 5° and 10°. The charts to the left of each map show the relationship between
+    richness and latitude.
+  imagens:
+  - src: am_latitude.jpg
+    alt: Spider richness in latitude bands of 1, 5 and 10 degrees
+numeros:
+- valor: 148k
+  texto: occurrence records extracted from the literature
+- valor: 6,500
+  texto: papers with records in the Americas, out of more than 15,000 reviewed
+- valor: 16,679
+  texto: valid species, about 34% of the world’s spider diversity
+- valor: 48,593
+  texto: georeferenced localities in the gazetteer
+secoes:
+- titulo: The problem
+  texto: >-
+    Spider distribution data come from heterogeneous, patchy sources. Of the spider records from the Americas in
+    GBIF, only about 26% have an identified species and collection data. Without a reliable database, you cannot
+    tell diversity patterns apart from gaps in knowledge across a whole continent.
+- titulo: The data
+  texto: >-
+    SPIDBASE, a relational database built from the taxonomic literature of the World Spider Catalog (plate 2), with
+    148,000 records traceable to the original publication. For the gradients, variables of temperature, precipitation,
+    productivity, climate stability and altitude.
+- titulo: The method
+  lista_numerada:
+  - Record density and sampling effort, to measure collection bias.
+  - Observed richness and endemicity, and predictions by MARS and Random Forest.
+  - Areas of endemism by geographic interpolation (GIE), in range-size classes.
+  - >-
+    Composition by interpolated NMDS and by generalized dissimilarity modelling (GDM), and biogeographic regionalization.
+  - Species–area relationship and gradients of latitude, altitude and environment.
+- titulo: The result
+  destaque: 'Known spider diversity follows human population density: much of the map is sampling bias.'
+  lista:
+  - >-
+    The patterns match known high-diversity regions, but mismatches such as Manitoba, in Canada, point to regions
+    that need more sampling.
+  - >-
+    Richness peaks near 0°, 20°N and 20°S, at low altitudes, with warmer temperatures, low to medium precipitation
+    and productivity, and stable climate.
+  - The number of species grows with area and with the scale of analysis.
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: >-
+  Diagnosing data gaps before impact assessments, prioritizing fauna surveys and using biodiversity data at continental
+  scale with control for sampling bias.

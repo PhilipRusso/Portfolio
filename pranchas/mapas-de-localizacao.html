@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 8 — Mapas de localização · Philip Russo</title>
+<meta name="description" content="Mapas feitos sob demanda para dois estudos de ecologia aquática, do recorte por ecorregião e por bacia ao detalhe dos pontos de coleta.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/mapas-de-localizacao.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/mapas-de-localizacao.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/bicudo.html" aria-label="Prancha anterior">←</a><span>08 / 08</span>
+<span class="circulo circulo--off" aria-hidden="true">→</span></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/mapas-de-localizacao.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/mapas-de-localizacao.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 8 · Brasil · Cartografia sob demanda · 2018</span>
+<h1 class="cabeca__titulo">Mapas de localização: reservatórios do país inteiro e um lago amazônico</h1>
+<p class="cabeca__resumo">Mapas feitos sob demanda para dois estudos de ecologia aquática, do recorte por ecorregião e por bacia ao detalhe dos pontos de coleta.</p>
+<dl class="ficha">
+<div><dt>Entrega</dt><dd>Mapas de localização sob demanda</dd></div>
+<div><dt>Período</dt><dd>2018</dd></div>
+<div><dt>Meu papel</dt><dd>Cartografia: base, recortes, símbolos e layout</dd></div>
+<div><dt>Ferramentas</dt><dd>ArcMap · Adobe Illustrator</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-reserv" data-camada="reserv">
+<figure class="visor__quadro" style="background: #F0F0F0">
+<div class="visor__area" style="aspect-ratio: 1.5 / 1; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/pub_rot_feow.jpg" alt="Mapa do Brasil com 28 reservatórios numerados sobre ecorregiões de água doce e quadros de detalhe do Sudeste">
+<span class="visor__leg">Ecorregiões de água doce (FEOW)</span></div>
+<div class="visor__img">
+<img src="../assets/img/pub_rot_bacias.jpg" alt="Mapa do Brasil com 13 reservatórios numerados sobre bacias hidrográficas e quadro de detalhe">
+<span class="visor__leg">Bacias hidrográficas</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-puru" data-camada="puru" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 1.5 / 1; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/pub_puruzinho.jpg" alt="Mapa do lago Puruzinho, perto de Humaitá, no Amazonas, com dez pontos de coleta até o rio Madeira" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Reservatórios">
+<span class="visor__grupo-rotulo">Reservatórios</span>
+<button type="button" class="pilula" data-alvo="reserv" aria-controls="camada-reserv" aria-pressed="true">Ecorregiões e bacias</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Amazônia">
+<span class="visor__grupo-rotulo">Amazônia</span>
+<button type="button" class="pilula" data-alvo="puru" aria-controls="camada-puru" aria-pressed="false">Lago Puruzinho</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="reserv">
+<p>À esquerda, 28 reservatórios sobre ecorregiões de água doce; à direita, 13 deles sobre bacias hidrográficas. Os quadros ampliam o Sudeste, onde os pontos se sobrepõem na escala do país.</p>
+</div>
+<div data-texto="puru" hidden>
+<p>Duas escalas no mesmo layout: a posição no Amazonas e no Brasil, e o lago Puruzinho, perto de Humaitá, com os dez pontos de coleta, de E01 a E10, até o rio Madeira.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">28</span><span class="numero__texto">reservatórios localizados no mapa por ecorregião</span></div>
+<div class="numero"><span class="numero__valor">10</span><span class="numero__texto">pontos de coleta ao longo do lago Puruzinho</span></div>
+<div class="numero"><span class="numero__valor">2</span><span class="numero__texto">escalas combinadas em cada layout, do país ao ponto</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O pedido</h2>
+<p class="secao__corpo">Dois projetos paralelos de ecologia aquática precisavam de mapas de localização claros: dezenas de reservatórios espalhados pelo país, com agrupamentos densos no Sudeste, e uma série de pontos de coleta ao longo de um lago estreito na Amazônia.</p>
+</div>
+<div class="secao">
+<h2>A solução</h2>
+<ul class="secao__corpo"><li>Reservatórios numerados, com a lista na legenda, sobre ecorregiões de água doce e sobre bacias hidrográficas.</li><li>Quadros de detalhe onde os pontos se sobrepõem na escala nacional.</li><li>Para o lago Puruzinho, um mapa de situação no Amazonas e no Brasil ligado ao detalhe do lago, com os pontos rotulados e a escala gráfica.</li><li>Base e símbolos no ArcMap, com acabamento do layout no Illustrator.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Mapas de localização e de área de estudo para artigos, relatórios técnicos e estudos ambientais.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/bicudo.html"><span class="mono-rotulo">← Prancha 7</span><span class="vizinhas__nome">Bicudo</span></a>
+<a class="vizinhas--dir" href="../index.html"><span class="mono-rotulo">Fim das pranchas →</span><span class="vizinhas__nome">Voltar ao atlas</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

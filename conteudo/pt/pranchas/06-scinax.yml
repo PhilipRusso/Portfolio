@@ -1,0 +1,134 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Scinax aff. machadoi
+nome_curto: <em>Scinax</em> aff. <em>machadoi</em>
+rotulo: Quadrilátero Ferrífero, MG · Modelagem de distribuição · 2021
+titulo: '<em>Scinax</em> aff. <em>machadoi</em>: onde procurar novas populações de uma perereca endêmica'
+resumo: >-
+  Revisão de coleções, três algoritmos de aprendizado de máquina e um consenso para orientar o trabalho de campo
+  numa região de mineração.
+ficha:
+- rotulo: Entrega
+  valor: Relatório técnico sob demanda, 2021
+- rotulo: Região
+  valor: Quadrilátero Ferrífero, MG
+- rotulo: Meu papel
+  valor: Compilação dos registros, modelagem e mapas
+- rotulo: Ferramentas
+  valor: BioDinamica · MaxEnt · ArcGIS Pro · QGIS
+cartao:
+  titulo: '<em>Scinax</em> aff. <em>machadoi</em>: onde procurar novas populações'
+  etiqueta: Quadrilátero Ferrífero · ANN · SVM · MaxEnt
+  imagem: qf_consenso.jpg
+  alt: Consenso de adequabilidade para Scinax aff. machadoi no Quadrilátero Ferrífero
+  fundo: '#F4F4EF'
+visor:
+  proporcao: 16 / 10
+  margem: 0px
+  inicial: consenso
+  nota: >-
+    Modelos com cerca de 1 km de resolução. Adequabilidade normalizada em cada algoritmo para permitir a comparação.
+camadas:
+- id: relevo
+  grupo: Dados
+  rotulo: Registros e relevo
+  texto: >-
+    Hipsometria do Quadrilátero Ferrífero com os registros e as principais serras. A espécie ocorre no maciço das
+    serras do Gandarela, Capanema e Caraça e na Serra do Garimpo.
+  imagens:
+  - src: qf_relevo.jpg
+    alt: Mapa hipsométrico do Quadrilátero Ferrífero com os registros da espécie
+- id: ann
+  grupo: Modelos
+  rotulo: Rede neural
+  fundo: '#F4F4EF'
+  texto: 'Rede neural artificial: uma das previsões mais amplas dos três algoritmos.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_ann.jpg
+    alt: Adequabilidade prevista pela rede neural artificial
+- id: svm
+  grupo: Modelos
+  rotulo: SVM
+  fundo: '#F4F4EF'
+  texto: 'Máquina de vetores de suporte: também prevê uma área ampla, com gradiente mais suave.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_svm.jpg
+    alt: Adequabilidade prevista pela máquina de vetores de suporte
+- id: maxent
+  grupo: Modelos
+  rotulo: MaxEnt
+  fundo: '#F4F4EF'
+  texto: 'MaxEnt: o algoritmo mais restritivo, concentrado no maciço do Caraça e arredores.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_maxent.jpg
+    alt: Adequabilidade prevista pelo MaxEnt
+- id: consenso
+  grupo: Modelos
+  rotulo: Consenso
+  fundo: '#F4F4EF'
+  texto: >-
+    Média dos três algoritmos. A adequabilidade alta se restringe aos topos das serras da encosta leste do Quadrilátero.
+  legenda: adequabilidade
+  imagens:
+  - src: qf_consenso.jpg
+    alt: Consenso de adequabilidade entre os três algoritmos
+- id: dist
+  grupo: Resultado
+  rotulo: Distribuição potencial
+  fundo: '#F4F4EF'
+  texto: >-
+    Consenso convertido em presença e ausência pelo menor limiar de presença. As manchas fora das serras conhecidas
+    indicam onde buscar novas populações.
+  legenda: presenca
+  imagens:
+  - src: qf_dist.jpg
+    alt: Distribuição potencial em presença e ausência
+numeros:
+- valor: '130'
+  texto: espécimes ou lotes encontrados em 5 de 8 coleções
+- valor: '14'
+  texto: estudos com registros primários revisados
+- valor: 1.015–1.976 m
+  texto: faixa de altitude dos registros
+- valor: 606 km²
+  texto: de extensão de ocorrência (EOO, critério da IUCN)
+secoes:
+- titulo: O problema
+  texto: >-
+    Uma perereca do grupo <em>Scinax catharinae</em>, possivelmente uma espécie ainda não descrita, é conhecida
+    só no Quadrilátero Ferrífero, região de mineração intensa em Minas Gerais. Antes das campanhas de campo, o projeto
+    precisava saber onde a espécie já foi registrada e onde vale procurá-la.
+- titulo: Os dados
+  texto: >-
+    Revisão de oito coleções herpetológicas e de 14 estudos: 130 espécimes ou lotes em sete municípios. Coordenadas
+    das coleções, dos coletores ou georreferenciadas a partir da descrição da localidade. Como preditores, as 19
+    variáveis bioclimáticas do WorldClim e a altitude, recortadas para o Quadrilátero Ferrífero.
+- titulo: O método
+  lista_numerada:
+  - PCA das variáveis, com os componentes que somam mais de 98% da variância.
+  - 'Três algoritmos de aprendizado de máquina: rede neural artificial, SVM e MaxEnt.'
+  - Consenso entre os três (ensemble forecasting), com o pacote BioDinamica no Dinamica EGO.
+  - Mapa de presença e ausência pelo menor limiar de presença.
+  - Extensão de ocorrência pelo mínimo polígono convexo, segundo a IUCN.
+- titulo: O resultado
+  destaque: >-
+    A área adequada se restringe aos topos das serras da encosta leste. Fora das serras já conhecidas, o consenso
+    aponta três frentes para buscar novas populações.
+  lista:
+  - Serra da Piedade.
+  - >-
+    Serras perto de Itatiaia, Lavras Novas e Santo Antônio do Salto, em Ouro Preto, incluindo o Monumento Natural
+    de Itatiaia.
+  - Serrinha e Pico do Itacolomi, também em Ouro Preto.
+  - 'Registros em duas unidades de conservação: PARNA Serra do Gandarela e RPPN Santuário do Caraça.'
+  - >-
+    O modelo também prevê áreas bem amostradas onde a espécie provavelmente não ocorre, como a Serra do Rola-Moça:
+    história e dispersão ficam fora de um modelo climático.
+aplicacao: >-
+  Licenciamento ambiental e planos de ação para espécies ameaçadas em áreas de mineração, e planejamento de campanhas
+  de campo. O projeto original, em ArcGIS Pro, foi migrado para o QGIS com o conversor da seção Ferramentas.

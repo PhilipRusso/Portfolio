@@ -1,0 +1,74 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Location maps
+nome_curto: Location maps
+rotulo: Brazil · On-demand cartography · 2018
+titulo: 'Location maps: reservoirs across the country and an Amazonian lake'
+resumo: >-
+  Maps made on demand for two aquatic ecology studies, from the ecoregion and basin views to the detail of the sampling
+  points.
+ficha:
+- rotulo: Deliverable
+  valor: On-demand location maps
+- rotulo: Period
+  valor: '2018'
+- rotulo: My role
+  valor: 'Cartography: base, insets, symbols and layout'
+- rotulo: Tools
+  valor: ArcMap · Adobe Illustrator
+cartao:
+  titulo: 'Location maps: reservoirs and an Amazonian lake'
+  etiqueta: Brazil · ArcMap · Illustrator · on demand
+  imagem: pub_puruzinho.jpg
+  alt: Location map of Lake Puruzinho, in Amazonas, with sampling points
+visor:
+  proporcao: 1.5 / 1
+  margem: 16px
+  inicial: reserv
+camadas:
+- id: reserv
+  grupo: Reservoirs
+  rotulo: Ecoregions and basins
+  fundo: '#F0F0F0'
+  texto: >-
+    On the left, 28 reservoirs over freshwater ecoregions; on the right, 13 of them over river basins. The insets
+    zoom into the south-east, where points overlap at the national scale.
+  imagens:
+  - src: pub_rot_feow.jpg
+    alt: Map of Brazil with 28 numbered reservoirs over freshwater ecoregions and insets of the south-east
+    legenda: Freshwater ecoregions (FEOW)
+  - src: pub_rot_bacias.jpg
+    alt: Map of Brazil with 13 numbered reservoirs over river basins and an inset
+    legenda: River basins
+- id: puru
+  grupo: Amazon
+  rotulo: Lake Puruzinho
+  texto: >-
+    Two scales in one layout: the position in Amazonas and in Brazil, and Lake Puruzinho, near Humaitá, with the
+    ten sampling points, E01 to E10, down to the Madeira River.
+  imagens:
+  - src: pub_puruzinho.jpg
+    alt: Map of Lake Puruzinho, near Humaitá, Amazonas, with ten sampling points down to the Madeira River
+numeros:
+- valor: '28'
+  texto: reservoirs located on the ecoregion map
+- valor: '10'
+  texto: sampling points along Lake Puruzinho
+- valor: '2'
+  texto: scales combined in each layout, from country to point
+secoes:
+- titulo: The brief
+  texto: >-
+    Two parallel aquatic ecology projects needed clear location maps: dozens of reservoirs spread across the country,
+    with dense clusters in the south-east, and a series of sampling points along a narrow lake in the Amazon.
+- titulo: The solution
+  lista:
+  - Numbered reservoirs, listed in the legend, over freshwater ecoregions and over river basins.
+  - Insets where points overlap at the national scale.
+  - >-
+    For Lake Puruzinho, a locator map of Amazonas and Brazil linked to the detail of the lake, with labelled points
+    and a scale bar.
+  - Base and symbols in ArcMap, with the layout finished in Illustrator.
+aplicacao: Location and study-area maps for papers, technical reports and environmental studies.

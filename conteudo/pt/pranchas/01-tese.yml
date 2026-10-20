@@ -1,0 +1,133 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Biogeografia das aranhas das Américas
+nome_curto: Biogeografia das aranhas das Américas
+rotulo: Américas · Tese de doutorado, 2024
+titulo: 'Biogeografia das aranhas das Américas: da literatura aos padrões de diversidade'
+resumo: >-
+  Um banco de registros publicados e mapas de riqueza, endemismo e composição para o continente inteiro, com o peso
+  do viés de coleta medido em cada padrão.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: ArcGIS Pro · Dinamica EGO · R · MySQL
+cartao:
+  titulo: 'Biogeografia das aranhas das Américas: da literatura aos padrões de diversidade'
+  etiqueta: Américas · Tese de doutorado · 148 mil registros
+  imagem: am_composition.jpg
+  alt: >-
+    Três mapas das Américas com a composição de espécies de aranhas em cores, a composição prevista por GDM e a
+    regionalização biogeográfica
+  ajuste: cover
+visor:
+  proporcao: 2.6 / 1
+  margem: 0px
+  inicial: riqueza
+camadas:
+- id: registros
+  grupo: Dados
+  rotulo: Registros e esforço
+  texto: >-
+    a. registros de aranhas; b. densidade de registros; c. esforço amostral. Vermelho indica densidade ou esforço
+    altos, cinza indica baixos.
+  imagens:
+  - src: am_distribution.jpg
+    alt: 'Três mapas das Américas: registros, densidade de registros e esforço amostral'
+- id: riqueza
+  grupo: Diversidade
+  rotulo: Riqueza
+  texto: >-
+    a. riqueza observada; b. riqueza prevista por MARS; c. riqueza prevista por Random Forest. Os picos observados
+    seguem as áreas mais coletadas.
+  imagens:
+  - src: am_richness.jpg
+    alt: Três mapas de riqueza de espécies de aranhas nas Américas
+- id: endemicidade
+  grupo: Diversidade
+  rotulo: Endemicidade
+  texto: a. índice de endemismo observado; b. previsto por MARS; c. previsto por Random Forest.
+  imagens:
+  - src: am_endemicity.jpg
+    alt: Três mapas de endemicidade de aranhas nas Américas
+- id: endemismo
+  grupo: Diversidade
+  rotulo: Áreas de endemismo
+  texto: >-
+    a. consenso das áreas de endemismo (GIE); b. classes 1 e 2, espécies com distribuição de até 50 km e de 51 a
+    200 km; c. classes 3 e 4, de 201 a 400 km e de 401 a 600 km.
+  imagens:
+  - src: am_endemism.jpg
+    alt: Três mapas de áreas de endemismo de aranhas nas Américas
+- id: composicao
+  grupo: Composição
+  rotulo: Composição
+  texto: >-
+    a. composição por NMDS interpolado, em cores RGB; b. composição prevista pelo GDM ao longo de gradientes ambientais;
+    c. regionalização biogeográfica, com o Caribe em destaque.
+  imagens:
+  - src: am_composition.jpg
+    alt: Três mapas de composição de espécies e regionalização de aranhas nas Américas
+- id: latitude
+  grupo: Composição
+  rotulo: Gradiente latitudinal
+  proporcao: 2.78 / 1
+  texto: >-
+    Riqueza em faixas de latitude de 1°, 5° e 10°. Os gráficos à esquerda de cada mapa mostram a relação entre riqueza
+    e latitude.
+  imagens:
+  - src: am_latitude.jpg
+    alt: Riqueza de aranhas em faixas de latitude de 1, 5 e 10 graus
+numeros:
+- valor: 148 mil
+  texto: registros de ocorrência extraídos da literatura
+- valor: '6.500'
+  texto: artigos com registros nas Américas, de mais de 15 mil revisados
+- valor: '16.679'
+  texto: espécies válidas, cerca de 34% da diversidade mundial de aranhas
+- valor: '48.593'
+  texto: localidades georreferenciadas no gazetteer
+secoes:
+- titulo: O problema
+  texto: >-
+    Os dados de distribuição de aranhas vêm de fontes heterogêneas e cheias de lacunas. Dos registros de aranhas
+    das Américas no GBIF, só cerca de 26% têm a espécie identificada e dados de coleta. Sem uma base confiável,
+    não dá para separar padrão de diversidade de falta de conhecimento num continente inteiro.
+- titulo: Os dados
+  texto: >-
+    O SPIDBASE, banco relacional construído a partir da literatura taxonômica do World Spider Catalog (prancha 2),
+    com 148 mil registros rastreáveis até a publicação de origem. Para os gradientes, variáveis de temperatura,
+    precipitação, produtividade, estabilidade climática e altitude.
+- titulo: O método
+  lista_numerada:
+  - Densidade de registros e esforço amostral, para medir o viés de coleta.
+  - Riqueza e endemicidade observadas e previstas por MARS e Random Forest.
+  - Áreas de endemismo por interpolação geográfica (GIE), em classes de amplitude de distribuição.
+  - >-
+    Composição por NMDS interpolado e por modelo de dissimilaridade generalizada (GDM), e regionalização biogeográfica.
+  - Relação espécie-área e gradientes de latitude, altitude e ambiente.
+- titulo: O resultado
+  destaque: >-
+    A diversidade conhecida de aranhas acompanha a densidade populacional humana: boa parte do mapa é viés de coleta.
+  lista:
+  - >-
+    Os padrões coincidem com regiões de alta diversidade já conhecidas, mas divergências como a de Manitoba, no
+    Canadá, apontam regiões que pedem mais coleta.
+  - >-
+    A riqueza é maior perto de 0°, 20°N e 20°S, em altitudes baixas, com temperaturas mais quentes, precipitação
+    e produtividade de baixa a média e clima estável.
+  - O número de espécies cresce com a área e com a escala de análise.
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Diagnóstico de lacunas de dados antes de estudos de impacto, priorização de inventários de fauna e uso de dados
+  de biodiversidade em escala continental com controle do viés de amostragem.

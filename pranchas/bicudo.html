@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 7 — Bicudo · Philip Russo</title>
+<meta name="description" content="Registros de coleções, museus, ciência cidadã e literatura, uma PCA do clima e a comparação entre o MaxEnt e dez algoritmos do openModeller para Sporophila maximiliani.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/bicudo.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/bicudo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/scinax.html" aria-label="Prancha anterior">←</a><span>07 / 08</span>
+<a class="circulo" href="../pranchas/mapas-de-localizacao.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/bicudo.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/bicudo.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 7 · Brasil · Modelagem de nicho · 2018</span>
+<h1 class="cabeca__titulo">Bicudo: onze algoritmos para modelar uma ave ameaçada com 22 registros</h1>
+<p class="cabeca__resumo">Registros de coleções, museus, ciência cidadã e literatura, uma PCA do clima e a comparação entre o MaxEnt e dez algoritmos do openModeller para <em>Sporophila maximiliani</em>.</p>
+<dl class="ficha">
+<div><dt>Entrega</dt><dd>Modelagem sob demanda, 2018</dd></div>
+<div><dt>Espécie</dt><dd><em>Sporophila maximiliani</em>, o bicudo</dd></div>
+<div><dt>Meu papel</dt><dd>Compilação dos registros, modelagem e mapas</dd></div>
+<div><dt>Ferramentas</dt><dd>MaxEnt · openModeller · ArcMap</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-registros" data-camada="registros" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/bi_registros.png" alt="Mapa do Brasil com 22 registros do bicudo coloridos pela fonte e gráfico com o ano de cada registro" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-maxent" data-camada="maxent">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/bi_maxent.jpg" alt="Adequabilidade climática para o bicudo no Brasil prevista pelo MaxEnt">
+<span class="visor__leg">Adequabilidade (MaxEnt)</span></div>
+<div class="visor__img">
+<img src="../assets/img/bi_limiar.jpg" alt="Áreas acima e abaixo do limiar de presença do MaxEnt para o bicudo no Brasil">
+<span class="visor__leg">Limiar do 10º percentil de presença</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-algoritmos" data-camada="algoritmos" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../assets/img/bi_algoritmos.jpg" alt="Dez mapas do Brasil com a adequabilidade para o bicudo prevista por algoritmos do openModeller" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Dados">
+<span class="visor__grupo-rotulo">Dados</span>
+<button type="button" class="pilula" data-alvo="registros" aria-controls="camada-registros" aria-pressed="false">Registros</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Modelos">
+<span class="visor__grupo-rotulo">Modelos</span>
+<button type="button" class="pilula" data-alvo="maxent" aria-controls="camada-maxent" aria-pressed="true">MaxEnt</button>
+<button type="button" class="pilula" data-alvo="algoritmos" aria-controls="camada-algoritmos" aria-pressed="false">Dez algoritmos</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="registros" hidden>
+<p>22 registros após a limpeza, de 1954 a 2014, coloridos pela fonte: coleções do speciesLink, museus, WikiAves e literatura. À direita, o ano de coleta ou observação de cada um.</p>
+</div>
+<div data-texto="maxent">
+<p>MaxEnt com os 22 registros e três eixos de PCA do clima. À direita, o mesmo modelo com o limiar do 10º percentil de presença de treino: cerca de 70% do país fica acima dele, e ficam de fora o semiárido nordestino e o extremo sul.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>Acima do limiar</span><span><i class="legenda__cor legenda__cor--claro"></i>Abaixo do limiar</span></span>
+</div>
+</div>
+<div data-texto="algoritmos" hidden>
+<p>Os dez algoritmos do openModeller com todos os registros, cada um normalizado de 0 a 1. As previsões divergem muito entre si, e o ENFA não produziu ajuste. A AUC indicada é a de treino.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade relativa</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>baixa</span><span>alta</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">22</span><span class="numero__texto">registros após a limpeza, de 1954 a 2014</span></div>
+<div class="numero"><span class="numero__valor">11</span><span class="numero__texto">algoritmos comparados: MaxEnt e dez do openModeller</span></div>
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">conjuntos de dados: todos os registros e partições de 70% e 90%</span></div>
+<div class="numero"><span class="numero__valor">~5 km</span><span class="numero__texto">de resolução, em todo o Brasil</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo">O bicudo é uma das aves mais visadas pelo tráfico de aves canoras no Brasil, classificada como Em Perigo pela IUCN e Criticamente em Perigo no país. Os registros confiáveis são poucos e espalhados no tempo. O pedido era estimar onde o clima é adequado para a espécie com os dados disponíveis.</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<p class="secao__corpo">22 registros após a limpeza, de 1954 a 2014: coleções do speciesLink (MBML e UNICAMP), Museu Paraense Emílio Goeldi e INPA, WikiAves, Taxeus, artigos, um plano de manejo e o Livro Vermelho. Como preditores, três eixos de uma PCA das 19 variáveis bioclimáticas recortadas para o Brasil.</p>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>Limpeza e georreferenciamento dos registros, com fonte, instituição e ano.</li><li>PCA das 19 variáveis bioclimáticas no Brasil, com os três primeiros eixos como preditores.</li><li>Três conjuntos de dados: todos os registros e subconjuntos de 70% e 90%, com o restante separado para teste.</li><li>MaxEnt e dez algoritmos do openModeller: rede neural, Bioclim, Climate Space Model, ENFA, Envelope Score, distância ambiental, dois GARP, Niche Mosaic e SVM.</li><li>Mapa de presença e ausência do MaxEnt pelo limiar do 10º percentil de presença de treino, no ArcMap.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Com 22 registros, os algoritmos divergem muito. O MaxEnt aponta clima adequado em boa parte do Brasil central, da Amazônia e da costa leste.</p>
+<ul><li>Os registros mais antigos vêm de coleções e museus; os mais recentes, de ciência cidadã e da literatura.</li><li>GARP com Best Subsets e Niche Mosaic tiveram as maiores AUC de treino, sem contar a distância ambiental, que tende a reproduzir os próprios pontos.</li><li>Clima adequado não significa presença: a captura ilegal eliminou a espécie de boa parte da área onde ocorria.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Espécies raras ou ameaçadas com poucos registros: escolha do algoritmo, comunicação da incerteza e seleção de áreas para busca ou soltura.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/scinax.html"><span class="mono-rotulo">← Prancha 6</span><span class="vizinhas__nome"><em>Scinax</em> aff. <em>machadoi</em></span></a>
+<a class="vizinhas--dir" href="../pranchas/mapas-de-localizacao.html"><span class="mono-rotulo">Prancha 8 →</span><span class="vizinhas__nome">Mapas de localização</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

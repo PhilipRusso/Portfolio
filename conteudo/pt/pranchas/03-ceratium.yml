@@ -1,0 +1,162 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Ceratium furcoides
+nome_curto: <em>Ceratium furcoides</em>
+rotulo: Mundo · Modelagem de nicho · 2020–2021
+titulo: '<em>Ceratium furcoides</em>: para onde uma microalga invasora pode se espalhar'
+resumo: >-
+  Modelos de nicho que mostram a mudança de nicho durante a invasão global e projetam o risco futuro sobre reservatórios
+  existentes e planejados.
+ficha:
+- rotulo: Período
+  valor: 2020–2021
+- rotulo: Colaboração
+  valor: Rafael L. Macêdo e coautores
+- rotulo: Meu papel
+  valor: Modelagem de nicho, projeções climáticas e mapas
+- rotulo: Ferramentas
+  valor: MaxEnt · Dinamica EGO · ArcGIS Pro
+cartao:
+  titulo: '<em>Ceratium furcoides</em>: expansão global de uma microalga invasora'
+  etiqueta: Mundo · MaxEnt · CMIP6 · 2 artigos
+  imagem: cf_all.jpg
+  alt: Adequabilidade climática de Ceratium furcoides nas Américas e na Europa, alta no sudeste da América do Sul
+  fundo: '#000000'
+  ajuste: cover
+  posicao: 22% 50%
+visor:
+  proporcao: 2.63 / 1
+  margem: 0px
+  inicial: all
+  nota: >-
+    Mapas originais do MaxEnt. As projeções do artigo combinam vários modelos climáticos; aqui, o MIROC6 permite
+    comparar os quatro cenários.
+camadas:
+- id: nat
+  grupo: Clima atual
+  rotulo: Área nativa
+  fundo: '#000000'
+  texto: >-
+    Modelo calibrado só com os registros da área de origem. Ele prevê pouca adequabilidade onde a espécie hoje invade,
+    como o sudeste da América do Sul.
+  legenda: ceratium
+  legenda_figura: Clima atual · calibração com registros da área nativa · média das réplicas
+  imagens:
+  - src: cf_nat.jpg
+    alt: Adequabilidade climática calibrada com a área nativa, alta na Europa e baixa na América do Sul
+- id: inv
+  grupo: Clima atual
+  rotulo: Área invadida
+  fundo: '#000000'
+  texto: >-
+    Modelo calibrado só com os registros das áreas invadidas. O contraste com a área nativa é a mudança de nicho
+    descrita no artigo da Hydrobiologia.
+  legenda: ceratium
+  legenda_figura: Clima atual · calibração com registros das áreas invadidas · média das réplicas
+  imagens:
+  - src: cf_inv.jpg
+    alt: Adequabilidade climática calibrada com as áreas invadidas, alta no sudeste da América do Sul
+- id: all
+  grupo: Clima atual
+  rotulo: Todos os registros
+  fundo: '#000000'
+  texto: >-
+    Modelo com todos os registros, base das projeções futuras. A adequabilidade mais alta fica no sudeste da América
+    do Sul.
+  legenda: ceratium
+  legenda_figura: Clima atual · calibração com todos os registros · média das réplicas
+  imagens:
+  - src: cf_all.jpg
+    alt: Adequabilidade climática atual com todos os registros
+- id: s126
+  grupo: Futuro (MIROC6)
+  rotulo: SSP1-2.6
+  fundo: '#000000'
+  texto: Cenário de baixas emissões. Alterne entre os cenários para ver como a área adequada muda com o aquecimento.
+  legenda: ceratium
+  legenda_figura: Futuro · SSP1-2.6 · modelo climático MIROC6 · mediana das réplicas
+  imagens:
+  - src: cf_126.jpg
+    alt: Adequabilidade futura no cenário SSP1-2.6
+- id: s245
+  grupo: Futuro (MIROC6)
+  rotulo: SSP2-4.5
+  fundo: '#000000'
+  texto: Cenário intermediário de emissões.
+  legenda: ceratium
+  legenda_figura: Futuro · SSP2-4.5 · modelo climático MIROC6 · mediana das réplicas
+  imagens:
+  - src: cf_245.jpg
+    alt: Adequabilidade futura no cenário SSP2-4.5
+- id: s370
+  grupo: Futuro (MIROC6)
+  rotulo: SSP3-7.0
+  fundo: '#000000'
+  texto: Cenário de emissões altas.
+  legenda: ceratium
+  legenda_figura: Futuro · SSP3-7.0 · modelo climático MIROC6 · mediana das réplicas
+  imagens:
+  - src: cf_370.jpg
+    alt: Adequabilidade futura no cenário SSP3-7.0
+- id: s585
+  grupo: Futuro (MIROC6)
+  rotulo: SSP5-8.5
+  fundo: '#000000'
+  texto: Cenário de emissões muito altas.
+  legenda: ceratium
+  legenda_figura: Futuro · SSP5-8.5 · modelo climático MIROC6 · mediana das réplicas
+  imagens:
+  - src: cf_585.jpg
+    alt: Adequabilidade futura no cenário SSP5-8.5
+numeros:
+- valor: '3'
+  texto: 'calibrações: área nativa, área invadida e todos os registros'
+- valor: '4'
+  texto: cenários socioeconômicos, de SSP1-2.6 a SSP5-8.5
+- valor: '9'
+  texto: modelos climáticos globais do CMIP6
+- valor: '34'
+  texto: projeções futuras resumidas em consenso por cenário
+secoes:
+- titulo: O problema
+  texto: >-
+    <em>Ceratium furcoides</em> é um dinoflagelado de água doce, originário de regiões temperadas, que forma florações
+    associadas à mortandade de peixes e à piora da qualidade da água. Na América do Sul, ele se espalha por reservatórios.
+    Duas perguntas guiaram o trabalho: a espécie ocupa nas áreas invadidas o mesmo nicho climático da área de origem?
+    E para onde pode se expandir com as mudanças climáticas e a construção de novas barragens?
+- titulo: Os dados
+  lista:
+  - Registros de ocorrência na área nativa e nas áreas invadidas.
+  - Variáveis bioclimáticas do WorldClim para o presente e para os cenários do CMIP6.
+  - Localização de grandes barragens existentes e planejadas.
+- titulo: O método
+  lista_numerada:
+  - 'Três calibrações no MaxEnt: só a área nativa, só as áreas invadidas e todos os registros.'
+  - Comparação dos nichos nativo e invadido.
+  - >-
+    Projeção para quatro cenários SSP com até nove modelos climáticos globais, em 34 combinações, resumidas em mapas
+    de consenso por cenário.
+  - Sobreposição das áreas adequadas com as grandes barragens existentes e planejadas.
+- titulo: O resultado
+  destaque: >-
+    O nicho fundamental da espécie mudou durante a invasão global. Até 2041–2060, as áreas adequadas tendem a se
+    expandir e a se sobrepor a grandes barragens existentes e planejadas.
+  depois: >-
+    Como a espécie pode se estabelecer a partir de uma única célula e forma estruturas de resistência, os artigos
+    recomendam detecção precoce e medidas de mitigação nas bacias de maior risco.
+- titulo: Publicações
+  publicacoes:
+  - >-
+    Macêdo RL, Franco ACS, <strong>Russo P</strong> et al. (2021). Climate and landscape changes enhance the global
+    spread of a bloom-forming dinoflagellate related to fish kills and water quality deterioration. <em>Ecological
+    Indicators</em> 133: 108408. <a href="https://doi.org/10.1016/j.ecolind.2021.108408" style="color: #111111">doi
+    ↗</a>
+  - >-
+    Macêdo RL, <strong>Russo P</strong>, Corrêa RF et al. (2021). The drifting dinoflagellate <em>Ceratium furcoides</em>:
+    fundamental niche shift during global invasion. <em>Hydrobiologia</em> 848: 2105–2117. <a href="https://doi.org/10.1007/s10750-020-04495-5"
+    style="color: #111111">doi ↗</a>
+aplicacao: >-
+  Risco de espécies invasoras para abastecimento e geração de energia, pragas em plantios florestais e planejamento
+  de monitoramento sob cenários climáticos.

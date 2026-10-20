@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% set ini = p.visor.inicial %}
+{% block titulo %}{{ site.ui.prancha }} {{ p.numero }} — {{ p.titulo_aba }} · {{ site.nome }}{% endblock %}
+{% block descricao %}{{ p.resumo | striptags }}{% endblock %}
+{% block conteudo %}
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="{{ url(lang, 'index.html') }}">← {{ site.atlas }}</a>
+<nav class="paginador" aria-label="{{ site.ui.pranchas }}">
+{% if ant %}<a class="circulo" href="{{ url(lang, 'pranchas/' ~ ant.slug ~ '.html') }}" aria-label="{{ site.ui.anterior }}">←</a>{% else %}<span class="circulo circulo--off" aria-hidden="true">←</span>{% endif %}
+<span>{{ '%02d' % p.numero }} / {{ '%02d' % total }}</span>
+{% if prox %}<a class="circulo" href="{{ url(lang, 'pranchas/' ~ prox.slug ~ '.html') }}" aria-label="{{ site.ui.proxima }}">→</a>{% else %}<span class="circulo circulo--off" aria-hidden="true">→</span>{% endif %}
+</nav>
+{% include 'idioma.html' %}
+</div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">{{ site.ui.prancha }} {{ p.numero }} · {{ p.rotulo }}</span>
+<h1 class="cabeca__titulo">{{ p.titulo }}</h1>
+<p class="cabeca__resumo">{{ p.resumo }}</p>
+<dl class="ficha">
+{% for f in p.ficha %}
+<div><dt>{{ f.rotulo }}</dt><dd>{{ f.valor }}</dd></div>
+{% endfor %}
+</dl>
+</section>
+
+<section class="largura visor" aria-label="{{ site.ui.mapa_interativo }}" data-visor>
+{% for c in p.camadas %}
+<div class="visor__camada" id="camada-{{ c.id }}" data-camada="{{ c.id }}"{{ '' if c.id == ini else ' hidden' }}>
+<figure class="visor__quadro" style="background: {{ c.fundo | default('#FFFFFF') }}">
+<div class="visor__area" style="aspect-ratio: {{ c.proporcao | default(p.visor.proporcao) }}; padding: {{ p.visor.margem | default('0px') }}">
+{% for im in c.imagens %}
+<div class="visor__img">
+<img src="/assets/img/{{ im.src }}" alt="{{ im.alt }}"{{ '' if c.id == ini else ' loading="lazy"' }}>
+{% if im.legenda %}<span class="visor__leg">{{ im.legenda }}</span>{% endif %}
+</div>
+{% endfor %}
+</div>
+</figure>
+{% if c.legenda_figura %}<p class="visor__cap">{{ c.legenda_figura }}</p>{% endif %}
+</div>
+{% endfor %}
+<div class="visor__controles">
+<div class="visor__botoes">
+{% for g in p.grupos %}
+<div class="visor__grupo" role="group" aria-label="{{ g.rotulo }}">
+<span class="visor__grupo-rotulo">{{ g.rotulo }}</span>
+{% for c in g.camadas %}
+<button type="button" class="pilula" data-alvo="{{ c.id }}" aria-controls="camada-{{ c.id }}" aria-pressed="{{ 'true' if c.id == ini else 'false' }}">{{ c.rotulo }}</button>
+{% endfor %}
+</div>
+{% endfor %}
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">{{ site.ui.vendo }}</span>
+{% for c in p.camadas %}
+<div data-texto="{{ c.id }}"{{ '' if c.id == ini else ' hidden' }}>
+<p>{{ c.texto }}</p>
+{% if c.legenda %}{% include 'legenda.html' %}{% endif %}
+</div>
+{% endfor %}
+</div>
+</div>
+{% if p.visor.nota %}<p class="visor__nota">{{ p.visor.nota }}</p>{% endif %}
+</section>
+
+<section class="numeros" aria-label="{{ site.ui.numeros }}">
+<div class="largura numeros__linha">
+{% for n in p.numeros %}
+<div class="numero"><span class="numero__valor">{{ n.valor }}</span><span class="numero__texto">{{ n.texto }}</span></div>
+{% endfor %}
+</div>
+</section>
+
+<section class="largura secoes">
+{% for s in p.secoes %}
+<div class="secao">
+<h2>{{ s.titulo }}</h2>
+{% if s.destaque %}
+<div class="secao__corpo">
+<p class="secao__destaque">{{ s.destaque }}</p>
+{% if s.lista %}<ul>{% for x in s.lista %}<li>{{ x }}</li>{% endfor %}</ul>{% endif %}
+{% if s.depois %}<p>{{ s.depois }}</p>{% endif %}
+</div>
+{% elif s.lista_numerada %}
+<ol class="secao__corpo">{% for x in s.lista_numerada %}<li>{{ x }}</li>{% endfor %}</ol>
+{% elif s.lista %}
+<ul class="secao__corpo">{% for x in s.lista %}<li>{{ x }}</li>{% endfor %}</ul>
+{% elif s.publicacoes %}
+<ul class="secao__corpo secao__pubs">{% for x in s.publicacoes %}<li>{{ x }}</li>{% endfor %}</ul>
+{% else %}
+<p class="secao__corpo">{{ s.texto }}</p>
+{% endif %}
+</div>
+{% endfor %}
+<aside class="secao secao--aplica">
+<h2>{{ site.ui.aplica }}</h2>
+<p class="secao__corpo">{{ p.aplicacao }}</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="{{ site.ui.outras }}">
+{% if ant %}
+<a href="{{ url(lang, 'pranchas/' ~ ant.slug ~ '.html') }}"><span class="mono-rotulo">← {{ site.ui.prancha }} {{ ant.numero }}</span><span class="vizinhas__nome">{{ ant.nome_curto }}</span></a>
+{% else %}
+<a href="{{ url(lang, 'index.html') }}"><span class="mono-rotulo">← {{ site.ui.voltar }}</span><span class="vizinhas__nome">{{ site.atlas }}</span></a>
+{% endif %}
+{% if prox %}
+<a class="vizinhas--dir" href="{{ url(lang, 'pranchas/' ~ prox.slug ~ '.html') }}"><span class="mono-rotulo">{{ site.ui.prancha }} {{ prox.numero }} →</span><span class="vizinhas__nome">{{ prox.nome_curto }}</span></a>
+{% else %}
+<a class="vizinhas--dir" href="{{ url(lang, 'index.html') }}"><span class="mono-rotulo">{{ site.ui.fim }} →</span><span class="vizinhas__nome">{{ site.ui.voltar_atlas }}</span></a>
+{% endif %}
+</nav>
+</main>
+{% endblock %}
+{% block scripts %}<script src="/assets/js/visor.js" defer></script>{% endblock %}

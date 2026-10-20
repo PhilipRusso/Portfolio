@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 4 — Spiders of the Atlantic Forest · Philip Russo</title>
+<meta name="description" content="Species richness, endemism and composition across the whole biome and in its least known part, north of the São Francisco River.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/aranhas-mata-atlantica.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/aranhas-mata-atlantica.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/ceratium.html" aria-label="Previous plate">←</a><span>04 / 08</span>
+<a class="circulo" href="../../en/pranchas/araneoidea-americas.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/aranhas-mata-atlantica.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/aranhas-mata-atlantica.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 4 · Atlantic Forest · Book chapter</span>
+<h1 class="cabeca__titulo">Spiders of the Atlantic Forest: what is pattern and what is lack of sampling</h1>
+<p class="cabeca__resumo">Species richness, endemism and composition across the whole biome and in its least known part, north of the São Francisco River.</p>
+<dl class="ficha">
+<div><dt>Publication</dt><dd>Book chapter, second author</dd></div>
+<div><dt>Team</dt><dd>Carvalho LS, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ</dd></div>
+<div><dt>My role</dt><dd>Spatial analyses and maps</dd></div>
+<div><dt>Tools</dt><dd>BioDinamica (Dinamica EGO) · R · ArcMap</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor>
+<div class="visor__camada" id="camada-area" data-camada="area" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/afs_layout.jpg" alt="Location map of the Atlantic Forest with a detail of the part north of the São Francisco River" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sr" data-camada="sr" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_sr.jpg" alt="Spider richness across the whole Atlantic Forest" loading="lazy">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_sr.jpg" alt="Spider richness in the Atlantic Forest north of the São Francisco River" loading="lazy">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-we" data-camada="we" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_we.jpg" alt="Weighted spider endemism across the whole Atlantic Forest" loading="lazy">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_we.jpg" alt="Weighted spider endemism in the Atlantic Forest north of the São Francisco River" loading="lazy">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-nmds" data-camada="nmds">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_nmds.jpg" alt="Spider species composition across the whole Atlantic Forest">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_nmds.jpg" alt="Spider species composition in the Atlantic Forest north of the São Francisco River">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-turn" data-camada="turn" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_turn.jpg" alt="Spider turnover across the whole Atlantic Forest" loading="lazy">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_turn.jpg" alt="Spider turnover in the Atlantic Forest north of the São Francisco River" loading="lazy">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-nest" data-camada="nest" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_nest.jpg" alt="Spider nestedness across the whole Atlantic Forest" loading="lazy">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_nest.jpg" alt="Spider nestedness in the Atlantic Forest north of the São Francisco River" loading="lazy">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-gdm" data-camada="gdm" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/af_gdm.jpg" alt="Spider composition predicted by GDM across the whole Atlantic Forest" loading="lazy">
+<span class="visor__leg">Whole Atlantic Forest</span></div>
+<div class="visor__img">
+<img src="../../assets/img/afs_gdm.jpg" alt="Spider composition predicted by GDM in the Atlantic Forest north of the São Francisco River" loading="lazy">
+<span class="visor__leg">North of the São Francisco River</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Context">
+<span class="visor__grupo-rotulo">Context</span>
+<button type="button" class="pilula" data-alvo="area" aria-controls="camada-area" aria-pressed="false">Study area</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Diversity">
+<span class="visor__grupo-rotulo">Diversity</span>
+<button type="button" class="pilula" data-alvo="sr" aria-controls="camada-sr" aria-pressed="false">Richness</button>
+<button type="button" class="pilula" data-alvo="we" aria-controls="camada-we" aria-pressed="false">Weighted endemism</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Composition">
+<span class="visor__grupo-rotulo">Composition</span>
+<button type="button" class="pilula" data-alvo="nmds" aria-controls="camada-nmds" aria-pressed="true">Composition</button>
+<button type="button" class="pilula" data-alvo="turn" aria-controls="camada-turn" aria-pressed="false">Turnover</button>
+<button type="button" class="pilula" data-alvo="nest" aria-controls="camada-nest" aria-pressed="false">Nestedness</button>
+<button type="button" class="pilula" data-alvo="gdm" aria-controls="camada-gdm" aria-pressed="false">GDM</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="area" hidden>
+<p>The Atlantic Forest and, in detail, the part north of the São Francisco River, the least sampled part of the biome.</p>
+</div>
+<div data-texto="sr" hidden>
+<p>Number of species per hexagon, interpolated by kriging. Peaks match the most sampled areas, near cities and research institutions.</p>
+</div>
+<div data-texto="we" hidden>
+<p>Richness weighted by the inverse of each species’ range: highlights areas with many small-ranged species.</p>
+</div>
+<div data-texto="nmds">
+<p>Three axes of an NMDS ordination, interpolated and combined in RGB. Different colours mean different spider communities.</p>
+</div>
+<div data-texto="turn" hidden>
+<p>The part of the difference between communities caused by species replacement from place to place.</p>
+</div>
+<div data-texto="nest" hidden>
+<p>The part of the difference caused by species loss: poorer communities as subsets of richer ones.</p>
+</div>
+<div data-texto="gdm" hidden>
+<p>Composition predicted by the generalized dissimilarity model from geographic distance and climate. Geographic distance was the most important predictor.</p>
+</div>
+</div>
+</div>
+<p class="visor__nota">0.5° hexagons. Richness and endemism interpolated by kriging; composition by spline. In the composition maps, different colours mean different communities.</p></section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">5,482</span><span class="numero__texto">non-duplicated records in the biome</span></div>
+<div class="numero"><span class="numero__valor">842</span><span class="numero__texto">species in 12 families (Araneoidea and Pholcidae)</span></div>
+<div class="numero"><span class="numero__valor"><4%</span><span class="numero__texto">of the records in the northern part: 212 records, 70 species</span></div>
+<div class="numero"><span class="numero__valor">102</span><span class="numero__texto">areas of endemism in the biome, 5 of them in the north</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Spider records in Brazil cluster near large cities and long-established research institutions, the so-called museum effect. The Atlantic Forest north of the São Francisco River is the least sampled part of the biome. The question was to separate diversity patterns that reflect biology from those that only reflect where more sampling happened.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">Occurrence databases of Araneoidea and Pholcidae compiled from the literature and clipped to the Atlantic Forest: 5,482 non-duplicated records of 842 species. Fewer than 4% are in the northern part. For the dissimilarity model, the 19 WorldClim bioclimatic variables.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Sampling effort and species richness in 0.5° hexagons, with the BioDinamica package in Dinamica EGO.</li><li>Beta diversity by interpolated NMDS ordination, split into turnover and nestedness.</li><li>Generalized dissimilarity model (GDM) with geographic distance and the first five axes of a PCA of the bioclimatic variables.</li><li>Areas of endemism by geographic interpolation (GIE) and endemism weighted by species range.</li><li>Final maps standardized in ArcMap.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">102 areas of endemism, consistent with the four main regions already described for spiders. In the north, areas of endemism coincide with the few well-sampled sites.</p>
+<ul><li>Richness follows the number of records across the biome: part of the pattern is a sampling effect.</li><li>In the GDM, geographic distance was the most important predictor, followed by the first climate axis.</li><li>Of the 19 species endemic to the northern part, 12 were described from 2015 on or are still unnamed.</li><li>The maps show where to prioritize new sampling.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publication</h2>
+<ul class="secao__corpo secao__pubs"><li>Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Chapter in [book, publisher, year].</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Diagnosing data gaps before impact assessments, prioritizing areas for fauna surveys and selecting areas for conservation.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/ceratium.html"><span class="mono-rotulo">← Plate 3</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/araneoidea-americas.html"><span class="mono-rotulo">Plate 5 →</span><span class="vizinhas__nome">Araneoidea of the Americas, 1757–2017</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

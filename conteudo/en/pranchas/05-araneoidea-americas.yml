@@ -1,0 +1,115 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Araneoidea of the Americas, 1757–2017
+nome_curto: Araneoidea of the Americas, 1757–2017
+rotulo: Americas · MSc dissertation, 2019
+titulo: 'Araneoid spiders of the Americas: 260 years of collecting on the diversity map'
+resumo: >-
+  Richness, composition and endemism in three time slices, from 1757 to 2017, to separate the biogeographic pattern
+  from the history of collecting.
+ficha:
+- rotulo: Deliverable
+  valor: MSc dissertation, Graduate Program in Zoology, UFMG
+- rotulo: Advisors
+  valor: Adalberto J. dos Santos · co-advisor Ubirajara de Oliveira
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: ArcMap · Dinamica EGO · Google Earth Pro · Past
+cartao:
+  titulo: 'Araneoidea of the Americas: 260 years of collecting on the map'
+  etiqueta: Americas · MSc dissertation · 1757–2017
+  imagem: msc_comp2017.jpg
+  alt: Species composition of araneoid spiders in the Americas in RGB colours
+visor:
+  proporcao: 2.6 / 1
+  margem: 8px
+  inicial: riqueza
+camadas:
+- id: densidade
+  grupo: Collecting
+  rotulo: Record density
+  texto: >-
+    Kernel density of records: A. up to 2017; B. up to 1971; C. up to 1892. Darker tones mean more records. The
+    south-eastern United States dominated at first; over time, southern and south-eastern Brazil gain weight.
+  imagens:
+  - src: msc_densidade.jpg
+    alt: Three maps of kernel density of Araneoidea records in the Americas, up to 2017, 1971 and 1892
+- id: riqueza
+  grupo: Diversity
+  rotulo: Richness
+  texto: >-
+    Richness in 1° hexagons: A. all records, up to 2017; B. up to 1971; C. up to 1892. The older slices already
+    show much of the current pattern, with peaks in southern Brazil and the south-eastern United States.
+  imagens:
+  - src: msc_riqueza.jpg
+    alt: Three maps of Araneoidea richness in hexagons across the Americas, up to 2017, 1971 and 1892
+- id: composicao
+  grupo: Diversity
+  rotulo: Composition
+  texto: >-
+    Three axes of an NMDS with the Bray–Curtis index, interpolated and combined in RGB colours. Different colours
+    mean different communities; colours are not comparable between maps.
+  imagens:
+  - src: msc_comp2017.jpg
+    alt: Araneoidea species composition in the Americas with records up to 2017
+    legenda: Up to 2017
+  - src: msc_comp1971.jpg
+    alt: Araneoidea species composition in the Americas with records up to 1971
+    legenda: Up to 1971
+  - src: msc_comp1892.jpg
+    alt: Araneoidea species composition in the Americas with records up to 1892
+    legenda: Up to 1892
+numeros:
+- valor: 27,396
+  texto: records extracted from 550 papers, out of about 1,850 analysed
+- valor: 8,642
+  texto: georeferenced localities, in 25,115 points
+- valor: r = 0.7
+  texto: correlation between richness and record density
+- valor: '100'
+  texto: random replicates per time slice
+secoes:
+- titulo: The problem
+  texto: >-
+    Continental diversity maps are often read as a portrait of nature, but they also record where and when people
+    collected. Araneoidea, the largest and best-studied superfamily of spiders, was a good model to measure this
+    effect in the Americas.
+- titulo: The data
+  texto: >-
+    Taxonomic literature from the World Spider Catalog: about 1,850 papers analysed, 550 with geographic information.
+    The result was 27,396 records, georeferenced in Google Earth Pro into 25,115 points and 8,642 localities, organized
+    in a record catalogue and a gazetteer.
+- titulo: The method
+  lista_numerada:
+  - Richness on a 1° hexagon grid in ArcMap and kernel density of records.
+  - >-
+    Composition by NMDS with the Bray–Curtis index, interpolated in Dinamica EGO and split into turnover and nestedness.
+  - Areas of endemism by geographic interpolation (GIE), in range-size classes.
+  - Three time slices, up to 1892, 1971 and 2017, set by natural breaks in the publication years of the records.
+  - >-
+    For each slice, 100 replicates with the same number of records drawn from the full dataset, to separate the
+    effect of time from the effect of data volume; comparison by regression in Past.
+  - Country cartograms, with area proportional to the number of species.
+- titulo: The result
+  destaque: 'Known Araneoidea richness follows record density (r = 0.7): the diversity map is also a map of collecting.'
+  lista:
+  - >-
+    Southern and south-eastern Brazil and the south-eastern United States combine high richness with high accumulated
+    collecting effort.
+  - Areas of endemism change a lot as new data come in.
+  - >-
+    Species composition depends less on collecting history, and its breaks resemble natural divisions based on climate
+    and vegetation.
+  - Up to 1892, only two species of Araneoidea were known from Mexico; by 1971 there were 112.
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2019). Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
+    araneoideas americanas [Biogeographic patterns and the structure of taxonomic knowledge of American araneoid
+    spiders]. MSc dissertation, Graduate Program in Zoology, UFMG.
+aplicacao: >-
+  Checking whether a spatial pattern is real or a sampling artefact before using it in a decision, and pointing
+  to where new sampling would change knowledge the most.

@@ -1,0 +1,161 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Spiders of the Atlantic Forest
+nome_curto: Spiders of the Atlantic Forest
+rotulo: Atlantic Forest · Book chapter
+titulo: 'Spiders of the Atlantic Forest: what is pattern and what is lack of sampling'
+resumo: >-
+  Species richness, endemism and composition across the whole biome and in its least known part, north of the São
+  Francisco River.
+ficha:
+- rotulo: Publication
+  valor: Book chapter, second author
+- rotulo: Team
+  valor: Carvalho LS, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ
+- rotulo: My role
+  valor: Spatial analyses and maps
+- rotulo: Tools
+  valor: BioDinamica (Dinamica EGO) · R · ArcMap
+cartao:
+  titulo: 'Spiders of the Atlantic Forest: diversity and sampling bias'
+  etiqueta: Atlantic Forest · BioDinamica · GDM
+  imagem: af_nmds.jpg
+  alt: Spider species composition in the Atlantic Forest in RGB colours from NMDS axes
+visor:
+  proporcao: 2 / 1
+  margem: 12px
+  inicial: nmds
+  nota: >-
+    0.5° hexagons. Richness and endemism interpolated by kriging; composition by spline. In the composition maps,
+    different colours mean different communities.
+camadas:
+- id: area
+  grupo: Context
+  rotulo: Study area
+  texto: >-
+    The Atlantic Forest and, in detail, the part north of the São Francisco River, the least sampled part of the
+    biome.
+  imagens:
+  - src: afs_layout.jpg
+    alt: Location map of the Atlantic Forest with a detail of the part north of the São Francisco River
+- id: sr
+  grupo: Diversity
+  rotulo: Richness
+  texto: >-
+    Number of species per hexagon, interpolated by kriging. Peaks match the most sampled areas, near cities and
+    research institutions.
+  imagens:
+  - src: af_sr.jpg
+    alt: Spider richness across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_sr.jpg
+    alt: Spider richness in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+- id: we
+  grupo: Diversity
+  rotulo: Weighted endemism
+  texto: 'Richness weighted by the inverse of each species’ range: highlights areas with many small-ranged species.'
+  imagens:
+  - src: af_we.jpg
+    alt: Weighted spider endemism across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_we.jpg
+    alt: Weighted spider endemism in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+- id: nmds
+  grupo: Composition
+  rotulo: Composition
+  texto: >-
+    Three axes of an NMDS ordination, interpolated and combined in RGB. Different colours mean different spider
+    communities.
+  imagens:
+  - src: af_nmds.jpg
+    alt: Spider species composition across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_nmds.jpg
+    alt: Spider species composition in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+- id: turn
+  grupo: Composition
+  rotulo: Turnover
+  texto: The part of the difference between communities caused by species replacement from place to place.
+  imagens:
+  - src: af_turn.jpg
+    alt: Spider turnover across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_turn.jpg
+    alt: Spider turnover in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+- id: nest
+  grupo: Composition
+  rotulo: Nestedness
+  texto: 'The part of the difference caused by species loss: poorer communities as subsets of richer ones.'
+  imagens:
+  - src: af_nest.jpg
+    alt: Spider nestedness across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_nest.jpg
+    alt: Spider nestedness in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+- id: gdm
+  grupo: Composition
+  rotulo: GDM
+  texto: >-
+    Composition predicted by the generalized dissimilarity model from geographic distance and climate. Geographic
+    distance was the most important predictor.
+  imagens:
+  - src: af_gdm.jpg
+    alt: Spider composition predicted by GDM across the whole Atlantic Forest
+    legenda: Whole Atlantic Forest
+  - src: afs_gdm.jpg
+    alt: Spider composition predicted by GDM in the Atlantic Forest north of the São Francisco River
+    legenda: North of the São Francisco River
+numeros:
+- valor: 5,482
+  texto: non-duplicated records in the biome
+- valor: '842'
+  texto: species in 12 families (Araneoidea and Pholcidae)
+- valor: <4%
+  texto: 'of the records in the northern part: 212 records, 70 species'
+- valor: '102'
+  texto: areas of endemism in the biome, 5 of them in the north
+secoes:
+- titulo: The problem
+  texto: >-
+    Spider records in Brazil cluster near large cities and long-established research institutions, the so-called
+    museum effect. The Atlantic Forest north of the São Francisco River is the least sampled part of the biome.
+    The question was to separate diversity patterns that reflect biology from those that only reflect where more
+    sampling happened.
+- titulo: The data
+  texto: >-
+    Occurrence databases of Araneoidea and Pholcidae compiled from the literature and clipped to the Atlantic Forest:
+    5,482 non-duplicated records of 842 species. Fewer than 4% are in the northern part. For the dissimilarity model,
+    the 19 WorldClim bioclimatic variables.
+- titulo: The method
+  lista_numerada:
+  - Sampling effort and species richness in 0.5° hexagons, with the BioDinamica package in Dinamica EGO.
+  - Beta diversity by interpolated NMDS ordination, split into turnover and nestedness.
+  - >-
+    Generalized dissimilarity model (GDM) with geographic distance and the first five axes of a PCA of the bioclimatic
+    variables.
+  - Areas of endemism by geographic interpolation (GIE) and endemism weighted by species range.
+  - Final maps standardized in ArcMap.
+- titulo: The result
+  destaque: >-
+    102 areas of endemism, consistent with the four main regions already described for spiders. In the north, areas
+    of endemism coincide with the few well-sampled sites.
+  lista:
+  - 'Richness follows the number of records across the biome: part of the pattern is a sampling effect.'
+  - In the GDM, geographic distance was the most important predictor, followed by the first climate axis.
+  - Of the 19 species endemic to the northern part, 12 were described from 2015 on or are still unnamed.
+  - The maps show where to prioritize new sampling.
+- titulo: Publication
+  publicacoes:
+  - >-
+    Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna
+    of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Chapter in
+    [book, publisher, year].
+aplicacao: >-
+  Diagnosing data gaps before impact assessments, prioritizing areas for fauna surveys and selecting areas for conservation.

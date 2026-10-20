@@ -1,0 +1,99 @@
+# Página inicial (português). Os cartões das pranchas vêm do campo "cartao" de cada arquivo em pranchas/.
+rotulo: Portfólio · Philip Russo
+titulo: Atlas de projetos
+intro: >-
+  Transformo dados espaciais e ambientais em decisões para os setores ambiental e florestal. Cada prancha é um
+  estudo de caso com mapa interativo.
+subtitulo: Cientista de dados · Geoprocessamento · Doutor em Zoologia (UFMG)
+iniciar: Iniciar
+cv_rotulo: Baixar CV (PDF)
+# Para mostrar o botão do CV, coloque o PDF em assets/cv/ e escreva o caminho abaixo, por exemplo: /assets/cv/philip-russo-cv.pdf
+cv: ''
+local: Bauru, SP · remoto, ou híbrido na região.
+
+em_breve:
+- titulo: BioCarta
+  etiqueta: Aplicação web · PostgreSQL · Darwin Core
+  aviso: Em desenvolvimento
+
+numeros:
+- valor: 8 anos
+  texto: de pesquisa na UFMG em biogeografia e macroecologia
+- valor: 148 mil
+  texto: registros de aranhas das Américas organizados em banco relacional
+- valor: '34'
+  texto: projeções climáticas CMIP6 para uma espécie invasora
+- valor: '6'
+  texto: publicações, tese e dissertação com análises espaciais, de 2019 a 2025
+
+ferramentas:
+  titulo: Ferramentas
+  nota: Código próprio para gargalos de pesquisa. Código fechado; demonstração sob consulta.
+  itens:
+  - nome: Minerador de registros
+    texto: >-
+      Extrai o material examinado de artigos taxonômicos em PDF para tabelas validadas, com herança de localidade
+      e registro dos erros dos próprios artigos. Em outubro de 2026, processou 80 artigos e 3.263 registros.
+    tecnologias: Python · PyMuPDF
+  - nome: Extrator do World Spider Catalog
+    texto: Percorre o catálogo família por família e grava gêneros, espécies e referências taxonômicas em CSVs incrementais.
+    tecnologias: Python · web scraping
+  - nome: Conversor ArcGIS Pro → QGIS
+    texto: >-
+      Lê a estrutura interna dos arquivos .aprx e recria o projeto no QGIS com simbologia, temas e layouts de
+      impressão. Converteu os projetos das pranchas 4 e 6, com 167 camadas.
+    tecnologias: PyQGIS · GDAL
+  - nome: Gerador de grades regulares
+    texto: >-
+      Malhas quadradas ou hexagonais em Shapefile, em WGS 84 e em sistema projetado, com área geodésica e validação
+      contra a confusão entre metros e graus.
+    tecnologias: Python · pyproj
+
+publicacoes:
+  titulo: Publicações
+  itens:
+  - ano: '2025'
+    texto: >-
+      [Autores, incluindo <strong>Russo P</strong>]. SpiderATLAS: a database of spider traits and distributions in
+      the Brazilian Atlantic Forest. <em>Journal of Biogeography</em>. [DOI]
+  - ano: '2024'
+    texto: >-
+      <strong>Russo P</strong>. Spider biogeography of the Americas: from literature data to diversity patterns.
+      Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG. <a href="/pranchas/tese.html">prancha 1 →</a>
+  - ano: '2021'
+    texto: >-
+      Macêdo RL, Franco ACS, <strong>Russo P</strong>, Collart T, Mammola S, Jeppesen E, Branco CWC, dos Santos LN,
+      Rocha O. Climate and landscape changes enhance the global spread of a bloom-forming dinoflagellate related to
+      fish kills and water quality deterioration. <em>Ecological Indicators</em> 133: 108408.
+      <a href="https://doi.org/10.1016/j.ecolind.2021.108408">doi ↗</a>
+  - ano: '2021'
+    texto: >-
+      Macêdo RL, <strong>Russo P</strong>, Corrêa RF, Rocha O, dos Santos LN, Branco CWC. The drifting dinoflagellate
+      <em>Ceratium furcoides</em> (Levander) Langhans 1925: fundamental niche shift during global invasion.
+      <em>Hydrobiologia</em> 848: 2105–2117. <a href="https://doi.org/10.1007/s10750-020-04495-5">doi ↗</a>
+  - ano: '2019'
+    texto: >-
+      <strong>Russo P</strong>. Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
+      araneoideas americanas. Dissertação de mestrado, Programa de Pós-Graduação em Zoologia, UFMG.
+      <a href="/pranchas/araneoidea-americas.html">prancha 5 →</a>
+  - ano: '[ano]'
+    texto: >-
+      Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna
+      of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Capítulo em
+      [livro, editora].
+
+sobre:
+  titulo: Sobre
+  paragrafos:
+  - >-
+    Sou biólogo, mestre e doutor em Zoologia pela UFMG, com MBA em Gestão de Negócios. Passei cerca de oito anos na
+    UFMG em biogeografia e macroecologia, com bancos de dados biológicos e espaciais e modelagem de distribuição de
+    espécies.
+  - Hoje atendo, como autônomo, projetos acadêmicos e consultorias ambientais com análises de dados e mapas temáticos.
+  ficha:
+  - rotulo: Ferramentas
+    valor: Python, R, SQL, QGIS, ArcGIS Pro, MaxEnt, Dinamica EGO
+  - rotulo: Idiomas
+    valor: Português nativo · inglês avançado · espanhol intermediário
+  - rotulo: Contato
+    valor: <a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a>

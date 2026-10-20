@@ -1,0 +1,110 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Great-billed seed finch
+nome_curto: Great-billed seed finch
+rotulo: Brazil · Niche modelling · 2018
+titulo: 'Great-billed seed finch: eleven algorithms to model a threatened bird from 22 records'
+resumo: >-
+  Records from collections, museums, citizen science and the literature, a PCA of climate and a comparison between
+  MaxEnt and ten openModeller algorithms for <em>Sporophila maximiliani</em>.
+ficha:
+- rotulo: Deliverable
+  valor: On-demand modelling, 2018
+- rotulo: Species
+  valor: <em>Sporophila maximiliani</em>, the bicudo
+- rotulo: My role
+  valor: Record compilation, modelling and maps
+- rotulo: Tools
+  valor: MaxEnt · openModeller · ArcMap
+cartao:
+  titulo: 'Great-billed seed finch: eleven algorithms for a threatened bird with 22 records'
+  etiqueta: Brazil · MaxEnt · openModeller
+  imagem: bi_maxent.jpg
+  alt: Climatic suitability for the great-billed seed finch in Brazil predicted by MaxEnt, with the records
+visor:
+  proporcao: 2.2 / 1
+  margem: 12px
+  inicial: maxent
+camadas:
+- id: registros
+  grupo: Data
+  rotulo: Records
+  texto: >-
+    22 records after cleaning, from 1954 to 2014, coloured by source: speciesLink collections, museums, WikiAves
+    and the literature. On the right, the year each record was collected or observed.
+  imagens:
+  - src: bi_registros_en.png
+    alt: >-
+      Map of Brazil with 22 great-billed seed finch records coloured by source and a chart with the year of each
+      record
+- id: maxent
+  grupo: Models
+  rotulo: MaxEnt
+  texto: >-
+    MaxEnt with the 22 records and three PCA axes of climate. On the right, the same model with the 10th percentile
+    training presence threshold: about 70% of the country is above it, leaving out the semi-arid north-east and
+    the far south.
+  legenda: limiar
+  imagens:
+  - src: bi_maxent.jpg
+    alt: Climatic suitability for the great-billed seed finch in Brazil predicted by MaxEnt
+    legenda: Suitability (MaxEnt)
+  - src: bi_limiar.jpg
+    alt: Areas above and below the MaxEnt presence threshold for the great-billed seed finch in Brazil
+    legenda: 10th percentile presence threshold
+- id: algoritmos
+  grupo: Models
+  rotulo: Ten algorithms
+  texto: >-
+    The ten openModeller algorithms with all records, each normalized from 0 to 1. Predictions differ widely, and
+    ENFA did not produce a fit. The AUC shown is the training AUC.
+  legenda: adequabilidade
+  imagens:
+  - src: bi_algoritmos_en.jpg
+    alt: Ten maps of Brazil with suitability for the great-billed seed finch predicted by openModeller algorithms
+numeros:
+- valor: '22'
+  texto: records after cleaning, from 1954 to 2014
+- valor: '11'
+  texto: 'algorithms compared: MaxEnt and ten from openModeller'
+- valor: '3'
+  texto: 'datasets: all records and 70% and 90% partitions'
+- valor: ~5 km
+  texto: resolution, across Brazil
+secoes:
+- titulo: The problem
+  texto: >-
+    The great-billed seed finch is one of the birds most targeted by the songbird trade in Brazil, listed as Endangered
+    by the IUCN and as Critically Endangered in the country. Reliable records are few and scattered in time. The
+    brief was to estimate where the climate is suitable for the species with the available data.
+- titulo: The data
+  texto: >-
+    22 records after cleaning, from 1954 to 2014: speciesLink collections (MBML and UNICAMP), the Museu Paraense
+    Emílio Goeldi and INPA, WikiAves, Taxeus, papers, a management plan and the Brazilian Red Book. As predictors,
+    three axes of a PCA of the 19 bioclimatic variables clipped to Brazil.
+- titulo: The method
+  lista_numerada:
+  - Cleaning and georeferencing of the records, with source, institution and year.
+  - PCA of the 19 bioclimatic variables for Brazil, with the first three axes as predictors.
+  - 'Three datasets: all records and subsets of 70% and 90%, with the rest held out for testing.'
+  - >-
+    MaxEnt and ten openModeller algorithms: neural network, Bioclim, Climate Space Model, ENFA, Envelope Score,
+    environmental distance, two GARP variants, Niche Mosaic and SVM.
+  - Presence–absence map from MaxEnt with the 10th percentile training presence threshold, in ArcMap.
+- titulo: The result
+  destaque: >-
+    With 22 records, the algorithms diverge widely. MaxEnt points to suitable climate across much of central Brazil,
+    the Amazon and the east coast.
+  lista:
+  - The oldest records come from collections and museums; the most recent from citizen science and the literature.
+  - >-
+    GARP with Best Subsets and Niche Mosaic had the highest training AUC, leaving aside environmental distance,
+    which tends to reproduce the training points.
+  - >-
+    Suitable climate does not mean presence: illegal trapping has wiped the species out of much of the area where
+    it used to occur.
+aplicacao: >-
+  Rare or threatened species with few records: choice of algorithm, communication of uncertainty and selection of
+  areas to search or for releases.

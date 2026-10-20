@@ -1,0 +1,37 @@
+# Fixed interface text (English).
+nome: Philip Russo
+coordenadas: 22°19′S 49°05′W
+atlas: Project atlas
+email: russo.bio@gmail.com
+linkedin: https://www.linkedin.com/in/philip-russo1
+ui:
+  menu_principal: Main
+  projetos: Projects
+  idioma: Language
+  prancha: Plate
+  pranchas: Plates
+  anterior: Previous plate
+  proxima: Next plate
+  mapa_interativo: Interactive map
+  vendo: What you are seeing
+  numeros: Figures
+  aplica: Where this applies
+  outras: Other plates
+  voltar: Back
+  fim: End of the plates
+  voltar_atlas: Back to the atlas
+legendas:
+  ceratium:
+    titulo: Climatic suitability
+    baixa: 0 · low
+    alta: 1 · high
+  adequabilidade:
+    titulo: Relative suitability
+    baixa: low
+    alta: high
+  presenca:
+    sim: Predicted presence
+    nao: Predicted absence
+  limiar:
+    sim: Above threshold
+    nao: Below threshold

@@ -1,0 +1,116 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Araneoidea das Américas, 1757–2017
+nome_curto: Araneoidea das Américas, 1757–2017
+rotulo: Américas · Dissertação de mestrado, 2019
+titulo: 'Aranhas araneoideas das Américas: 260 anos de coleta no mapa da diversidade'
+resumo: >-
+  Riqueza, composição e endemismo em três recortes no tempo, de 1757 a 2017, para separar o padrão biogeográfico
+  da história da coleta.
+ficha:
+- rotulo: Entrega
+  valor: Dissertação de mestrado, PPG Zoologia, UFMG
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos · coorientação Ubirajara de Oliveira
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: ArcMap · Dinamica EGO · Google Earth Pro · Past
+cartao:
+  titulo: 'Araneoidea das Américas: 260 anos de coleta no mapa'
+  etiqueta: Américas · Dissertação de mestrado · 1757–2017
+  imagem: msc_comp2017.jpg
+  alt: Composição de espécies de aranhas araneoideas nas Américas em cores RGB
+visor:
+  proporcao: 2.6 / 1
+  margem: 8px
+  inicial: riqueza
+camadas:
+- id: densidade
+  grupo: Coleta
+  rotulo: Densidade de registros
+  texto: >-
+    Densidade Kernel dos registros: A. até 2017; B. até 1971; C. até 1892. Tons mais escuros indicam mais registros.
+    O sudeste dos Estados Unidos dominava no início; com o tempo, o sul e o sudeste do Brasil ganham peso.
+  imagens:
+  - src: msc_densidade.jpg
+    alt: Três mapas de densidade Kernel dos registros de Araneoidea nas Américas, até 2017, 1971 e 1892
+- id: riqueza
+  grupo: Diversidade
+  rotulo: Riqueza
+  texto: >-
+    Riqueza em hexágonos de 1°: A. todos os registros, até 2017; B. até 1971; C. até 1892. Os recortes antigos já
+    mostram boa parte do padrão atual, com picos no sul do Brasil e no sudeste dos Estados Unidos.
+  imagens:
+  - src: msc_riqueza.jpg
+    alt: Três mapas de riqueza de Araneoidea em hexágonos nas Américas, até 2017, 1971 e 1892
+- id: composicao
+  grupo: Diversidade
+  rotulo: Composição
+  texto: >-
+    Três eixos de um NMDS com índice de Bray-Curtis, interpolados e combinados em cores RGB. Cores diferentes indicam
+    comunidades diferentes; as cores não se comparam entre os mapas.
+  imagens:
+  - src: msc_comp2017.jpg
+    alt: Composição de espécies de Araneoidea nas Américas com registros até 2017
+    legenda: Até 2017
+  - src: msc_comp1971.jpg
+    alt: Composição de espécies de Araneoidea nas Américas com registros até 1971
+    legenda: Até 1971
+  - src: msc_comp1892.jpg
+    alt: Composição de espécies de Araneoidea nas Américas com registros até 1892
+    legenda: Até 1892
+numeros:
+- valor: '27.396'
+  texto: registros extraídos de 550 artigos, de cerca de 1.850 analisados
+- valor: '8.642'
+  texto: localidades georreferenciadas, em 25.115 pontos
+- valor: r = 0,7
+  texto: correlação entre riqueza e densidade de registros
+- valor: '100'
+  texto: réplicas aleatórias por recorte no tempo
+secoes:
+- titulo: O problema
+  texto: >-
+    Mapas de diversidade em escala continental costumam ser lidos como retrato da natureza, mas também registram
+    onde e quando se coletou. Araneoidea, a maior e mais estudada superfamília de aranhas, era um bom modelo para
+    medir esse efeito nas Américas.
+- titulo: Os dados
+  texto: >-
+    Literatura taxonômica do World Spider Catalog: cerca de 1.850 trabalhos analisados, 550 com informação geográfica.
+    O resultado foram 27.396 registros, georreferenciados no Google Earth Pro em 25.115 pontos e 8.642 localidades,
+    organizados num catálogo de registros e num gazetteer.
+- titulo: O método
+  lista_numerada:
+  - Riqueza em malha de hexágonos de 1° no ArcMap e densidade Kernel dos registros.
+  - >-
+    Composição por NMDS com índice de Bray-Curtis, interpolada no Dinamica EGO e separada em turnover e aninhamento.
+  - Áreas de endemismo por interpolação geográfica (GIE), em classes de amplitude de distribuição.
+  - >-
+    Três recortes no tempo, até 1892, 1971 e 2017, definidos por quebras naturais nos anos de publicação dos registros.
+  - >-
+    Para cada recorte, 100 réplicas com o mesmo número de registros sorteados do conjunto completo, para separar
+    o efeito do tempo do efeito do volume de dados; comparação por regressão no Past.
+  - Cartogramas por país, com a área proporcional ao número de espécies.
+- titulo: O resultado
+  destaque: >-
+    A riqueza conhecida de Araneoidea acompanha a densidade de registros (r = 0,7): o mapa da diversidade é também
+    o mapa da coleta.
+  lista:
+  - >-
+    O sul e o sudeste do Brasil e o sudeste dos Estados Unidos reúnem alta riqueza e alto esforço de coleta acumulado.
+  - As áreas de endemismo mudam bastante à medida que novos dados chegam.
+  - >-
+    A composição de espécies depende menos do histórico de coleta, e suas quebras lembram divisões naturais baseadas
+    em clima e vegetação.
+  - Até 1892, só duas espécies de Araneoidea eram conhecidas no México; em 1971, já eram 112.
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2019). Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
+    araneoideas americanas. Dissertação de mestrado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Avaliar se um padrão espacial é real ou efeito de amostragem antes de usá-lo numa decisão, e apontar onde novas
+  coletas mudariam mais o conhecimento.

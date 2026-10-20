@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block titulo %}{{ site.nome }} — {{ inicio.titulo }}{% endblock %}
+{% block descricao %}{{ inicio.intro }}{% endblock %}
+{% block conteudo %}
+<header class="topo">
+<div class="largura topo__linha">
+<a class="marca" href="{{ url(lang, 'index.html') }}"><span class="marca__nome">{{ site.nome }}</span><span class="marca__coord">{{ site.coordenadas }}</span></a>
+<nav class="menu" aria-label="{{ site.ui.menu_principal }}">
+<a href="#atlas">{{ site.ui.projetos }}</a>
+<a href="#ferramentas">{{ inicio.ferramentas.titulo }}</a>
+<a href="#publicacoes">{{ inicio.publicacoes.titulo }}</a>
+<a href="#sobre">{{ inicio.sobre.titulo }}</a>
+{% include 'idioma.html' %}
+</nav>
+</div>
+</header>
+
+<main>
+<section id="atlas" class="largura atlas">
+<div class="atlas__painel">
+<span class="atlas__icone" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M8 3.5l5 2.9v5.8l-5 2.9-5-2.9V6.4z"/><path d="M18 3.5l5 2.9v5.8l-5 2.9-5-2.9V6.4z"/><path d="M13 12.2l5 2.9v5.8l-5 2.9-5-2.9v-5.8z"/><path d="M23 12.2l5 2.9v5.8l-5 2.9-5-2.9v-5.8z"/></svg></span>
+<span class="atlas__rotulo">{{ inicio.rotulo }}</span>
+<h1 class="atlas__titulo">{{ inicio.titulo }}</h1>
+<p class="atlas__intro">{{ inicio.intro }}</p>
+<p class="atlas__sub">{{ inicio.subtitulo }}</p>
+<hr class="atlas__div">
+<div class="botoes">
+<a class="botao botao--cheio" href="{{ url(lang, 'pranchas/' ~ pranchas[0].slug ~ '.html') }}">{{ inicio.iniciar }}</a>
+{% if inicio.cv %}<a class="botao botao--contorno" href="{{ inicio.cv }}">{{ inicio.cv_rotulo }}</a>{% endif %}
+</div>
+<p class="atlas__local">{{ inicio.local }}</p>
+</div>
+
+<div class="grade">
+{% for p in pranchas %}
+{% set c = p.cartao %}
+<a class="cartao{{ ' cartao--destaque' if loop.first else '' }}" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}">
+<span class="cartao__img" style="background: {{ c.fundo | default('#FFFFFF') }}{{ '; border-color: transparent' if c.fundo == '#000000' else '' }}">
+<img src="/assets/img/{{ c.imagem }}" alt="{{ c.alt }}" style="object-fit: {{ c.ajuste | default('contain') }}; object-position: {{ c.posicao | default('50% 50%') }}"{{ '' if loop.first else ' loading="lazy"' }}>
+</span>
+<span class="cartao__legenda">
+<span class="selo">{{ p.numero }}</span>
+<span class="cartao__textos">
+<span class="cartao__titulo">{{ c.titulo }}</span>
+<span class="cartao__etiqueta">{{ c.etiqueta }}</span>
+</span>
+</span>
+</a>
+{% endfor %}
+{% for e in inicio.em_breve %}
+<article class="cartao cartao--breve">
+<span class="cartao__img cartao__img--vazio">{{ e.aviso }}</span>
+<span class="cartao__legenda">
+<span class="selo selo--vazio">{{ pranchas | length + loop.index }}</span>
+<span class="cartao__textos">
+<span class="cartao__titulo">{{ e.titulo }}</span>
+<span class="cartao__etiqueta">{{ e.etiqueta }}</span>
+</span>
+</span>
+</article>
+{% endfor %}
+</div>
+</section>
+
+<section class="numeros" aria-label="{{ site.ui.numeros }}">
+<div class="largura numeros__linha">
+{% for n in inicio.numeros %}
+<div class="numero"><span class="numero__valor numero__valor--neutro">{{ n.valor }}</span><span class="numero__texto">{{ n.texto }}</span></div>
+{% endfor %}
+</div>
+</section>
+
+<section id="ferramentas" class="largura bloco">
+<div class="bloco__cabeca">
+<h2 class="h2-grande">{{ inicio.ferramentas.titulo }}</h2>
+<p class="bloco__nota">{{ inicio.ferramentas.nota }}</p>
+</div>
+<div class="tabela">
+{% for f in inicio.ferramentas.itens %}
+<div class="tabela__linha">
+<h3>{{ f.nome }}</h3>
+<p>{{ f.texto }}</p>
+<span class="tabela__tec">{{ f.tecnologias }}</span>
+</div>
+{% endfor %}
+</div>
+</section>
+
+<section id="publicacoes" class="largura bloco">
+<h2 class="h2-grande">{{ inicio.publicacoes.titulo }}</h2>
+<ol class="pubs">
+{% for pub in inicio.publicacoes.itens %}
+<li><span class="pubs__ano">{{ pub.ano }}</span><span class="pubs__texto">{{ pub.texto }}</span></li>
+{% endfor %}
+</ol>
+</section>
+
+<section id="sobre" class="largura bloco sobre">
+<div class="sobre__texto">
+<h2 class="h2-grande">{{ inicio.sobre.titulo }}</h2>
+{% for par in inicio.sobre.paragrafos %}
+<p>{{ par }}</p>
+{% endfor %}
+</div>
+<dl class="sobre__ficha">
+{% for item in inicio.sobre.ficha %}
+<div><dt>{{ item.rotulo }}</dt><dd>{{ item.valor }}</dd></div>
+{% endfor %}
+</dl>
+</section>
+</main>
+{% endblock %}

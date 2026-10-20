@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 7 — Great-billed seed finch · Philip Russo</title>
+<meta name="description" content="Records from collections, museums, citizen science and the literature, a PCA of climate and a comparison between MaxEnt and ten openModeller algorithms for Sporophila maximiliani.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/bicudo.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/bicudo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/scinax.html" aria-label="Previous plate">←</a><span>07 / 08</span>
+<a class="circulo" href="../../en/pranchas/mapas-de-localizacao.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/bicudo.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/bicudo.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 7 · Brazil · Niche modelling · 2018</span>
+<h1 class="cabeca__titulo">Great-billed seed finch: eleven algorithms to model a threatened bird from 22 records</h1>
+<p class="cabeca__resumo">Records from collections, museums, citizen science and the literature, a PCA of climate and a comparison between MaxEnt and ten openModeller algorithms for <em>Sporophila maximiliani</em>.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>On-demand modelling, 2018</dd></div>
+<div><dt>Species</dt><dd><em>Sporophila maximiliani</em>, the bicudo</dd></div>
+<div><dt>My role</dt><dd>Record compilation, modelling and maps</dd></div>
+<div><dt>Tools</dt><dd>MaxEnt · openModeller · ArcMap</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor>
+<div class="visor__camada" id="camada-registros" data-camada="registros" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/bi_registros_en.png" alt="Map of Brazil with 22 great-billed seed finch records coloured by source and a chart with the year of each record" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-maxent" data-camada="maxent">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/bi_maxent.jpg" alt="Climatic suitability for the great-billed seed finch in Brazil predicted by MaxEnt">
+<span class="visor__leg">Suitability (MaxEnt)</span></div>
+<div class="visor__img">
+<img src="../../assets/img/bi_limiar.jpg" alt="Areas above and below the MaxEnt presence threshold for the great-billed seed finch in Brazil">
+<span class="visor__leg">10th percentile presence threshold</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-algoritmos" data-camada="algoritmos" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.2 / 1; padding: 12px">
+<div class="visor__img">
+<img src="../../assets/img/bi_algoritmos_en.jpg" alt="Ten maps of Brazil with suitability for the great-billed seed finch predicted by openModeller algorithms" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Data">
+<span class="visor__grupo-rotulo">Data</span>
+<button type="button" class="pilula" data-alvo="registros" aria-controls="camada-registros" aria-pressed="false">Records</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Models">
+<span class="visor__grupo-rotulo">Models</span>
+<button type="button" class="pilula" data-alvo="maxent" aria-controls="camada-maxent" aria-pressed="true">MaxEnt</button>
+<button type="button" class="pilula" data-alvo="algoritmos" aria-controls="camada-algoritmos" aria-pressed="false">Ten algorithms</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="registros" hidden>
+<p>22 records after cleaning, from 1954 to 2014, coloured by source: speciesLink collections, museums, WikiAves and the literature. On the right, the year each record was collected or observed.</p>
+</div>
+<div data-texto="maxent">
+<p>MaxEnt with the 22 records and three PCA axes of climate. On the right, the same model with the 10th percentile training presence threshold: about 70% of the country is above it, leaving out the semi-arid north-east and the far south.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>Above threshold</span><span><i class="legenda__cor legenda__cor--claro"></i>Below threshold</span></span>
+</div>
+</div>
+<div data-texto="algoritmos" hidden>
+<p>The ten openModeller algorithms with all records, each normalized from 0 to 1. Predictions differ widely, and ENFA did not produce a fit. The AUC shown is the training AUC.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">22</span><span class="numero__texto">records after cleaning, from 1954 to 2014</span></div>
+<div class="numero"><span class="numero__valor">11</span><span class="numero__texto">algorithms compared: MaxEnt and ten from openModeller</span></div>
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">datasets: all records and 70% and 90% partitions</span></div>
+<div class="numero"><span class="numero__valor">~5 km</span><span class="numero__texto">resolution, across Brazil</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">The great-billed seed finch is one of the birds most targeted by the songbird trade in Brazil, listed as Endangered by the IUCN and as Critically Endangered in the country. Reliable records are few and scattered in time. The brief was to estimate where the climate is suitable for the species with the available data.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">22 records after cleaning, from 1954 to 2014: speciesLink collections (MBML and UNICAMP), the Museu Paraense Emílio Goeldi and INPA, WikiAves, Taxeus, papers, a management plan and the Brazilian Red Book. As predictors, three axes of a PCA of the 19 bioclimatic variables clipped to Brazil.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Cleaning and georeferencing of the records, with source, institution and year.</li><li>PCA of the 19 bioclimatic variables for Brazil, with the first three axes as predictors.</li><li>Three datasets: all records and subsets of 70% and 90%, with the rest held out for testing.</li><li>MaxEnt and ten openModeller algorithms: neural network, Bioclim, Climate Space Model, ENFA, Envelope Score, environmental distance, two GARP variants, Niche Mosaic and SVM.</li><li>Presence–absence map from MaxEnt with the 10th percentile training presence threshold, in ArcMap.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">With 22 records, the algorithms diverge widely. MaxEnt points to suitable climate across much of central Brazil, the Amazon and the east coast.</p>
+<ul><li>The oldest records come from collections and museums; the most recent from citizen science and the literature.</li><li>GARP with Best Subsets and Niche Mosaic had the highest training AUC, leaving aside environmental distance, which tends to reproduce the training points.</li><li>Suitable climate does not mean presence: illegal trapping has wiped the species out of much of the area where it used to occur.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Rare or threatened species with few records: choice of algorithm, communication of uncertainty and selection of areas to search or for releases.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/scinax.html"><span class="mono-rotulo">← Plate 6</span><span class="vizinhas__nome"><em>Scinax</em> aff. <em>machadoi</em></span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/mapas-de-localizacao.html"><span class="mono-rotulo">Plate 8 →</span><span class="vizinhas__nome">Location maps</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

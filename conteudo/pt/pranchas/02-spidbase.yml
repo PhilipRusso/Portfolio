@@ -1,0 +1,133 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: SPIDBASE
+nome_curto: SPIDBASE
+rotulo: Engenharia de dados · Tese, capítulos 1 e 2
+titulo: 'SPIDBASE: um banco relacional de 148 mil registros de aranhas extraídos da literatura'
+resumo: >-
+  Modelo entidade-relacionamento alinhado ao Darwin Core, com o histórico taxonômico de cada registro, gazetteer
+  próprio e regras de integridade.
+ficha:
+- rotulo: Entrega
+  valor: Banco de dados e capítulos da tese (2024)
+- rotulo: Meu papel
+  valor: Modelagem, extração, integração e validação
+- rotulo: Padrões
+  valor: Darwin Core · ISO 3166 · GADM
+- rotulo: Ferramentas
+  valor: MySQL Workbench · Excel e macros · ArcGIS Pro · Power BI
+cartao:
+  titulo: 'SPIDBASE: banco relacional de registros de aranhas'
+  etiqueta: MySQL · Darwin Core · 13 entidades
+  imagem: spid_er.png
+  alt: Diagrama entidade-relacionamento do banco de dados SPIDBASE
+visor:
+  proporcao: 16 / 9
+  margem: 16px
+  inicial: er
+camadas:
+- id: er
+  grupo: Banco
+  rotulo: Modelo de dados
+  texto: >-
+    Modelo entidade-relacionamento: 13 entidades agrupadas nas classes do Darwin Core de taxonomia, localização
+    e fonte, além de autoria e ocorrência.
+  imagens:
+  - src: spid_er.png
+    alt: Diagrama entidade-relacionamento do SPIDBASE
+- id: fluxo
+  grupo: Banco
+  rotulo: Fluxo de construção
+  texto: >-
+    Do World Spider Catalog, ISO 3166 e GADM até a tabela de ocorrências: extração, tabulação dos artigos e validação
+    contra a taxonomia e o gazetteer.
+  imagens:
+  - src: spid_fluxo.png
+    alt: Diagrama do fluxo de construção do SPIDBASE
+- id: familias
+  grupo: Conteúdo
+  rotulo: Por família
+  texto: Registros e espécimes por família. O tamanho do círculo indica o número de espécies.
+  imagens:
+  - src: spid_familias.jpg
+    alt: Gráfico de registros e espécimes por família de aranha
+- id: paises
+  grupo: Conteúdo
+  rotulo: Por país
+  texto: >-
+    Registros e espécimes por país. O tamanho do círculo indica o número de espécies. Brasil e Estados Unidos concentram
+    a maior parte dos registros.
+  imagens:
+  - src: spid_paises.jpg
+    alt: Gráfico de registros e espécimes por país
+- id: mapa
+  grupo: Conteúdo
+  rotulo: Mapa por país
+  texto: >-
+    a. número de famílias; b. número de espécies; c. ocorrências por país, com a proporção de fêmeas, machos e jovens.
+  imagens:
+  - src: am_abundance.jpg
+    alt: Três mapas das Américas com famílias, espécies e ocorrências por país
+- id: vidaEsp
+  grupo: Análise
+  rotulo: Vida útil das espécies
+  texto: >-
+    Tempo entre a coleta do registro mais antigo e a descrição da espécie. Barras: média por ano de descrição; linha
+    vermelha: valor acumulado; linhas pretas: erro padrão.
+  imagens:
+  - src: spid_vida_especies.jpg
+    alt: Gráfico da vida útil das espécies por ano de descrição
+- id: vidaReg
+  grupo: Análise
+  rotulo: Vida útil dos registros
+  texto: >-
+    Tempo entre a coleta e a publicação de cada registro, de 1990 a 2021. Barras: média por ano de publicação; linha
+    vermelha: valor acumulado; linhas pretas: erro padrão.
+  imagens:
+  - src: spid_vida_registros.jpg
+    alt: Gráfico da vida útil dos registros de 1990 a 2021
+numeros:
+- valor: '13'
+  texto: entidades normalizadas até a forma normal de Boyce-Codd
+- valor: 148 mil
+  texto: registros, com pelo menos 325 mil espécimes
+- valor: 15 mil
+  texto: artigos revisados, 6.500 com registros nas Américas
+- valor: 25 anos
+  texto: entre a primeira coleta e a descrição de uma espécie, em média
+secoes:
+- titulo: O problema
+  texto: >-
+    Bases abertas como o GBIF misturam fontes, padrões e níveis de qualidade. O World Spider Catalog tem taxonomia
+    confiável, mas geografia imprecisa, restrita à distribuição geral das espécies. Faltava uma base de aranhas
+    das Américas com registros rastreáveis até a publicação de origem.
+- titulo: Os dados
+  texto: >-
+    World Spider Catalog, versão 24.0: exportação diária de espécies, páginas de família, lista de referências e
+    PDFs dos artigos. Divisões administrativas do ISO 3166 e do GADM, e gazetteers como USGS, IBGE e GeoHack.
+- titulo: O método
+  lista_numerada:
+  - Modelo entidade-relacionamento no MySQL Workbench, com 13 entidades e termos do Darwin Core.
+  - >-
+    Normalização até a forma normal de Boyce-Codd, chaves primárias e estrangeiras e restrições de tipo, unicidade
+    e nulidade.
+  - Taxonomia, gazetteer e fontes usadas como ontologias, para controlar a entrada das ocorrências.
+  - >-
+    Extração dos registros dos artigos com macros próprias para limpar e estruturar o texto; nomes validados contra
+    a taxonomia e localidades contra o gazetteer.
+  - Cálculo da vida útil (shelf life) das espécies e dos registros.
+- titulo: O resultado
+  destaque: >-
+    16.679 espécies válidas nas Américas, cerca de 34% da diversidade mundial de aranhas, em 95 famílias e 48.593
+    localidades georreferenciadas.
+  lista:
+  - 'Cada registro guarda o histórico taxonômico: sinonímias e mudanças de nome ao longo do tempo.'
+  - >-
+    Entre a primeira coleta e a descrição de uma espécie passam em média 25 anos (mediana de 18), acima das estimativas
+    anteriores para aranhas, de 15 a 17 anos. O atraso cresceu a partir dos anos 2000.
+  - A base sustenta as análises de diversidade da prancha 1.
+aplicacao: >-
+  Integração de bases heterogêneas, modelagem de dados com padrões abertos e controle de qualidade em dados ambientais
+  e de biodiversidade.

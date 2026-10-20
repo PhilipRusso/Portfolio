@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 3 — Ceratium furcoides · Philip Russo</title>
+<meta name="description" content="Modelos de nicho que mostram a mudança de nicho durante a invasão global e projetam o risco futuro sobre reservatórios existentes e planejados.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/ceratium.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/ceratium.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/spidbase.html" aria-label="Prancha anterior">←</a><span>03 / 08</span>
+<a class="circulo" href="../pranchas/aranhas-mata-atlantica.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/ceratium.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/ceratium.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 3 · Mundo · Modelagem de nicho · 2020–2021</span>
+<h1 class="cabeca__titulo"><em>Ceratium furcoides</em>: para onde uma microalga invasora pode se espalhar</h1>
+<p class="cabeca__resumo">Modelos de nicho que mostram a mudança de nicho durante a invasão global e projetam o risco futuro sobre reservatórios existentes e planejados.</p>
+<dl class="ficha">
+<div><dt>Período</dt><dd>2020–2021</dd></div>
+<div><dt>Colaboração</dt><dd>Rafael L. Macêdo e coautores</dd></div>
+<div><dt>Meu papel</dt><dd>Modelagem de nicho, projeções climáticas e mapas</dd></div>
+<div><dt>Ferramentas</dt><dd>MaxEnt · Dinamica EGO · ArcGIS Pro</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-nat" data-camada="nat" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_nat.jpg" alt="Adequabilidade climática calibrada com a área nativa, alta na Europa e baixa na América do Sul" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Clima atual · calibração com registros da área nativa · média das réplicas</p></div>
+<div class="visor__camada" id="camada-inv" data-camada="inv" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_inv.jpg" alt="Adequabilidade climática calibrada com as áreas invadidas, alta no sudeste da América do Sul" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Clima atual · calibração com registros das áreas invadidas · média das réplicas</p></div>
+<div class="visor__camada" id="camada-all" data-camada="all">
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_all.jpg" alt="Adequabilidade climática atual com todos os registros">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Clima atual · calibração com todos os registros · média das réplicas</p></div>
+<div class="visor__camada" id="camada-s126" data-camada="s126" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_126.jpg" alt="Adequabilidade futura no cenário SSP1-2.6" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Futuro · SSP1-2.6 · modelo climático MIROC6 · mediana das réplicas</p></div>
+<div class="visor__camada" id="camada-s245" data-camada="s245" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_245.jpg" alt="Adequabilidade futura no cenário SSP2-4.5" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Futuro · SSP2-4.5 · modelo climático MIROC6 · mediana das réplicas</p></div>
+<div class="visor__camada" id="camada-s370" data-camada="s370" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_370.jpg" alt="Adequabilidade futura no cenário SSP3-7.0" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Futuro · SSP3-7.0 · modelo climático MIROC6 · mediana das réplicas</p></div>
+<div class="visor__camada" id="camada-s585" data-camada="s585" hidden>
+<figure class="visor__quadro" style="background: #000000">
+<div class="visor__area" style="aspect-ratio: 2.63 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../assets/img/cf_585.jpg" alt="Adequabilidade futura no cenário SSP5-8.5" loading="lazy">
+</div>
+</div>
+</figure>
+<p class="visor__cap">Futuro · SSP5-8.5 · modelo climático MIROC6 · mediana das réplicas</p></div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Clima atual">
+<span class="visor__grupo-rotulo">Clima atual</span>
+<button type="button" class="pilula" data-alvo="nat" aria-controls="camada-nat" aria-pressed="false">Área nativa</button>
+<button type="button" class="pilula" data-alvo="inv" aria-controls="camada-inv" aria-pressed="false">Área invadida</button>
+<button type="button" class="pilula" data-alvo="all" aria-controls="camada-all" aria-pressed="true">Todos os registros</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Futuro (MIROC6)">
+<span class="visor__grupo-rotulo">Futuro (MIROC6)</span>
+<button type="button" class="pilula" data-alvo="s126" aria-controls="camada-s126" aria-pressed="false">SSP1-2.6</button>
+<button type="button" class="pilula" data-alvo="s245" aria-controls="camada-s245" aria-pressed="false">SSP2-4.5</button>
+<button type="button" class="pilula" data-alvo="s370" aria-controls="camada-s370" aria-pressed="false">SSP3-7.0</button>
+<button type="button" class="pilula" data-alvo="s585" aria-controls="camada-s585" aria-pressed="false">SSP5-8.5</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="nat" hidden>
+<p>Modelo calibrado só com os registros da área de origem. Ele prevê pouca adequabilidade onde a espécie hoje invade, como o sudeste da América do Sul.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="inv" hidden>
+<p>Modelo calibrado só com os registros das áreas invadidas. O contraste com a área nativa é a mudança de nicho descrita no artigo da Hydrobiologia.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="all">
+<p>Modelo com todos os registros, base das projeções futuras. A adequabilidade mais alta fica no sudeste da América do Sul.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="s126" hidden>
+<p>Cenário de baixas emissões. Alterne entre os cenários para ver como a área adequada muda com o aquecimento.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="s245" hidden>
+<p>Cenário intermediário de emissões.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="s370" hidden>
+<p>Cenário de emissões altas.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+<div data-texto="s585" hidden>
+<p>Cenário de emissões muito altas.</p>
+<div class="legenda">
+<span class="mono-rotulo">Adequabilidade climática</span>
+<span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>0 · baixa</span><span>1 · alta</span></span>
+</div>
+</div>
+</div>
+</div>
+<p class="visor__nota">Mapas originais do MaxEnt. As projeções do artigo combinam vários modelos climáticos; aqui, o MIROC6 permite comparar os quatro cenários.</p></section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">calibrações: área nativa, área invadida e todos os registros</span></div>
+<div class="numero"><span class="numero__valor">4</span><span class="numero__texto">cenários socioeconômicos, de SSP1-2.6 a SSP5-8.5</span></div>
+<div class="numero"><span class="numero__valor">9</span><span class="numero__texto">modelos climáticos globais do CMIP6</span></div>
+<div class="numero"><span class="numero__valor">34</span><span class="numero__texto">projeções futuras resumidas em consenso por cenário</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo"><em>Ceratium furcoides</em> é um dinoflagelado de água doce, originário de regiões temperadas, que forma florações associadas à mortandade de peixes e à piora da qualidade da água. Na América do Sul, ele se espalha por reservatórios. Duas perguntas guiaram o trabalho: a espécie ocupa nas áreas invadidas o mesmo nicho climático da área de origem? E para onde pode se expandir com as mudanças climáticas e a construção de novas barragens?</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<ul class="secao__corpo"><li>Registros de ocorrência na área nativa e nas áreas invadidas.</li><li>Variáveis bioclimáticas do WorldClim para o presente e para os cenários do CMIP6.</li><li>Localização de grandes barragens existentes e planejadas.</li></ul>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>Três calibrações no MaxEnt: só a área nativa, só as áreas invadidas e todos os registros.</li><li>Comparação dos nichos nativo e invadido.</li><li>Projeção para quatro cenários SSP com até nove modelos climáticos globais, em 34 combinações, resumidas em mapas de consenso por cenário.</li><li>Sobreposição das áreas adequadas com as grandes barragens existentes e planejadas.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">O nicho fundamental da espécie mudou durante a invasão global. Até 2041–2060, as áreas adequadas tendem a se expandir e a se sobrepor a grandes barragens existentes e planejadas.</p>
+<p>Como a espécie pode se estabelecer a partir de uma única célula e forma estruturas de resistência, os artigos recomendam detecção precoce e medidas de mitigação nas bacias de maior risco.</p></div>
+</div>
+<div class="secao">
+<h2>Publicações</h2>
+<ul class="secao__corpo secao__pubs"><li>Macêdo RL, Franco ACS, <strong>Russo P</strong> et al. (2021). Climate and landscape changes enhance the global spread of a bloom-forming dinoflagellate related to fish kills and water quality deterioration. <em>Ecological Indicators</em> 133: 108408. <a href="https://doi.org/10.1016/j.ecolind.2021.108408" style="color: #111111">doi ↗</a></li><li>Macêdo RL, <strong>Russo P</strong>, Corrêa RF et al. (2021). The drifting dinoflagellate <em>Ceratium furcoides</em>: fundamental niche shift during global invasion. <em>Hydrobiologia</em> 848: 2105–2117. <a href="https://doi.org/10.1007/s10750-020-04495-5" style="color: #111111">doi ↗</a></li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Risco de espécies invasoras para abastecimento e geração de energia, pragas em plantios florestais e planejamento de monitoramento sob cenários climáticos.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/spidbase.html"><span class="mono-rotulo">← Prancha 2</span><span class="vizinhas__nome">SPIDBASE</span></a>
+<a class="vizinhas--dir" href="../pranchas/aranhas-mata-atlantica.html"><span class="mono-rotulo">Prancha 4 →</span><span class="vizinhas__nome">Aranhas da Mata Atlântica</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

@@ -1,0 +1,132 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Scinax aff. machadoi
+nome_curto: <em>Scinax</em> aff. <em>machadoi</em>
+rotulo: Quadrilátero Ferrífero, Brazil · Distribution modelling · 2021
+titulo: '<em>Scinax</em> aff. <em>machadoi</em>: where to look for new populations of an endemic tree frog'
+resumo: >-
+  A review of collections, three machine-learning algorithms and a consensus to guide fieldwork in a mining region.
+ficha:
+- rotulo: Deliverable
+  valor: On-demand technical report, 2021
+- rotulo: Region
+  valor: Quadrilátero Ferrífero, Minas Gerais
+- rotulo: My role
+  valor: Record compilation, modelling and maps
+- rotulo: Tools
+  valor: BioDinamica · MaxEnt · ArcGIS Pro · QGIS
+cartao:
+  titulo: '<em>Scinax</em> aff. <em>machadoi</em>: where to look for new populations'
+  etiqueta: Quadrilátero Ferrífero · ANN · SVM · MaxEnt
+  imagem: qf_consenso.jpg
+  alt: Consensus suitability for Scinax aff. machadoi in the Quadrilátero Ferrífero
+  fundo: '#F4F4EF'
+visor:
+  proporcao: 16 / 10
+  margem: 0px
+  inicial: consenso
+  nota: Models at about 1 km resolution. Suitability normalized within each algorithm to allow comparison.
+camadas:
+- id: relevo
+  grupo: Data
+  rotulo: Records and relief
+  texto: >-
+    Hypsometry of the Quadrilátero Ferrífero with the records and the main ranges. The species occurs in the Gandarela,
+    Capanema and Caraça massif and in the Serra do Garimpo.
+  imagens:
+  - src: qf_relevo.jpg
+    alt: Hypsometric map of the Quadrilátero Ferrífero with the species records
+- id: ann
+  grupo: Models
+  rotulo: Neural network
+  fundo: '#F4F4EF'
+  texto: 'Artificial neural network: one of the broadest predictions of the three algorithms.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_ann.jpg
+    alt: Suitability predicted by the artificial neural network
+- id: svm
+  grupo: Models
+  rotulo: SVM
+  fundo: '#F4F4EF'
+  texto: 'Support vector machine: also predicts a broad area, with a smoother gradient.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_svm.jpg
+    alt: Suitability predicted by the support vector machine
+- id: maxent
+  grupo: Models
+  rotulo: MaxEnt
+  fundo: '#F4F4EF'
+  texto: 'MaxEnt: the most restrictive algorithm, concentrated on the Caraça massif and surroundings.'
+  legenda: adequabilidade
+  imagens:
+  - src: qf_maxent.jpg
+    alt: Suitability predicted by MaxEnt
+- id: consenso
+  grupo: Models
+  rotulo: Consensus
+  fundo: '#F4F4EF'
+  texto: >-
+    Mean of the three algorithms. High suitability is restricted to the ridge tops of the eastern slope of the Quadrilátero.
+  legenda: adequabilidade
+  imagens:
+  - src: qf_consenso.jpg
+    alt: Consensus suitability across the three algorithms
+- id: dist
+  grupo: Result
+  rotulo: Potential distribution
+  fundo: '#F4F4EF'
+  texto: >-
+    Consensus converted into presence and absence with the lowest presence threshold. Patches outside the known
+    ranges show where to look for new populations.
+  legenda: presenca
+  imagens:
+  - src: qf_dist.jpg
+    alt: Potential distribution as presence and absence
+numeros:
+- valor: '130'
+  texto: specimens or lots found in 5 of 8 collections
+- valor: '14'
+  texto: studies with primary records reviewed
+- valor: 1,015–1,976 m
+  texto: altitude range of the records
+- valor: 606 km²
+  texto: extent of occurrence (EOO, IUCN criterion)
+secoes:
+- titulo: The problem
+  texto: >-
+    A tree frog of the <em>Scinax catharinae</em> group, possibly an undescribed species, is known only from the
+    Quadrilátero Ferrífero, an intensively mined region in Minas Gerais. Before the field campaigns, the project
+    needed to know where the species had been recorded and where it was worth searching.
+- titulo: The data
+  texto: >-
+    A review of eight herpetological collections and 14 studies: 130 specimens or lots in seven municipalities.
+    Coordinates from the collections, from the collectors or georeferenced from the locality description. As predictors,
+    the 19 WorldClim bioclimatic variables and altitude, clipped to the Quadrilátero Ferrífero.
+- titulo: The method
+  lista_numerada:
+  - PCA of the variables, keeping the components that add up to more than 98% of the variance.
+  - 'Three machine-learning algorithms: artificial neural network, SVM and MaxEnt.'
+  - Consensus of the three (ensemble forecasting), with the BioDinamica package in Dinamica EGO.
+  - Presence–absence map using the lowest presence threshold.
+  - Extent of occurrence by minimum convex polygon, following IUCN.
+- titulo: The result
+  destaque: >-
+    Suitable area is restricted to the ridge tops of the eastern slope. Outside the known ranges, the consensus
+    points to three fronts to search for new populations.
+  lista:
+  - Serra da Piedade.
+  - >-
+    Ranges near Itatiaia, Lavras Novas and Santo Antônio do Salto, in Ouro Preto, including the Itatiaia Natural
+    Monument.
+  - Serrinha and Pico do Itacolomi, also in Ouro Preto.
+  - 'Records in two protected areas: Serra do Gandarela National Park and the Santuário do Caraça private reserve.'
+  - >-
+    The model also predicts well-sampled areas where the species probably does not occur, such as Serra do Rola-Moça:
+    history and dispersal are outside the scope of a climate model.
+aplicacao: >-
+  Environmental licensing and action plans for threatened species in mining areas, and planning of field campaigns.
+  The original ArcGIS Pro project was migrated to QGIS with the converter in the Tools section.

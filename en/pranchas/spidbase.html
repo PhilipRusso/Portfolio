@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 2 — SPIDBASE · Philip Russo</title>
+<meta name="description" content="An entity-relationship model aligned with Darwin Core, with the taxonomic history of every record, its own gazetteer and integrity rules.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/spidbase.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/spidbase.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/tese.html" aria-label="Previous plate">←</a><span>02 / 08</span>
+<a class="circulo" href="../../en/pranchas/ceratium.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/spidbase.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/spidbase.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 2 · Data engineering · Thesis, chapters 1 and 2</span>
+<h1 class="cabeca__titulo">SPIDBASE: a relational database of 148,000 spider records extracted from the literature</h1>
+<p class="cabeca__resumo">An entity-relationship model aligned with Darwin Core, with the taxonomic history of every record, its own gazetteer and integrity rules.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>Database and thesis chapters (2024)</dd></div>
+<div><dt>My role</dt><dd>Modelling, extraction, integration and validation</dd></div>
+<div><dt>Standards</dt><dd>Darwin Core · ISO 3166 · GADM</dd></div>
+<div><dt>Tools</dt><dd>MySQL Workbench · Excel and macros · ArcGIS Pro · Power BI</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor>
+<div class="visor__camada" id="camada-er" data-camada="er">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_er.png" alt="SPIDBASE entity-relationship diagram">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-fluxo" data-camada="fluxo" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_fluxo.png" alt="Diagram of the SPIDBASE build workflow" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-familias" data-camada="familias" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_familias.jpg" alt="Chart of records and specimens by spider family" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-paises" data-camada="paises" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_paises.jpg" alt="Chart of records and specimens by country" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-mapa" data-camada="mapa" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/am_abundance.jpg" alt="Three maps of the Americas with families, species and occurrences by country" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-vidaEsp" data-camada="vidaEsp" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_vida_especies.jpg" alt="Chart of species shelf life by year of description" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-vidaReg" data-camada="vidaReg" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../../assets/img/spid_vida_registros.jpg" alt="Chart of record shelf life from 1990 to 2021" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Database">
+<span class="visor__grupo-rotulo">Database</span>
+<button type="button" class="pilula" data-alvo="er" aria-controls="camada-er" aria-pressed="true">Data model</button>
+<button type="button" class="pilula" data-alvo="fluxo" aria-controls="camada-fluxo" aria-pressed="false">Build workflow</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Content">
+<span class="visor__grupo-rotulo">Content</span>
+<button type="button" class="pilula" data-alvo="familias" aria-controls="camada-familias" aria-pressed="false">By family</button>
+<button type="button" class="pilula" data-alvo="paises" aria-controls="camada-paises" aria-pressed="false">By country</button>
+<button type="button" class="pilula" data-alvo="mapa" aria-controls="camada-mapa" aria-pressed="false">Map by country</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Analysis">
+<span class="visor__grupo-rotulo">Analysis</span>
+<button type="button" class="pilula" data-alvo="vidaEsp" aria-controls="camada-vidaEsp" aria-pressed="false">Species shelf life</button>
+<button type="button" class="pilula" data-alvo="vidaReg" aria-controls="camada-vidaReg" aria-pressed="false">Record shelf life</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="er">
+<p>Entity-relationship model: 13 entities grouped into the Darwin Core classes for taxonomy, location and source, plus authorship and occurrence.</p>
+</div>
+<div data-texto="fluxo" hidden>
+<p>From the World Spider Catalog, ISO 3166 and GADM to the occurrence table: extraction, tabulation of the papers and validation against the taxonomy and the gazetteer.</p>
+</div>
+<div data-texto="familias" hidden>
+<p>Records and specimens by family. Circle size shows the number of species.</p>
+</div>
+<div data-texto="paises" hidden>
+<p>Records and specimens by country. Circle size shows the number of species. Brazil and the United States hold most of the records.</p>
+</div>
+<div data-texto="mapa" hidden>
+<p>a. number of families; b. number of species; c. occurrences by country, with the share of females, males and juveniles.</p>
+</div>
+<div data-texto="vidaEsp" hidden>
+<p>Time between the oldest collected record and the description of the species. Bars: mean per year of description; red line: cumulative value; black lines: standard error.</p>
+</div>
+<div data-texto="vidaReg" hidden>
+<p>Time between collection and publication of each record, from 1990 to 2021. Bars: mean per year of publication; red line: cumulative value; black lines: standard error.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">13</span><span class="numero__texto">entities normalized to Boyce–Codd normal form</span></div>
+<div class="numero"><span class="numero__valor">148k</span><span class="numero__texto">records, with at least 325,000 specimens</span></div>
+<div class="numero"><span class="numero__valor">15k</span><span class="numero__texto">papers reviewed, 6,500 with records in the Americas</span></div>
+<div class="numero"><span class="numero__valor">25 years</span><span class="numero__texto">on average between first collection and description of a species</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Open databases such as GBIF mix sources, standards and quality levels. The World Spider Catalog has reliable taxonomy but imprecise geography, limited to the general range of each species. There was no database of spiders of the Americas with records traceable to the original publication.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">World Spider Catalog, version 24.0: daily species export, family pages, reference list and the PDFs of the papers. Administrative divisions from ISO 3166 and GADM, and gazetteers such as USGS, IBGE and GeoHack.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Entity-relationship model in MySQL Workbench, with 13 entities and Darwin Core terms.</li><li>Normalization to Boyce–Codd normal form, primary and foreign keys, and type, uniqueness and null constraints.</li><li>Taxonomy, gazetteer and sources used as ontologies to control the entry of occurrences.</li><li>Extraction of records from the papers with custom macros to clean and structure the text; names validated against the taxonomy and localities against the gazetteer.</li><li>Shelf-life calculation for species and records.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">16,679 valid species in the Americas, about 34% of the world’s spider diversity, in 95 families and 48,593 georeferenced localities.</p>
+<ul><li>Every record keeps its taxonomic history: synonymies and name changes over time.</li><li>On average 25 years pass between the first collection and the description of a species (median 18), above previous estimates for spiders of 15 to 17 years. The delay grew from the 2000s on.</li><li>The database underpins the diversity analyses in plate 1.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Integrating heterogeneous databases, data modelling with open standards and quality control for environmental and biodiversity data.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/tese.html"><span class="mono-rotulo">← Plate 1</span><span class="vizinhas__nome">Spider biogeography of the Americas</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/ceratium.html"><span class="mono-rotulo">Plate 3 →</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

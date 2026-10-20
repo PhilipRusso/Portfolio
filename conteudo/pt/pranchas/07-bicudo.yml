@@ -1,0 +1,106 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Bicudo
+nome_curto: Bicudo
+rotulo: Brasil · Modelagem de nicho · 2018
+titulo: 'Bicudo: onze algoritmos para modelar uma ave ameaçada com 22 registros'
+resumo: >-
+  Registros de coleções, museus, ciência cidadã e literatura, uma PCA do clima e a comparação entre o MaxEnt e dez
+  algoritmos do openModeller para <em>Sporophila maximiliani</em>.
+ficha:
+- rotulo: Entrega
+  valor: Modelagem sob demanda, 2018
+- rotulo: Espécie
+  valor: <em>Sporophila maximiliani</em>, o bicudo
+- rotulo: Meu papel
+  valor: Compilação dos registros, modelagem e mapas
+- rotulo: Ferramentas
+  valor: MaxEnt · openModeller · ArcMap
+cartao:
+  titulo: 'Bicudo: onze algoritmos para uma ave ameaçada com 22 registros'
+  etiqueta: Brasil · MaxEnt · openModeller
+  imagem: bi_maxent.jpg
+  alt: Adequabilidade climática para o bicudo no Brasil prevista pelo MaxEnt, com os registros
+visor:
+  proporcao: 2.2 / 1
+  margem: 12px
+  inicial: maxent
+camadas:
+- id: registros
+  grupo: Dados
+  rotulo: Registros
+  texto: >-
+    22 registros após a limpeza, de 1954 a 2014, coloridos pela fonte: coleções do speciesLink, museus, WikiAves
+    e literatura. À direita, o ano de coleta ou observação de cada um.
+  imagens:
+  - src: bi_registros.png
+    alt: Mapa do Brasil com 22 registros do bicudo coloridos pela fonte e gráfico com o ano de cada registro
+- id: maxent
+  grupo: Modelos
+  rotulo: MaxEnt
+  texto: >-
+    MaxEnt com os 22 registros e três eixos de PCA do clima. À direita, o mesmo modelo com o limiar do 10º percentil
+    de presença de treino: cerca de 70% do país fica acima dele, e ficam de fora o semiárido nordestino e o extremo
+    sul.
+  legenda: limiar
+  imagens:
+  - src: bi_maxent.jpg
+    alt: Adequabilidade climática para o bicudo no Brasil prevista pelo MaxEnt
+    legenda: Adequabilidade (MaxEnt)
+  - src: bi_limiar.jpg
+    alt: Áreas acima e abaixo do limiar de presença do MaxEnt para o bicudo no Brasil
+    legenda: Limiar do 10º percentil de presença
+- id: algoritmos
+  grupo: Modelos
+  rotulo: Dez algoritmos
+  texto: >-
+    Os dez algoritmos do openModeller com todos os registros, cada um normalizado de 0 a 1. As previsões divergem
+    muito entre si, e o ENFA não produziu ajuste. A AUC indicada é a de treino.
+  legenda: adequabilidade
+  imagens:
+  - src: bi_algoritmos.jpg
+    alt: Dez mapas do Brasil com a adequabilidade para o bicudo prevista por algoritmos do openModeller
+numeros:
+- valor: '22'
+  texto: registros após a limpeza, de 1954 a 2014
+- valor: '11'
+  texto: 'algoritmos comparados: MaxEnt e dez do openModeller'
+- valor: '3'
+  texto: 'conjuntos de dados: todos os registros e partições de 70% e 90%'
+- valor: ~5 km
+  texto: de resolução, em todo o Brasil
+secoes:
+- titulo: O problema
+  texto: >-
+    O bicudo é uma das aves mais visadas pelo tráfico de aves canoras no Brasil, classificada como Em Perigo pela
+    IUCN e Criticamente em Perigo no país. Os registros confiáveis são poucos e espalhados no tempo. O pedido era
+    estimar onde o clima é adequado para a espécie com os dados disponíveis.
+- titulo: Os dados
+  texto: >-
+    22 registros após a limpeza, de 1954 a 2014: coleções do speciesLink (MBML e UNICAMP), Museu Paraense Emílio
+    Goeldi e INPA, WikiAves, Taxeus, artigos, um plano de manejo e o Livro Vermelho. Como preditores, três eixos
+    de uma PCA das 19 variáveis bioclimáticas recortadas para o Brasil.
+- titulo: O método
+  lista_numerada:
+  - Limpeza e georreferenciamento dos registros, com fonte, instituição e ano.
+  - PCA das 19 variáveis bioclimáticas no Brasil, com os três primeiros eixos como preditores.
+  - 'Três conjuntos de dados: todos os registros e subconjuntos de 70% e 90%, com o restante separado para teste.'
+  - >-
+    MaxEnt e dez algoritmos do openModeller: rede neural, Bioclim, Climate Space Model, ENFA, Envelope Score, distância
+    ambiental, dois GARP, Niche Mosaic e SVM.
+  - Mapa de presença e ausência do MaxEnt pelo limiar do 10º percentil de presença de treino, no ArcMap.
+- titulo: O resultado
+  destaque: >-
+    Com 22 registros, os algoritmos divergem muito. O MaxEnt aponta clima adequado em boa parte do Brasil central,
+    da Amazônia e da costa leste.
+  lista:
+  - Os registros mais antigos vêm de coleções e museus; os mais recentes, de ciência cidadã e da literatura.
+  - >-
+    GARP com Best Subsets e Niche Mosaic tiveram as maiores AUC de treino, sem contar a distância ambiental, que
+    tende a reproduzir os próprios pontos.
+  - 'Clima adequado não significa presença: a captura ilegal eliminou a espécie de boa parte da área onde ocorria.'
+aplicacao: >-
+  Espécies raras ou ameaçadas com poucos registros: escolha do algoritmo, comunicação da incerteza e seleção de
+  áreas para busca ou soltura.

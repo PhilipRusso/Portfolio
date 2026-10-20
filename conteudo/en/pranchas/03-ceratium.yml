@@ -1,0 +1,162 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Ceratium furcoides
+nome_curto: <em>Ceratium furcoides</em>
+rotulo: World · Niche modelling · 2020–2021
+titulo: '<em>Ceratium furcoides</em>: where an invasive microalga can spread'
+resumo: >-
+  Niche models that show the niche shift during the global invasion and project future risk over existing and planned
+  reservoirs.
+ficha:
+- rotulo: Period
+  valor: 2020–2021
+- rotulo: Collaboration
+  valor: Rafael L. Macêdo and co-authors
+- rotulo: My role
+  valor: Niche modelling, climate projections and maps
+- rotulo: Tools
+  valor: MaxEnt · Dinamica EGO · ArcGIS Pro
+cartao:
+  titulo: '<em>Ceratium furcoides</em>: global spread of an invasive microalga'
+  etiqueta: World · MaxEnt · CMIP6 · 2 papers
+  imagem: cf_all.jpg
+  alt: Climatic suitability of Ceratium furcoides in the Americas and Europe, high in south-eastern South America
+  fundo: '#000000'
+  ajuste: cover
+  posicao: 22% 50%
+visor:
+  proporcao: 2.63 / 1
+  margem: 0px
+  inicial: all
+  nota: >-
+    Original MaxEnt maps. The projections in the paper combine several climate models; here, MIROC6 lets you compare
+    the four scenarios.
+camadas:
+- id: nat
+  grupo: Current climate
+  rotulo: Native range
+  fundo: '#000000'
+  texto: >-
+    Model calibrated only with records from the native range. It predicts low suitability where the species now
+    invades, such as south-eastern South America.
+  legenda: ceratium
+  legenda_figura: Current climate · calibrated with native-range records · mean of replicates
+  imagens:
+  - src: cf_nat.jpg
+    alt: Climatic suitability calibrated with the native range, high in Europe and low in South America
+- id: inv
+  grupo: Current climate
+  rotulo: Invaded range
+  fundo: '#000000'
+  texto: >-
+    Model calibrated only with records from the invaded ranges. The contrast with the native range is the niche
+    shift described in the Hydrobiologia paper.
+  legenda: ceratium
+  legenda_figura: Current climate · calibrated with invaded-range records · mean of replicates
+  imagens:
+  - src: cf_inv.jpg
+    alt: Climatic suitability calibrated with the invaded ranges, high in south-eastern South America
+- id: all
+  grupo: Current climate
+  rotulo: All records
+  fundo: '#000000'
+  texto: >-
+    Model with all records, the basis for the future projections. Suitability is highest in south-eastern South
+    America.
+  legenda: ceratium
+  legenda_figura: Current climate · calibrated with all records · mean of replicates
+  imagens:
+  - src: cf_all.jpg
+    alt: Current climatic suitability with all records
+- id: s126
+  grupo: Future (MIROC6)
+  rotulo: SSP1-2.6
+  fundo: '#000000'
+  texto: Low-emission scenario. Switch between scenarios to see how the suitable area changes with warming.
+  legenda: ceratium
+  legenda_figura: Future · SSP1-2.6 · MIROC6 climate model · median of replicates
+  imagens:
+  - src: cf_126.jpg
+    alt: Future suitability under SSP1-2.6
+- id: s245
+  grupo: Future (MIROC6)
+  rotulo: SSP2-4.5
+  fundo: '#000000'
+  texto: Intermediate emission scenario.
+  legenda: ceratium
+  legenda_figura: Future · SSP2-4.5 · MIROC6 climate model · median of replicates
+  imagens:
+  - src: cf_245.jpg
+    alt: Future suitability under SSP2-4.5
+- id: s370
+  grupo: Future (MIROC6)
+  rotulo: SSP3-7.0
+  fundo: '#000000'
+  texto: High-emission scenario.
+  legenda: ceratium
+  legenda_figura: Future · SSP3-7.0 · MIROC6 climate model · median of replicates
+  imagens:
+  - src: cf_370.jpg
+    alt: Future suitability under SSP3-7.0
+- id: s585
+  grupo: Future (MIROC6)
+  rotulo: SSP5-8.5
+  fundo: '#000000'
+  texto: Very high emission scenario.
+  legenda: ceratium
+  legenda_figura: Future · SSP5-8.5 · MIROC6 climate model · median of replicates
+  imagens:
+  - src: cf_585.jpg
+    alt: Future suitability under SSP5-8.5
+numeros:
+- valor: '3'
+  texto: 'calibrations: native range, invaded range and all records'
+- valor: '4'
+  texto: socioeconomic scenarios, from SSP1-2.6 to SSP5-8.5
+- valor: '9'
+  texto: CMIP6 global climate models
+- valor: '34'
+  texto: future projections summarized as a consensus per scenario
+secoes:
+- titulo: The problem
+  texto: >-
+    <em>Ceratium furcoides</em> is a freshwater dinoflagellate native to temperate regions that forms blooms linked
+    to fish kills and declining water quality. In South America it spreads through reservoirs. Two questions guided
+    the work: does the species occupy the same climatic niche in invaded areas as in its native range? And where
+    could it expand with climate change and the construction of new dams?
+- titulo: The data
+  lista:
+  - Occurrence records in the native range and in the invaded ranges.
+  - WorldClim bioclimatic variables for the present and for the CMIP6 scenarios.
+  - Locations of existing and planned large dams.
+- titulo: The method
+  lista_numerada:
+  - 'Three MaxEnt calibrations: native range only, invaded ranges only and all records.'
+  - Comparison of the native and invaded niches.
+  - >-
+    Projection to four SSP scenarios with up to nine global climate models, in 34 combinations, summarized as consensus
+    maps per scenario.
+  - Overlay of suitable areas with existing and planned large dams.
+- titulo: The result
+  destaque: >-
+    The species’ fundamental niche shifted during the global invasion. By 2041–2060, suitable areas tend to expand
+    and overlap with existing and planned large dams.
+  depois: >-
+    Because the species can establish from a single cell and forms resting stages, the papers recommend early detection
+    and mitigation in the highest-risk basins.
+- titulo: Publications
+  publicacoes:
+  - >-
+    Macêdo RL, Franco ACS, <strong>Russo P</strong> et al. (2021). Climate and landscape changes enhance the global
+    spread of a bloom-forming dinoflagellate related to fish kills and water quality deterioration. <em>Ecological
+    Indicators</em> 133: 108408. <a href="https://doi.org/10.1016/j.ecolind.2021.108408" style="color: #111111">doi
+    ↗</a>
+  - >-
+    Macêdo RL, <strong>Russo P</strong>, Corrêa RF et al. (2021). The drifting dinoflagellate <em>Ceratium furcoides</em>:
+    fundamental niche shift during global invasion. <em>Hydrobiologia</em> 848: 2105–2117. <a href="https://doi.org/10.1007/s10750-020-04495-5"
+    style="color: #111111">doi ↗</a>
+aplicacao: >-
+  Risk from invasive species to water supply and hydropower, pests in forest plantations and monitoring plans under
+  climate scenarios.

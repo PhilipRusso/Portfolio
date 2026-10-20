@@ -1,0 +1,132 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: SPIDBASE
+nome_curto: SPIDBASE
+rotulo: Data engineering · Thesis, chapters 1 and 2
+titulo: 'SPIDBASE: a relational database of 148,000 spider records extracted from the literature'
+resumo: >-
+  An entity-relationship model aligned with Darwin Core, with the taxonomic history of every record, its own gazetteer
+  and integrity rules.
+ficha:
+- rotulo: Deliverable
+  valor: Database and thesis chapters (2024)
+- rotulo: My role
+  valor: Modelling, extraction, integration and validation
+- rotulo: Standards
+  valor: Darwin Core · ISO 3166 · GADM
+- rotulo: Tools
+  valor: MySQL Workbench · Excel and macros · ArcGIS Pro · Power BI
+cartao:
+  titulo: 'SPIDBASE: a relational database of spider records'
+  etiqueta: MySQL · Darwin Core · 13 entities
+  imagem: spid_er.png
+  alt: Entity-relationship diagram of the SPIDBASE database
+visor:
+  proporcao: 16 / 9
+  margem: 16px
+  inicial: er
+camadas:
+- id: er
+  grupo: Database
+  rotulo: Data model
+  texto: >-
+    Entity-relationship model: 13 entities grouped into the Darwin Core classes for taxonomy, location and source,
+    plus authorship and occurrence.
+  imagens:
+  - src: spid_er.png
+    alt: SPIDBASE entity-relationship diagram
+- id: fluxo
+  grupo: Database
+  rotulo: Build workflow
+  texto: >-
+    From the World Spider Catalog, ISO 3166 and GADM to the occurrence table: extraction, tabulation of the papers
+    and validation against the taxonomy and the gazetteer.
+  imagens:
+  - src: spid_fluxo.png
+    alt: Diagram of the SPIDBASE build workflow
+- id: familias
+  grupo: Content
+  rotulo: By family
+  texto: Records and specimens by family. Circle size shows the number of species.
+  imagens:
+  - src: spid_familias.jpg
+    alt: Chart of records and specimens by spider family
+- id: paises
+  grupo: Content
+  rotulo: By country
+  texto: >-
+    Records and specimens by country. Circle size shows the number of species. Brazil and the United States hold
+    most of the records.
+  imagens:
+  - src: spid_paises.jpg
+    alt: Chart of records and specimens by country
+- id: mapa
+  grupo: Content
+  rotulo: Map by country
+  texto: >-
+    a. number of families; b. number of species; c. occurrences by country, with the share of females, males and
+    juveniles.
+  imagens:
+  - src: am_abundance.jpg
+    alt: Three maps of the Americas with families, species and occurrences by country
+- id: vidaEsp
+  grupo: Analysis
+  rotulo: Species shelf life
+  texto: >-
+    Time between the oldest collected record and the description of the species. Bars: mean per year of description;
+    red line: cumulative value; black lines: standard error.
+  imagens:
+  - src: spid_vida_especies.jpg
+    alt: Chart of species shelf life by year of description
+- id: vidaReg
+  grupo: Analysis
+  rotulo: Record shelf life
+  texto: >-
+    Time between collection and publication of each record, from 1990 to 2021. Bars: mean per year of publication;
+    red line: cumulative value; black lines: standard error.
+  imagens:
+  - src: spid_vida_registros.jpg
+    alt: Chart of record shelf life from 1990 to 2021
+numeros:
+- valor: '13'
+  texto: entities normalized to Boyce–Codd normal form
+- valor: 148k
+  texto: records, with at least 325,000 specimens
+- valor: 15k
+  texto: papers reviewed, 6,500 with records in the Americas
+- valor: 25 years
+  texto: on average between first collection and description of a species
+secoes:
+- titulo: The problem
+  texto: >-
+    Open databases such as GBIF mix sources, standards and quality levels. The World Spider Catalog has reliable
+    taxonomy but imprecise geography, limited to the general range of each species. There was no database of spiders
+    of the Americas with records traceable to the original publication.
+- titulo: The data
+  texto: >-
+    World Spider Catalog, version 24.0: daily species export, family pages, reference list and the PDFs of the papers.
+    Administrative divisions from ISO 3166 and GADM, and gazetteers such as USGS, IBGE and GeoHack.
+- titulo: The method
+  lista_numerada:
+  - Entity-relationship model in MySQL Workbench, with 13 entities and Darwin Core terms.
+  - Normalization to Boyce–Codd normal form, primary and foreign keys, and type, uniqueness and null constraints.
+  - Taxonomy, gazetteer and sources used as ontologies to control the entry of occurrences.
+  - >-
+    Extraction of records from the papers with custom macros to clean and structure the text; names validated against
+    the taxonomy and localities against the gazetteer.
+  - Shelf-life calculation for species and records.
+- titulo: The result
+  destaque: >-
+    16,679 valid species in the Americas, about 34% of the world’s spider diversity, in 95 families and 48,593 georeferenced
+    localities.
+  lista:
+  - 'Every record keeps its taxonomic history: synonymies and name changes over time.'
+  - >-
+    On average 25 years pass between the first collection and the description of a species (median 18), above previous
+    estimates for spiders of 15 to 17 years. The delay grew from the 2000s on.
+  - The database underpins the diversity analyses in plate 1.
+aplicacao: >-
+  Integrating heterogeneous databases, data modelling with open standards and quality control for environmental
+  and biodiversity data.

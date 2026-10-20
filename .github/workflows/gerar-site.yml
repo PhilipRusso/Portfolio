@@ -1,0 +1,40 @@
+# Regera o HTML do site sempre que o conteúdo, os modelos ou o gerador mudarem.
+name: Gerar site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'conteudo/**'
+      - 'modelos/**'
+      - 'gerar.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gerar-site
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: python gerar.py
+      - name: Salvar o HTML gerado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html pranchas en
+          if git diff --cached --quiet; then
+            echo "O HTML já estava atualizado."
+          else
+            git commit -m "Regera o HTML a partir do conteúdo"
+            git push
+          fi

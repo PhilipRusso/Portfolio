@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 1 — Spider biogeography of the Americas · Philip Russo</title>
+<meta name="description" content="A database of published records and maps of richness, endemism and composition for the whole continent, with the weight of sampling bias measured in each pattern.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/tese.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/tese.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<span class="circulo circulo--off" aria-hidden="true">←</span><span>01 / 08</span>
+<a class="circulo" href="../../en/pranchas/spidbase.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/tese.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/tese.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 1 · Americas · PhD thesis, 2024</span>
+<h1 class="cabeca__titulo">Spider biogeography of the Americas: from literature data to diversity patterns</h1>
+<p class="cabeca__resumo">A database of published records and maps of richness, endemism and composition for the whole continent, with the weight of sampling bias measured in each pattern.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>PhD thesis, Graduate Program in Zoology, UFMG</dd></div>
+<div><dt>Advisor</dt><dd>Adalberto J. dos Santos</dd></div>
+<div><dt>My role</dt><dd>Author: database, analyses and maps</dd></div>
+<div><dt>Tools</dt><dd>ArcGIS Pro · Dinamica EGO · R · MySQL</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor>
+<div class="visor__camada" id="camada-registros" data-camada="registros" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.6 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_distribution.jpg" alt="Three maps of the Americas: records, record density and sampling effort" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-riqueza" data-camada="riqueza">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.6 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_richness.jpg" alt="Three maps of spider species richness in the Americas">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-endemicidade" data-camada="endemicidade" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.6 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_endemicity.jpg" alt="Three maps of spider endemicity in the Americas" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-endemismo" data-camada="endemismo" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.6 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_endemism.jpg" alt="Three maps of areas of spider endemism in the Americas" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-composicao" data-camada="composicao" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.6 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_composition.jpg" alt="Three maps of spider species composition and regionalization in the Americas" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-latitude" data-camada="latitude" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.78 / 1; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/am_latitude.jpg" alt="Spider richness in latitude bands of 1, 5 and 10 degrees" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Data">
+<span class="visor__grupo-rotulo">Data</span>
+<button type="button" class="pilula" data-alvo="registros" aria-controls="camada-registros" aria-pressed="false">Records and effort</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Diversity">
+<span class="visor__grupo-rotulo">Diversity</span>
+<button type="button" class="pilula" data-alvo="riqueza" aria-controls="camada-riqueza" aria-pressed="true">Richness</button>
+<button type="button" class="pilula" data-alvo="endemicidade" aria-controls="camada-endemicidade" aria-pressed="false">Endemicity</button>
+<button type="button" class="pilula" data-alvo="endemismo" aria-controls="camada-endemismo" aria-pressed="false">Areas of endemism</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Composition">
+<span class="visor__grupo-rotulo">Composition</span>
+<button type="button" class="pilula" data-alvo="composicao" aria-controls="camada-composicao" aria-pressed="false">Composition</button>
+<button type="button" class="pilula" data-alvo="latitude" aria-controls="camada-latitude" aria-pressed="false">Latitudinal gradient</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="registros" hidden>
+<p>a. spider records; b. record density; c. sampling effort. Red marks high density or effort, grey marks low.</p>
+</div>
+<div data-texto="riqueza">
+<p>a. observed richness; b. richness predicted by MARS; c. richness predicted by Random Forest. Observed peaks follow the most sampled areas.</p>
+</div>
+<div data-texto="endemicidade" hidden>
+<p>a. observed endemism index; b. predicted by MARS; c. predicted by Random Forest.</p>
+</div>
+<div data-texto="endemismo" hidden>
+<p>a. consensus of the areas of endemism (GIE); b. classes 1 and 2, species with ranges up to 50 km and from 51 to 200 km; c. classes 3 and 4, from 201 to 400 km and from 401 to 600 km.</p>
+</div>
+<div data-texto="composicao" hidden>
+<p>a. composition from interpolated NMDS, in RGB colours; b. composition predicted by GDM along environmental gradients; c. biogeographic regionalization, with the Caribbean highlighted.</p>
+</div>
+<div data-texto="latitude" hidden>
+<p>Richness in latitude bands of 1°, 5° and 10°. The charts to the left of each map show the relationship between richness and latitude.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">148k</span><span class="numero__texto">occurrence records extracted from the literature</span></div>
+<div class="numero"><span class="numero__valor">6,500</span><span class="numero__texto">papers with records in the Americas, out of more than 15,000 reviewed</span></div>
+<div class="numero"><span class="numero__valor">16,679</span><span class="numero__texto">valid species, about 34% of the world’s spider diversity</span></div>
+<div class="numero"><span class="numero__valor">48,593</span><span class="numero__texto">georeferenced localities in the gazetteer</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Spider distribution data come from heterogeneous, patchy sources. Of the spider records from the Americas in GBIF, only about 26% have an identified species and collection data. Without a reliable database, you cannot tell diversity patterns apart from gaps in knowledge across a whole continent.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">SPIDBASE, a relational database built from the taxonomic literature of the World Spider Catalog (plate 2), with 148,000 records traceable to the original publication. For the gradients, variables of temperature, precipitation, productivity, climate stability and altitude.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Record density and sampling effort, to measure collection bias.</li><li>Observed richness and endemicity, and predictions by MARS and Random Forest.</li><li>Areas of endemism by geographic interpolation (GIE), in range-size classes.</li><li>Composition by interpolated NMDS and by generalized dissimilarity modelling (GDM), and biogeographic regionalization.</li><li>Species–area relationship and gradients of latitude, altitude and environment.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Known spider diversity follows human population density: much of the map is sampling bias.</p>
+<ul><li>The patterns match known high-diversity regions, but mismatches such as Manitoba, in Canada, point to regions that need more sampling.</li><li>Richness peaks near 0°, 20°N and 20°S, at low altitudes, with warmer temperatures, low to medium precipitation and productivity, and stable climate.</li><li>The number of species grows with area and with the scale of analysis.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publication</h2>
+<ul class="secao__corpo secao__pubs"><li><strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns. PhD thesis, Graduate Program in Zoology, UFMG.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Diagnosing data gaps before impact assessments, prioritizing fauna surveys and using biodiversity data at continental scale with control for sampling bias.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/index.html"><span class="mono-rotulo">← Back</span><span class="vizinhas__nome">Project atlas</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/spidbase.html"><span class="mono-rotulo">Plate 2 →</span><span class="vizinhas__nome">SPIDBASE</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

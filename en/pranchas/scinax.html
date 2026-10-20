@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 6 — Scinax aff. machadoi · Philip Russo</title>
+<meta name="description" content="A review of collections, three machine-learning algorithms and a consensus to guide fieldwork in a mining region.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/scinax.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/scinax.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/araneoidea-americas.html" aria-label="Previous plate">←</a><span>06 / 08</span>
+<a class="circulo" href="../../en/pranchas/bicudo.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/scinax.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/scinax.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 6 · Quadrilátero Ferrífero, Brazil · Distribution modelling · 2021</span>
+<h1 class="cabeca__titulo"><em>Scinax</em> aff. <em>machadoi</em>: where to look for new populations of an endemic tree frog</h1>
+<p class="cabeca__resumo">A review of collections, three machine-learning algorithms and a consensus to guide fieldwork in a mining region.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>On-demand technical report, 2021</dd></div>
+<div><dt>Region</dt><dd>Quadrilátero Ferrífero, Minas Gerais</dd></div>
+<div><dt>My role</dt><dd>Record compilation, modelling and maps</dd></div>
+<div><dt>Tools</dt><dd>BioDinamica · MaxEnt · ArcGIS Pro · QGIS</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor>
+<div class="visor__camada" id="camada-relevo" data-camada="relevo" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_relevo.jpg" alt="Hypsometric map of the Quadrilátero Ferrífero with the species records" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-ann" data-camada="ann" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_ann.jpg" alt="Suitability predicted by the artificial neural network" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-svm" data-camada="svm" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_svm.jpg" alt="Suitability predicted by the support vector machine" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-maxent" data-camada="maxent" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_maxent.jpg" alt="Suitability predicted by MaxEnt" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-consenso" data-camada="consenso">
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_consenso.jpg" alt="Consensus suitability across the three algorithms">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-dist" data-camada="dist" hidden>
+<figure class="visor__quadro" style="background: #F4F4EF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__img">
+<img src="../../assets/img/qf_dist.jpg" alt="Potential distribution as presence and absence" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Data">
+<span class="visor__grupo-rotulo">Data</span>
+<button type="button" class="pilula" data-alvo="relevo" aria-controls="camada-relevo" aria-pressed="false">Records and relief</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Models">
+<span class="visor__grupo-rotulo">Models</span>
+<button type="button" class="pilula" data-alvo="ann" aria-controls="camada-ann" aria-pressed="false">Neural network</button>
+<button type="button" class="pilula" data-alvo="svm" aria-controls="camada-svm" aria-pressed="false">SVM</button>
+<button type="button" class="pilula" data-alvo="maxent" aria-controls="camada-maxent" aria-pressed="false">MaxEnt</button>
+<button type="button" class="pilula" data-alvo="consenso" aria-controls="camada-consenso" aria-pressed="true">Consensus</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Result">
+<span class="visor__grupo-rotulo">Result</span>
+<button type="button" class="pilula" data-alvo="dist" aria-controls="camada-dist" aria-pressed="false">Potential distribution</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="relevo" hidden>
+<p>Hypsometry of the Quadrilátero Ferrífero with the records and the main ranges. The species occurs in the Gandarela, Capanema and Caraça massif and in the Serra do Garimpo.</p>
+</div>
+<div data-texto="ann" hidden>
+<p>Artificial neural network: one of the broadest predictions of the three algorithms.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+</div>
+</div>
+<div data-texto="svm" hidden>
+<p>Support vector machine: also predicts a broad area, with a smoother gradient.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+</div>
+</div>
+<div data-texto="maxent" hidden>
+<p>MaxEnt: the most restrictive algorithm, concentrated on the Caraça massif and surroundings.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+</div>
+</div>
+<div data-texto="consenso">
+<p>Mean of the three algorithms. High suitability is restricted to the ridge tops of the eastern slope of the Quadrilátero.</p>
+<div class="legenda">
+<span class="mono-rotulo">Relative suitability</span>
+<span class="legenda__barra legenda__barra--verde" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>low</span><span>high</span></span>
+</div>
+</div>
+<div data-texto="dist" hidden>
+<p>Consensus converted into presence and absence with the lowest presence threshold. Patches outside the known ranges show where to look for new populations.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #1E5E4A"></i>Predicted presence</span><span><i class="legenda__cor legenda__cor--claro"></i>Predicted absence</span></span>
+</div>
+</div>
+</div>
+</div>
+<p class="visor__nota">Models at about 1 km resolution. Suitability normalized within each algorithm to allow comparison.</p></section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">130</span><span class="numero__texto">specimens or lots found in 5 of 8 collections</span></div>
+<div class="numero"><span class="numero__valor">14</span><span class="numero__texto">studies with primary records reviewed</span></div>
+<div class="numero"><span class="numero__valor">1,015–1,976 m</span><span class="numero__texto">altitude range of the records</span></div>
+<div class="numero"><span class="numero__valor">606 km²</span><span class="numero__texto">extent of occurrence (EOO, IUCN criterion)</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">A tree frog of the <em>Scinax catharinae</em> group, possibly an undescribed species, is known only from the Quadrilátero Ferrífero, an intensively mined region in Minas Gerais. Before the field campaigns, the project needed to know where the species had been recorded and where it was worth searching.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">A review of eight herpetological collections and 14 studies: 130 specimens or lots in seven municipalities. Coordinates from the collections, from the collectors or georeferenced from the locality description. As predictors, the 19 WorldClim bioclimatic variables and altitude, clipped to the Quadrilátero Ferrífero.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>PCA of the variables, keeping the components that add up to more than 98% of the variance.</li><li>Three machine-learning algorithms: artificial neural network, SVM and MaxEnt.</li><li>Consensus of the three (ensemble forecasting), with the BioDinamica package in Dinamica EGO.</li><li>Presence–absence map using the lowest presence threshold.</li><li>Extent of occurrence by minimum convex polygon, following IUCN.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Suitable area is restricted to the ridge tops of the eastern slope. Outside the known ranges, the consensus points to three fronts to search for new populations.</p>
+<ul><li>Serra da Piedade.</li><li>Ranges near Itatiaia, Lavras Novas and Santo Antônio do Salto, in Ouro Preto, including the Itatiaia Natural Monument.</li><li>Serrinha and Pico do Itacolomi, also in Ouro Preto.</li><li>Records in two protected areas: Serra do Gandarela National Park and the Santuário do Caraça private reserve.</li><li>The model also predicts well-sampled areas where the species probably does not occur, such as Serra do Rola-Moça: history and dispersal are outside the scope of a climate model.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Environmental licensing and action plans for threatened species in mining areas, and planning of field campaigns. The original ArcGIS Pro project was migrated to QGIS with the converter in the Tools section.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/araneoidea-americas.html"><span class="mono-rotulo">← Plate 5</span><span class="vizinhas__nome">Araneoidea of the Americas, 1757–2017</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/bicudo.html"><span class="mono-rotulo">Plate 7 →</span><span class="vizinhas__nome">Great-billed seed finch</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

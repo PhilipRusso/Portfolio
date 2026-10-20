@@ -1,0 +1,163 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Aranhas da Mata Atlântica
+nome_curto: Aranhas da Mata Atlântica
+rotulo: Mata Atlântica · Capítulo de livro
+titulo: 'Aranhas da Mata Atlântica: o que é padrão e o que é falta de coleta'
+resumo: >-
+  Riqueza, endemismo e composição de espécies em todo o bioma e na sua porção menos conhecida, ao norte do rio São
+  Francisco.
+ficha:
+- rotulo: Publicação
+  valor: Capítulo de livro, 2º autor
+- rotulo: Equipe
+  valor: Carvalho LS, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ
+- rotulo: Meu papel
+  valor: Análises espaciais e mapas
+- rotulo: Ferramentas
+  valor: BioDinamica (Dinamica EGO) · R · ArcMap
+cartao:
+  titulo: 'Aranhas da Mata Atlântica: diversidade e viés de amostragem'
+  etiqueta: Mata Atlântica · BioDinamica · GDM
+  imagem: af_nmds.jpg
+  alt: Composição de espécies de aranhas na Mata Atlântica em cores RGB a partir de eixos NMDS
+visor:
+  proporcao: 2 / 1
+  margem: 12px
+  inicial: nmds
+  nota: >-
+    Hexágonos de 0,5°. Riqueza e endemismo interpolados por krigagem; composição por spline. Nos mapas de composição,
+    cores diferentes indicam comunidades diferentes.
+camadas:
+- id: area
+  grupo: Contexto
+  rotulo: Área de estudo
+  texto: A Mata Atlântica e, em detalhe, a porção ao norte do rio São Francisco, a parte menos amostrada do bioma.
+  imagens:
+  - src: afs_layout.jpg
+    alt: Mapa de localização da Mata Atlântica com o detalhe da porção ao norte do rio São Francisco
+- id: sr
+  grupo: Diversidade
+  rotulo: Riqueza
+  texto: >-
+    Número de espécies por hexágono, interpolado por krigagem. Os picos coincidem com as áreas mais amostradas,
+    perto de cidades e instituições de pesquisa.
+  imagens:
+  - src: af_sr.jpg
+    alt: Riqueza de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_sr.jpg
+    alt: Riqueza de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+- id: we
+  grupo: Diversidade
+  rotulo: Endemismo ponderado
+  texto: >-
+    Riqueza ponderada pelo inverso da área de distribuição de cada espécie: destaca áreas com muitas espécies de
+    distribuição restrita.
+  imagens:
+  - src: af_we.jpg
+    alt: Endemismo ponderado de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_we.jpg
+    alt: Endemismo ponderado de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+- id: nmds
+  grupo: Composição
+  rotulo: Composição
+  texto: >-
+    Três eixos de uma ordenação NMDS interpolados e combinados em RGB. Cores diferentes indicam comunidades de aranhas
+    diferentes.
+  imagens:
+  - src: af_nmds.jpg
+    alt: Composição de espécies de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_nmds.jpg
+    alt: Composição de espécies de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+- id: turn
+  grupo: Composição
+  rotulo: Turnover
+  texto: Parte da diferença entre comunidades causada pela substituição de espécies de um lugar para outro.
+  imagens:
+  - src: af_turn.jpg
+    alt: Turnover de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_turn.jpg
+    alt: Turnover de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+- id: nest
+  grupo: Composição
+  rotulo: Aninhamento
+  texto: 'Parte da diferença causada pela perda de espécies: comunidades mais pobres como subconjuntos das mais
+    ricas.'
+  imagens:
+  - src: af_nest.jpg
+    alt: Aninhamento de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_nest.jpg
+    alt: Aninhamento de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+- id: gdm
+  grupo: Composição
+  rotulo: GDM
+  texto: >-
+    Composição prevista pelo modelo de dissimilaridade generalizada a partir da distância geográfica e do clima.
+    A distância geográfica foi o preditor mais importante.
+  imagens:
+  - src: af_gdm.jpg
+    alt: Composição prevista pelo GDM de aranhas em toda a Mata Atlântica
+    legenda: Mata Atlântica inteira
+  - src: afs_gdm.jpg
+    alt: Composição prevista pelo GDM de aranhas na Mata Atlântica ao norte do rio São Francisco
+    legenda: Ao norte do rio São Francisco
+numeros:
+- valor: '5.482'
+  texto: registros não duplicados no bioma
+- valor: '842'
+  texto: espécies de 12 famílias (Araneoidea e Pholcidae)
+- valor: <4%
+  texto: 'dos registros na porção setentrional: 212 registros, 70 espécies'
+- valor: '102'
+  texto: áreas de endemismo no bioma, 5 delas no norte
+secoes:
+- titulo: O problema
+  texto: >-
+    Os registros de aranhas no Brasil se concentram perto de grandes cidades e de instituições de pesquisa antigas,
+    o chamado efeito museu. A Mata Atlântica ao norte do rio São Francisco é a parte menos amostrada do bioma. A
+    questão era separar os padrões de diversidade que refletem a biologia dos que refletem só onde se coletou mais.
+- titulo: Os dados
+  texto: >-
+    Bancos de ocorrência de Araneoidea e Pholcidae compilados da literatura e recortados para a Mata Atlântica:
+    5.482 registros não duplicados de 842 espécies. Menos de 4% estão na porção setentrional. Para o modelo de dissimilaridade,
+    19 variáveis bioclimáticas do WorldClim.
+- titulo: O método
+  lista_numerada:
+  - Esforço amostral e riqueza de espécies em hexágonos de 0,5°, com o pacote BioDinamica no Dinamica EGO.
+  - Diversidade beta por ordenação NMDS interpolada, separada em turnover e aninhamento.
+  - >-
+    Modelo de dissimilaridade generalizada (GDM) com a distância geográfica e os cinco primeiros eixos de uma PCA
+    das variáveis bioclimáticas.
+  - >-
+    Áreas de endemismo por interpolação geográfica (GIE) e endemismo ponderado pela área de distribuição das espécies.
+  - Padronização dos mapas finais no ArcMap.
+- titulo: O resultado
+  destaque: >-
+    102 áreas de endemismo, coerentes com as quatro grandes regiões já descritas para aranhas. No norte, as áreas
+    de endemismo coincidem com os poucos locais bem amostrados.
+  lista:
+  - 'A riqueza acompanha o número de registros em todo o bioma: parte do padrão é efeito de coleta.'
+  - No GDM, a distância geográfica foi o preditor mais importante, seguida pelo primeiro eixo climático.
+  - Dos 19 endêmicos da porção setentrional, 12 foram descritos a partir de 2015 ou ainda não têm nome.
+  - Os mapas indicam onde priorizar novas coletas.
+- titulo: Publicação
+  publicacoes:
+  - >-
+    Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna
+    of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Capítulo em
+    [livro, editora, ano].
+aplicacao: >-
+  Diagnóstico de lacunas de dados antes de estudos de impacto, priorização de áreas para inventário de fauna e seleção
+  de áreas para conservação.

@@ -1,0 +1,99 @@
+# Home page (English). Plate cards come from the "cartao" field of each file in pranchas/.
+rotulo: Portfolio · Philip Russo
+titulo: Project atlas
+intro: >-
+  I turn spatial and environmental data into decisions for the environmental and forestry sectors. Each plate is a
+  case study with an interactive map.
+subtitulo: Data scientist · GIS · PhD in Zoology (UFMG)
+iniciar: Start
+cv_rotulo: Download CV (PDF)
+# To show the CV button, put the PDF in assets/cv/ and write its path below, e.g. /assets/cv/philip-russo-cv.pdf
+cv: ''
+local: Bauru, SP, Brazil · remote, or hybrid in the region.
+
+em_breve:
+- titulo: BioCarta
+  etiqueta: Web application · PostgreSQL · Darwin Core
+  aviso: In development
+
+numeros:
+- valor: 8 years
+  texto: of research at UFMG in biogeography and macroecology
+- valor: 148k
+  texto: spider records from the Americas organized in a relational database
+- valor: '34'
+  texto: CMIP6 climate projections for an invasive species
+- valor: '6'
+  texto: publications, thesis and dissertation with spatial analyses, from 2019 to 2025
+
+ferramentas:
+  titulo: Tools
+  nota: Custom code for research bottlenecks. Closed source; demo on request.
+  itens:
+  - nome: Record miner
+    texto: >-
+      Extracts the examined material from taxonomic papers in PDF into validated tables, with locality inheritance
+      and a log of errors in the papers themselves. As of October 2026, it has processed 80 papers and 3,263 records.
+    tecnologias: Python · PyMuPDF
+  - nome: World Spider Catalog extractor
+    texto: Crawls the catalog family by family and writes genera, species and taxonomic references to incremental CSVs.
+    tecnologias: Python · web scraping
+  - nome: ArcGIS Pro → QGIS converter
+    texto: >-
+      Reads the internal structure of .aprx files and rebuilds the project in QGIS with symbology, map themes and print
+      layouts. It converted the projects of plates 4 and 6, with 167 layers.
+    tecnologias: PyQGIS · GDAL
+  - nome: Regular grid generator
+    texto: >-
+      Square or hexagonal grids as Shapefiles, in WGS 84 and in a projected system, with geodesic area and a check
+      against mixing up metres and degrees.
+    tecnologias: Python · pyproj
+
+publicacoes:
+  titulo: Publications
+  itens:
+  - ano: '2025'
+    texto: >-
+      [Authors, including <strong>Russo P</strong>]. SpiderATLAS: a database of spider traits and distributions in
+      the Brazilian Atlantic Forest. <em>Journal of Biogeography</em>. [DOI]
+  - ano: '2024'
+    texto: >-
+      <strong>Russo P</strong>. Spider biogeography of the Americas: from literature data to diversity patterns.
+      PhD thesis, Graduate Program in Zoology, UFMG. <a href="/en/pranchas/tese.html">plate 1 →</a>
+  - ano: '2021'
+    texto: >-
+      Macêdo RL, Franco ACS, <strong>Russo P</strong>, Collart T, Mammola S, Jeppesen E, Branco CWC, dos Santos LN,
+      Rocha O. Climate and landscape changes enhance the global spread of a bloom-forming dinoflagellate related to
+      fish kills and water quality deterioration. <em>Ecological Indicators</em> 133: 108408.
+      <a href="https://doi.org/10.1016/j.ecolind.2021.108408">doi ↗</a>
+  - ano: '2021'
+    texto: >-
+      Macêdo RL, <strong>Russo P</strong>, Corrêa RF, Rocha O, dos Santos LN, Branco CWC. The drifting dinoflagellate
+      <em>Ceratium furcoides</em> (Levander) Langhans 1925: fundamental niche shift during global invasion.
+      <em>Hydrobiologia</em> 848: 2105–2117. <a href="https://doi.org/10.1007/s10750-020-04495-5">doi ↗</a>
+  - ano: '2019'
+    texto: >-
+      <strong>Russo P</strong>. Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
+      araneoideas americanas. MSc dissertation, Graduate Program in Zoology, UFMG.
+      <a href="/en/pranchas/araneoidea-americas.html">plate 5 →</a>
+  - ano: '[year]'
+    texto: >-
+      Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna
+      of the Brazilian Atlantic Forest: effect of sampling bias on diversity patterns and conservation. Chapter in
+      [book, publisher].
+
+sobre:
+  titulo: About
+  paragrafos:
+  - >-
+    I am a biologist with an MSc and a PhD in Zoology from UFMG, and an MBA in Business Management. I spent about
+    eight years at UFMG working on biogeography and macroecology, with biological and spatial databases and species
+    distribution modelling.
+  - Today I work as a freelancer on academic projects and environmental consulting, with data analysis and thematic maps.
+  ficha:
+  - rotulo: Tools
+    valor: Python, R, SQL, QGIS, ArcGIS Pro, MaxEnt, Dinamica EGO
+  - rotulo: Languages
+    valor: Portuguese (native) · English (advanced) · Spanish (intermediate)
+  - rotulo: Contact
+    valor: <a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a>

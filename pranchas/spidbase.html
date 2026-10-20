@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 2 — SPIDBASE · Philip Russo</title>
+<meta name="description" content="Modelo entidade-relacionamento alinhado ao Darwin Core, com o histórico taxonômico de cada registro, gazetteer próprio e regras de integridade.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/spidbase.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/spidbase.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/tese.html" aria-label="Prancha anterior">←</a><span>02 / 08</span>
+<a class="circulo" href="../pranchas/ceratium.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/spidbase.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/spidbase.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 2 · Engenharia de dados · Tese, capítulos 1 e 2</span>
+<h1 class="cabeca__titulo">SPIDBASE: um banco relacional de 148 mil registros de aranhas extraídos da literatura</h1>
+<p class="cabeca__resumo">Modelo entidade-relacionamento alinhado ao Darwin Core, com o histórico taxonômico de cada registro, gazetteer próprio e regras de integridade.</p>
+<dl class="ficha">
+<div><dt>Entrega</dt><dd>Banco de dados e capítulos da tese (2024)</dd></div>
+<div><dt>Meu papel</dt><dd>Modelagem, extração, integração e validação</dd></div>
+<div><dt>Padrões</dt><dd>Darwin Core · ISO 3166 · GADM</dd></div>
+<div><dt>Ferramentas</dt><dd>MySQL Workbench · Excel e macros · ArcGIS Pro · Power BI</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor>
+<div class="visor__camada" id="camada-er" data-camada="er">
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_er.png" alt="Diagrama entidade-relacionamento do SPIDBASE">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-fluxo" data-camada="fluxo" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_fluxo.png" alt="Diagrama do fluxo de construção do SPIDBASE" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-familias" data-camada="familias" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_familias.jpg" alt="Gráfico de registros e espécimes por família de aranha" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-paises" data-camada="paises" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_paises.jpg" alt="Gráfico de registros e espécimes por país" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-mapa" data-camada="mapa" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/am_abundance.jpg" alt="Três mapas das Américas com famílias, espécies e ocorrências por país" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-vidaEsp" data-camada="vidaEsp" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_vida_especies.jpg" alt="Gráfico da vida útil das espécies por ano de descrição" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-vidaReg" data-camada="vidaReg" hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__img">
+<img src="../assets/img/spid_vida_registros.jpg" alt="Gráfico da vida útil dos registros de 1990 a 2021" loading="lazy">
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Banco">
+<span class="visor__grupo-rotulo">Banco</span>
+<button type="button" class="pilula" data-alvo="er" aria-controls="camada-er" aria-pressed="true">Modelo de dados</button>
+<button type="button" class="pilula" data-alvo="fluxo" aria-controls="camada-fluxo" aria-pressed="false">Fluxo de construção</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Conteúdo">
+<span class="visor__grupo-rotulo">Conteúdo</span>
+<button type="button" class="pilula" data-alvo="familias" aria-controls="camada-familias" aria-pressed="false">Por família</button>
+<button type="button" class="pilula" data-alvo="paises" aria-controls="camada-paises" aria-pressed="false">Por país</button>
+<button type="button" class="pilula" data-alvo="mapa" aria-controls="camada-mapa" aria-pressed="false">Mapa por país</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Análise">
+<span class="visor__grupo-rotulo">Análise</span>
+<button type="button" class="pilula" data-alvo="vidaEsp" aria-controls="camada-vidaEsp" aria-pressed="false">Vida útil das espécies</button>
+<button type="button" class="pilula" data-alvo="vidaReg" aria-controls="camada-vidaReg" aria-pressed="false">Vida útil dos registros</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="er">
+<p>Modelo entidade-relacionamento: 13 entidades agrupadas nas classes do Darwin Core de taxonomia, localização e fonte, além de autoria e ocorrência.</p>
+</div>
+<div data-texto="fluxo" hidden>
+<p>Do World Spider Catalog, ISO 3166 e GADM até a tabela de ocorrências: extração, tabulação dos artigos e validação contra a taxonomia e o gazetteer.</p>
+</div>
+<div data-texto="familias" hidden>
+<p>Registros e espécimes por família. O tamanho do círculo indica o número de espécies.</p>
+</div>
+<div data-texto="paises" hidden>
+<p>Registros e espécimes por país. O tamanho do círculo indica o número de espécies. Brasil e Estados Unidos concentram a maior parte dos registros.</p>
+</div>
+<div data-texto="mapa" hidden>
+<p>a. número de famílias; b. número de espécies; c. ocorrências por país, com a proporção de fêmeas, machos e jovens.</p>
+</div>
+<div data-texto="vidaEsp" hidden>
+<p>Tempo entre a coleta do registro mais antigo e a descrição da espécie. Barras: média por ano de descrição; linha vermelha: valor acumulado; linhas pretas: erro padrão.</p>
+</div>
+<div data-texto="vidaReg" hidden>
+<p>Tempo entre a coleta e a publicação de cada registro, de 1990 a 2021. Barras: média por ano de publicação; linha vermelha: valor acumulado; linhas pretas: erro padrão.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">13</span><span class="numero__texto">entidades normalizadas até a forma normal de Boyce-Codd</span></div>
+<div class="numero"><span class="numero__valor">148 mil</span><span class="numero__texto">registros, com pelo menos 325 mil espécimes</span></div>
+<div class="numero"><span class="numero__valor">15 mil</span><span class="numero__texto">artigos revisados, 6.500 com registros nas Américas</span></div>
+<div class="numero"><span class="numero__valor">25 anos</span><span class="numero__texto">entre a primeira coleta e a descrição de uma espécie, em média</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo">Bases abertas como o GBIF misturam fontes, padrões e níveis de qualidade. O World Spider Catalog tem taxonomia confiável, mas geografia imprecisa, restrita à distribuição geral das espécies. Faltava uma base de aranhas das Américas com registros rastreáveis até a publicação de origem.</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<p class="secao__corpo">World Spider Catalog, versão 24.0: exportação diária de espécies, páginas de família, lista de referências e PDFs dos artigos. Divisões administrativas do ISO 3166 e do GADM, e gazetteers como USGS, IBGE e GeoHack.</p>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>Modelo entidade-relacionamento no MySQL Workbench, com 13 entidades e termos do Darwin Core.</li><li>Normalização até a forma normal de Boyce-Codd, chaves primárias e estrangeiras e restrições de tipo, unicidade e nulidade.</li><li>Taxonomia, gazetteer e fontes usadas como ontologias, para controlar a entrada das ocorrências.</li><li>Extração dos registros dos artigos com macros próprias para limpar e estruturar o texto; nomes validados contra a taxonomia e localidades contra o gazetteer.</li><li>Cálculo da vida útil (shelf life) das espécies e dos registros.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">16.679 espécies válidas nas Américas, cerca de 34% da diversidade mundial de aranhas, em 95 famílias e 48.593 localidades georreferenciadas.</p>
+<ul><li>Cada registro guarda o histórico taxonômico: sinonímias e mudanças de nome ao longo do tempo.</li><li>Entre a primeira coleta e a descrição de uma espécie passam em média 25 anos (mediana de 18), acima das estimativas anteriores para aranhas, de 15 a 17 anos. O atraso cresceu a partir dos anos 2000.</li><li>A base sustenta as análises de diversidade da prancha 1.</li></ul></div>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Integração de bases heterogêneas, modelagem de dados com padrões abertos e controle de qualidade em dados ambientais e de biodiversidade.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/tese.html"><span class="mono-rotulo">← Prancha 1</span><span class="vizinhas__nome">Biogeografia das aranhas das Américas</span></a>
+<a class="vizinhas--dir" href="../pranchas/ceratium.html"><span class="mono-rotulo">Prancha 3 →</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>
