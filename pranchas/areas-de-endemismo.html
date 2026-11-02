@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prancha 4 — Áreas de endemismo · Philip Russo</title>
+<meta name="description" content="Interpolação geográfica do endemismo (GIE) em nove classes de amplitude de distribuição: o consenso e as quatro classes mais restritas.">
+<link rel="alternate" hreflang="pt-BR" href="../pranchas/areas-de-endemismo.html">
+<link rel="alternate" hreflang="en" href="../en/pranchas/areas-de-endemismo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
+<nav class="paginador" aria-label="Pranchas">
+<a class="circulo" href="../pranchas/endemicidade.html" aria-label="Prancha anterior">←</a><span>04 / 12</span>
+<a class="circulo" href="../pranchas/composicao.html" aria-label="Próxima prancha">→</a></nav>
+<div class="idioma" role="group" aria-label="Idioma">
+<a href="../pranchas/areas-de-endemismo.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
+<a href="../en/pranchas/areas-de-endemismo.html" hreflang="en" lang="en">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Prancha 4 · Américas · Tese de doutorado, 2024 · parte 4 de 5</span>
+<h1 class="cabeca__titulo">Áreas de endemismo: 255 regiões com espécies de distribuição congruente</h1>
+<p class="cabeca__resumo">Interpolação geográfica do endemismo (GIE) em nove classes de amplitude de distribuição: o consenso e as quatro classes mais restritas.</p>
+<dl class="ficha">
+<div><dt>Entrega</dt><dd>Tese de doutorado, PPG Zoologia, UFMG (cap. 3)</dd></div>
+<div><dt>Orientação</dt><dd>Adalberto J. dos Santos</dd></div>
+<div><dt>Meu papel</dt><dd>Autor: banco de dados, análises e mapas</dd></div>
+<div><dt>Ferramentas</dt><dd>QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Mapa interativo" data-visor data-ui='{"em": "em", "equador": "no equador", "escala": "escala", "hem": "N S L O", "passe": "Passe o cursor sobre o mapa", "rosa": "Rosa dos ventos: o norte est\u00e1 para cima"}'>
+<div class="visor__camada" id="camada-consenso" data-camada="consenso" data-cols="1" data-geo-camada>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Consensus.jpg" alt="Consenso das áreas de endemismo de aranhas nas Américas" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-c1" data-camada="c1" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Class01.jpg" alt="Áreas de endemismo da classe 1, de até 50 km" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-c2" data-camada="c2" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Class02.jpg" alt="Áreas de endemismo da classe 2, de 51 a 200 km" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-c3" data-camada="c3" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Class03.jpg" alt="Áreas de endemismo da classe 3, de 201 a 400 km" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-c4" data-camada="c4" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Class04.jpg" alt="Áreas de endemismo da classe 4, de 401 a 600 km" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-comparar" data-camada="comparar" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 1.359 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../assets/img/GIE_Consensus.jpg" alt="Consenso" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Consenso</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../assets/img/GIE_Class01.jpg" alt="Classe 1" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Classe 1 · até 50 km</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../assets/img/GIE_Class02.jpg" alt="Classe 2" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Classe 2 · 51 a 200 km</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../assets/img/GIE_Class03.jpg" alt="Classe 3" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Classe 3 · 201 a 400 km</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../assets/img/GIE_Class04.jpg" alt="Classe 4" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Classe 4 · 401 a 600 km</span></div>
+</div>
+</figure>
+</div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Elementos do mapa" aria-expanded="false" aria-controls="painel-areas-de-endemismo" title="Coordenadas, escala e rosa dos ventos" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Elementos do mapa</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-areas-de-endemismo" role="group" aria-label="Elementos do mapa" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordenadas</span><span class="interruptor__dica">Lat. e long. sob o cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Escala</span><span class="interruptor__dica">Medida na latitude do cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Rosa dos ventos</span><span class="interruptor__dica">Norte para cima</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Rótulos das áreas" data-areas hidden>
+<span class="areas__txt">Áreas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Mostrar o número de cada área">Números</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Mostrar o nome ao passar o mouse sobre um número">Nomes</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Passe o cursor sobre o mapa</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Consenso">
+<span class="visor__grupo-rotulo">Consenso</span>
+<button type="button" class="pilula" data-alvo="consenso" aria-controls="camada-consenso" aria-pressed="true">Consenso</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Classes">
+<span class="visor__grupo-rotulo">Classes</span>
+<button type="button" class="pilula" data-alvo="c1" aria-controls="camada-c1" aria-pressed="false">Classe 1</button>
+<button type="button" class="pilula" data-alvo="c2" aria-controls="camada-c2" aria-pressed="false">Classe 2</button>
+<button type="button" class="pilula" data-alvo="c3" aria-controls="camada-c3" aria-pressed="false">Classe 3</button>
+<button type="button" class="pilula" data-alvo="c4" aria-controls="camada-c4" aria-pressed="false">Classe 4</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Comparar">
+<span class="visor__grupo-rotulo">Comparar</span>
+<button type="button" class="pilula" data-alvo="comparar" aria-controls="camada-comparar" aria-pressed="false">Consenso e classes</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">O que você está vendo</span>
+<div data-texto="consenso">
+<p>Consenso das classes de amplitude: quanto mais escuro, mais áreas de endemismo se sobrepõem no mesmo lugar.</p>
+<div class="legenda">
+<span class="mono-rotulo">Sobreposição de áreas de endemismo</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EBEFFA, #DFE6EE, #C6D7E7, #A0B6CE, #35506B)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>menor</span><span>maior</span></span>
+</div>
+</div>
+<div data-texto="c1" hidden>
+<p>Classe 1: espécies com distribuição de até 50 km. São as áreas de endemismo mais restritas, pequenas e espalhadas pelo continente.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #204868"></i>Área de endemismo da classe</span></span>
+</div>
+</div>
+<div data-texto="c2" hidden>
+<p>Classe 2: espécies com distribuição de 51 a 200 km.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #204868"></i>Área de endemismo da classe</span></span>
+</div>
+</div>
+<div data-texto="c3" hidden>
+<p>Classe 3: espécies com distribuição de 201 a 400 km.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #204868"></i>Área de endemismo da classe</span></span>
+</div>
+</div>
+<div data-texto="c4" hidden>
+<p>Classe 4: espécies com distribuição de 401 a 600 km. Quanto maior a amplitude, maiores e mais contínuas as áreas.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #204868"></i>Área de endemismo da classe</span></span>
+</div>
+</div>
+<div data-texto="comparar" hidden>
+<p>O consenso e as quatro classes mais restritas lado a lado: quanto mais restrita a classe, menores e mais numerosas as áreas.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Números">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">255</span><span class="numero__texto">áreas de endemismo, somando as nove classes</span></div>
+<div class="numero"><span class="numero__valor">9</span><span class="numero__texto">classes de amplitude, de até 50 km a mais de 2.000 km</span></div>
+<div class="numero"><span class="numero__valor">0,97</span><span class="numero__texto">de I de Moran no consenso: padrão muito agregado</span></div>
+<div class="numero"><span class="numero__valor">r = 0,1</span><span class="numero__texto">entre a classe 1 e a densidade de registros</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>O problema</h2>
+<p class="secao__corpo">Áreas de endemismo são regiões onde várias espécies têm distribuição restrita e sobreposta. Delimitá-las exige um método que não dependa de grades arbitrárias e que funcione com dados desiguais.</p>
+</div>
+<div class="secao">
+<h2>Os dados</h2>
+<p class="secao__corpo">Os registros da prancha 1. A amplitude de cada espécie é a distância entre o centroide da sua distribuição e o ponto de ocorrência mais distante.</p>
+</div>
+<div class="secao">
+<h2>O método</h2>
+<ol class="secao__corpo"><li>Interpolação geográfica do endemismo (GIE) no BioDinamica, com estimador de densidade Kernel.</li><li>Nove classes de amplitude: até 50 km, 51–200, 201–400, 401–600, 601–800, 801–1.000, 1.001–1.500, 1.501–2.000 e mais de 2.000 km.</li><li>Mapa de consenso das classes e mapas por classe.</li><li>Correlação com os mapas de viés, de riqueza e de endemicidade, e I de Moran por classe.</li></ol>
+</div>
+<div class="secao">
+<h2>O resultado</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">São 255 áreas de endemismo para aranhas nas Américas. Quanto mais fina a classe, mais áreas restritas aparecem.</p>
+<ul><li>O sul e o sudeste do Brasil e a Amazônia brasileira concentram mais áreas de endemismo.</li><li>As classes mais restritas quase não se relacionam com a densidade de registros (r = 0,1 na classe 1).</li><li>A agregação espacial cresce com a amplitude: I de Moran de 0,08 na classe 1 e de 0,95 na classe 4.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publicação</h2>
+<ul class="secao__corpo secao__pubs"><li><strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns. Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Onde isso se aplica</h2>
+<p class="secao__corpo">Delimitação de áreas prioritárias e de unidades de conservação, e análise de impactos sobre espécies endêmicas.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Outras pranchas">
+<a href="../pranchas/endemicidade.html"><span class="mono-rotulo">← Prancha 3</span><span class="vizinhas__nome">Endemicidade</span></a>
+<a class="vizinhas--dir" href="../pranchas/composicao.html"><span class="mono-rotulo">Prancha 5 →</span><span class="vizinhas__nome">Composição e regionalização</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Atlas de projetos</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../assets/js/visor.js" defer></script></body>
+</html>

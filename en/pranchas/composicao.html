@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 5 — Composition and regionalization · Philip Russo</title>
+<meta name="description" content="Three beta-diversity models, through space (SCI), through the environment with geographic distance, and through the environment alone (GDM), and the regionalization of the continent by three clustering methods.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/composicao.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/composicao.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/areas-de-endemismo.html" aria-label="Previous plate">←</a><span>05 / 12</span>
+<a class="circulo" href="../../en/pranchas/spidbase.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/composicao.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/composicao.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 5 · Americas · PhD thesis, 2024 · part 5 of 5</span>
+<h1 class="cabeca__titulo">Composition and regionalization of spiders in the Americas</h1>
+<p class="cabeca__resumo">Three beta-diversity models, through space (SCI), through the environment with geographic distance, and through the environment alone (GDM), and the regionalization of the continent by three clustering methods.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)</dd></div>
+<div><dt>Advisor</dt><dd>Adalberto J. dos Santos</dd></div>
+<div><dt>My role</dt><dd>Author: database, analyses and maps</dd></div>
+<div><dt>Tools</dt><dd>QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor data-chave="{modelo}_{mapa}" data-facetas='{"mapa": "rgb", "modelo": "sci"}' data-ui='{"em": "at", "equador": "at the equator", "escala": "scale", "hem": "N S E W", "passe": "Move the cursor over the map", "rosa": "Compass rose: north is up"}'>
+<div class="visor__camada" id="camada-sci_rgb" data-camada="sci_rgb" data-cols="1" data-geo-camada>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation.jpg" alt="SCI · space: RGB of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_r" data-camada="sci_r" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Red.jpg" alt="SCI · space: Axis 1 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_g" data-camada="sci_g" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Green.jpg" alt="SCI · space: Axis 2 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_b" data-camada="sci_b" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Blue.jpg" alt="SCI · space: Axis 3 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_clara" data-camada="sci_clara" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseClara.jpg" alt="SCI · space: CLARA of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_kmeans" data-camada="sci_kmeans" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseKmeans.jpg" alt="SCI · space: k-means of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-sci_rf" data-camada="sci_rf" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseRF.jpg" alt="SCI · space: Random Forest of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_rgb" data-camada="geo_rgb" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance.jpg" alt="GDM · environment + distance: RGB of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_r" data-camada="geo_r" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Red.jpg" alt="GDM · environment + distance: Axis 1 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_g" data-camada="geo_g" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Green.jpg" alt="GDM · environment + distance: Axis 2 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_b" data-camada="geo_b" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Blue.jpg" alt="GDM · environment + distance: Axis 3 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_clara" data-camada="geo_clara" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseClara.jpg" alt="GDM · environment + distance: CLARA of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_kmeans" data-camada="geo_kmeans" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseKmeans.jpg" alt="GDM · environment + distance: k-means of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-geo_rf" data-camada="geo_rf" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseRF.jpg" alt="GDM · environment + distance: Random Forest of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_rgb" data-camada="amb_rgb" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly.jpg" alt="GDM · environment only: RGB of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_r" data-camada="amb_r" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Red.jpg" alt="GDM · environment only: Axis 1 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_g" data-camada="amb_g" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Green.jpg" alt="GDM · environment only: Axis 2 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_b" data-camada="amb_b" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Blue.jpg" alt="GDM · environment only: Axis 3 of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_clara" data-camada="amb_clara" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseClara.jpg" alt="GDM · environment only: CLARA of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_kmeans" data-camada="amb_kmeans" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseKmeans.jpg" alt="GDM · environment only: k-means of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-amb_rf" data-camada="amb_rf" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseRF.jpg" alt="GDM · environment only: Random Forest of spider species composition in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_rgb" data-camada="cmp_rgb" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation.jpg" alt="SCI · space: RGB" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance.jpg" alt="GDM · environment + distance: RGB" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly.jpg" alt="GDM · environment only: RGB" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_r" data-camada="cmp_r" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Red.jpg" alt="SCI · space: Axis 1" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Red.jpg" alt="GDM · environment + distance: Axis 1" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Red.jpg" alt="GDM · environment only: Axis 1" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_g" data-camada="cmp_g" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Green.jpg" alt="SCI · space: Axis 2" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Green.jpg" alt="GDM · environment + distance: Axis 2" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Green.jpg" alt="GDM · environment only: Axis 2" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_b" data-camada="cmp_b" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_Blue.jpg" alt="SCI · space: Axis 3" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_Blue.jpg" alt="GDM · environment + distance: Axis 3" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_Blue.jpg" alt="GDM · environment only: Axis 3" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_clara" data-camada="cmp_clara" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseClara.jpg" alt="SCI · space: CLARA" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseClara.jpg" alt="GDM · environment + distance: CLARA" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseClara.jpg" alt="GDM · environment only: CLARA" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_kmeans" data-camada="cmp_kmeans" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseKmeans.jpg" alt="SCI · space: k-means" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseKmeans.jpg" alt="GDM · environment + distance: k-means" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseKmeans.jpg" alt="GDM · environment only: k-means" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_rf" data-camada="cmp_rf" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesCompositionInterpolation_ClasseRF.jpg" alt="SCI · space: Random Forest" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SCI · space</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/GDM_GeographicalDistance_ClasseRF.jpg" alt="GDM · environment + distance: Random Forest" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment + distance</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/GDM_EnviromentalOnly_ClasseRF.jpg" alt="GDM · environment only: Random Forest" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GDM · environment only</span></div>
+</div>
+</figure>
+</div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Map elements" aria-expanded="false" aria-controls="painel-composicao" title="Coordinates, scale and compass rose" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Map elements</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-composicao" role="group" aria-label="Map elements" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordinates</span><span class="interruptor__dica">Lat. and long. under the cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Scale</span><span class="interruptor__dica">Measured at the cursor’s latitude</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Compass rose</span><span class="interruptor__dica">North is up</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Area labels" data-areas hidden>
+<span class="areas__txt">Areas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Show the number of each area">Numbers</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Show the name when hovering over a number">Names</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Move the cursor over the map</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Model">
+<span class="visor__grupo-rotulo">Model</span>
+<button type="button" class="pilula" data-faceta="modelo" data-valor="sci" aria-pressed="true">SCI · space</button>
+<button type="button" class="pilula" data-faceta="modelo" data-valor="geo" aria-pressed="false">GDM · environment + distance</button>
+<button type="button" class="pilula" data-faceta="modelo" data-valor="amb" aria-pressed="false">GDM · environment only</button>
+<button type="button" class="pilula" data-faceta="modelo" data-valor="cmp" aria-pressed="false">All three side by side</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Composition">
+<span class="visor__grupo-rotulo">Composition</span>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="rgb" aria-pressed="true">RGB</button>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="r" aria-pressed="false">Axis 1</button>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="g" aria-pressed="false">Axis 2</button>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="b" aria-pressed="false">Axis 3</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Regionalization">
+<span class="visor__grupo-rotulo">Regionalization</span>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="clara" aria-pressed="false">CLARA</button>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="kmeans" aria-pressed="false">k-means</button>
+<button type="button" class="pilula" data-faceta="mapa" data-valor="rf" aria-pressed="false">Random Forest</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="sci_rgb">
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. The three NMDS axes combined in red, green and blue: similar colours mean similar species composition.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #D13631"></i>Axis 1 → red</span><span><i class="legenda__cor" style="background: #4FAE63"></i>Axis 2 → green</span><span><i class="legenda__cor" style="background: #2171B5"></i>Axis 3 → blue</span></span>
+</div>
+</div>
+<div data-texto="sci_r" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. First NMDS axis, the red channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 1 · red channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #FEF0EA, #F5A08A, #D13631, #A91015, #66000D)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="sci_g" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. Second NMDS axis, the green channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 2 · green channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="sci_b" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. Third NMDS axis, the blue channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 3 · blue channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="sci_clara" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by CLARA, medoid clustering designed for large datasets.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="sci_kmeans" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by k-means.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="sci_rf" hidden>
+<p>Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by Random Forest classification.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="geo_rgb" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. The three NMDS axes combined in red, green and blue: similar colours mean similar species composition.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #D13631"></i>Axis 1 → red</span><span><i class="legenda__cor" style="background: #4FAE63"></i>Axis 2 → green</span><span><i class="legenda__cor" style="background: #2171B5"></i>Axis 3 → blue</span></span>
+</div>
+</div>
+<div data-texto="geo_r" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. First NMDS axis, the red channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 1 · red channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #FEF0EA, #F5A08A, #D13631, #A91015, #66000D)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="geo_g" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Second NMDS axis, the green channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 2 · green channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="geo_b" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Third NMDS axis, the blue channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 3 · blue channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="geo_clara" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization by CLARA, medoid clustering designed for large datasets.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="geo_kmeans" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization by k-means.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="geo_rf" hidden>
+<p>Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization by Random Forest classification.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="amb_rgb" hidden>
+<p>GDM with environmental gradients only, without geographic distance. The three NMDS axes combined in red, green and blue: similar colours mean similar species composition.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #D13631"></i>Axis 1 → red</span><span><i class="legenda__cor" style="background: #4FAE63"></i>Axis 2 → green</span><span><i class="legenda__cor" style="background: #2171B5"></i>Axis 3 → blue</span></span>
+</div>
+</div>
+<div data-texto="amb_r" hidden>
+<p>GDM with environmental gradients only, without geographic distance. First NMDS axis, the red channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 1 · red channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #FEF0EA, #F5A08A, #D13631, #A91015, #66000D)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="amb_g" hidden>
+<p>GDM with environmental gradients only, without geographic distance. Second NMDS axis, the green channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 2 · green channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="amb_b" hidden>
+<p>GDM with environmental gradients only, without geographic distance. Third NMDS axis, the blue channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 3 · blue channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="amb_clara" hidden>
+<p>GDM with environmental gradients only, without geographic distance. Regionalization by CLARA, medoid clustering designed for large datasets.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="amb_kmeans" hidden>
+<p>GDM with environmental gradients only, without geographic distance. Regionalization by k-means.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="amb_rf" hidden>
+<p>GDM with environmental gradients only, without geographic distance. Regionalization by Random Forest classification.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="cmp_rgb" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. The three NMDS axes combined in red, green and blue: similar colours mean similar species composition.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #D13631"></i>Axis 1 → red</span><span><i class="legenda__cor" style="background: #4FAE63"></i>Axis 2 → green</span><span><i class="legenda__cor" style="background: #2171B5"></i>Axis 3 → blue</span></span>
+</div>
+</div>
+<div data-texto="cmp_r" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. First NMDS axis, the red channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 1 · red channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #FEF0EA, #F5A08A, #D13631, #A91015, #66000D)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="cmp_g" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Second NMDS axis, the green channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 2 · green channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="cmp_b" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Third NMDS axis, the blue channel of the RGB.</p>
+<div class="legenda">
+<span class="mono-rotulo">NMDS axis 3 · blue channel</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="cmp_clara" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization by CLARA, medoid clustering designed for large datasets.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="cmp_kmeans" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization by k-means.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+<div data-texto="cmp_rf" hidden>
+<p>The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization by Random Forest classification.</p>
+<div class="legenda">
+<p class="legenda__nota">Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or value.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">composition models: SCI, GDM with geographic distance and GDM with the environment only</span></div>
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">regionalization methods: CLARA, k-means and Random Forest</span></div>
+<div class="numero"><span class="numero__valor">21</span><span class="numero__texto">maps: RGB, three axes and three regionalizations per model</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Richness and endemism do not say which regions have similar faunas. To regionalize the continent without relying on political borders, you need to measure how species composition changes across space and along the environment.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">The records from plate 1 in 1° hexagons, and the principal components of the environment used in the predictions of plates 2 and 3.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Bray-Curtis dissimilarity between hexagons, summarized by NMDS on three axes.</li><li>SCI: interpolation of composition, with geographic distance as a predictor.</li><li>GDM: composition modelled by environmental gradients, with and without geographic distance.</li><li>Combination of the three axes in RGB.</li><li>Regionalization by three clustering methods: CLARA, k-means and Random Forest.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Comparing models and methods shows which biogeographic boundaries recur and which depend on the choice of method.</p>
+<ul><li>Composition is barely related to density, effort, richness or endemicity (r of at most 0.3).</li><li>Some regions match known ecoregions, such as the Atlantic Forest, Patagonia and the North American deserts.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publication</h2>
+<ul class="secao__corpo secao__pubs"><li><strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns. PhD thesis, Graduate Program in Zoology, UFMG.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Regionalizations for conservation planning, choosing representative areas for surveys and regional-scale impact studies.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/areas-de-endemismo.html"><span class="mono-rotulo">← Plate 4</span><span class="vizinhas__nome">Areas of endemism</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/spidbase.html"><span class="mono-rotulo">Plate 6 →</span><span class="vizinhas__nome">SPIDBASE</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

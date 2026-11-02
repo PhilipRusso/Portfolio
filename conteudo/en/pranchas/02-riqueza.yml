@@ -1,0 +1,259 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Species richness
+nome_curto: Species richness
+rotulo: Americas · PhD thesis, 2024 · part 2 of 5
+titulo: 'Spider richness in the Americas: what is observed and what the environment predicts'
+resumo: >-
+  Observed richness in 1° hexagons, interpolated by kriging and by spline, and predicted from the environment by
+  five algorithms: GAM, GLM, MARS, Random Forest and SVM.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Spider richness: observed and predicted by the environment'
+  etiqueta: Americas · Thesis, part 2 of 5 · five algorithms
+  imagem: SpeciesRichnessPredicted_RF.jpg
+  alt: Spider species richness predicted by Random Forest in the Americas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: krig
+camadas:
+- id: hex
+  grupo: Observed
+  rotulo: Hexagons
+  texto: >-
+    Observed richness per 1° hexagon, computed directly from the records. It is the starting data, before any interpolation.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichness_Hexagon.jpg
+    alt: Observed richness per 1-degree hexagon in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: krig
+  grupo: Observed
+  rotulo: Kriging
+  texto: >-
+    Observed richness interpolated by kriging from the hexagons: a continuous surface that accounts for spatial
+    autocorrelation.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Observed richness interpolated by kriging in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: spline
+  grupo: Observed
+  rotulo: Spline
+  texto: >-
+    Observed richness interpolated by spline, a deterministic interpolator that produces a smoother surface than
+    kriging.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichness_Spline.jpg
+    alt: Observed richness interpolated by spline in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: gam
+  grupo: Predicted
+  rotulo: GAM
+  texto: Richness predicted by a generalized additive model (GAM), from the principal components of the environment.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichnessPredicted_GAM.jpg
+    alt: Richness predicted by GAM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: glm
+  grupo: Predicted
+  rotulo: GLM
+  texto: Richness predicted by a generalized linear model (GLM), from the principal components of the environment.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichnessPredicted_GLM.jpg
+    alt: Richness predicted by GLM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: mars
+  grupo: Predicted
+  rotulo: MARS
+  texto: >-
+    Richness predicted by multivariate adaptive regression splines (MARS), from the principal components of the
+    environment.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichnessPredicted_MARS.jpg
+    alt: Richness predicted by MARS in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: rf
+  grupo: Predicted
+  rotulo: Random Forest
+  texto: Richness predicted by Random Forest, from the principal components of the environment.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichnessPredicted_RF.jpg
+    alt: Richness predicted by Random Forest in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: svm
+  grupo: Predicted
+  rotulo: SVM
+  texto: Richness predicted by a support vector machine (SVM), from the principal components of the environment.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichnessPredicted_SVM.jpg
+    alt: Richness predicted by SVM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_obs
+  grupo: Compare
+  rotulo: 'Observed: all three'
+  proporcao: 3.4 / 1
+  texto: The three ways of mapping observed richness, side by side.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichness_Hexagon.jpg
+    alt: Observed richness per hexagon
+    legenda: Hexagons
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Richness interpolated by kriging
+    legenda: Kriging
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichness_Spline.jpg
+    alt: Richness interpolated by spline
+    legenda: Spline
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_pred
+  grupo: Compare
+  rotulo: Observed × predicted
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: Observed richness (kriging) and the five predictions, to compare where the algorithms agree.
+  legenda:
+    titulo: Species richness
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Observed richness, interpolated by kriging
+    legenda: Observed · kriging
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_GAM.jpg
+    alt: Richness predicted by GAM
+    legenda: GAM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_GLM.jpg
+    alt: Richness predicted by GLM
+    legenda: GLM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_MARS.jpg
+    alt: Richness predicted by MARS
+    legenda: MARS
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_RF.jpg
+    alt: Richness predicted by Random Forest
+    legenda: Random Forest
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_SVM.jpg
+    alt: Richness predicted by SVM
+    legenda: SVM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: 100+
+  texto: species per hexagon at the richness peaks
+- valor: '3'
+  texto: 'ways of mapping observed richness: hexagons, kriging and spline'
+- valor: '5'
+  texto: 'prediction algorithms: GAM, GLM, MARS, Random Forest and SVM'
+- valor: '4'
+  texto: principal components of the environment, with 97% of the variation
+secoes:
+- titulo: The problem
+  texto: >-
+    Richness maps made only from records show both diversity and collecting effort. Predicting richness from the
+    environment helps reveal where it should be high even where little has been collected.
+- titulo: The data
+  texto: >-
+    The 88,684 records from plate 1, aggregated in 1° hexagons. As predictors, a PCA of the 19 bioclimatic variables
+    and altitude from WorldClim and actual evapotranspiration from USGS, at 2.5′ resolution; the first four components
+    add up to 97% of the variation.
+- titulo: The method
+  lista_numerada:
+  - Observed richness per 1° hexagon in BioDinamica.
+  - Interpolation of observed richness by kriging and by spline.
+  - >-
+    Prediction of richness by five algorithms (GAM, GLM, MARS, Random Forest and SVM), with the principal components
+    of the environment as predictors.
+  - Correlation with the bias maps of plate 1 and comparison between the predictions.
+- titulo: The result
+  destaque: Observed richness follows collecting effort; predictions made from the environment depend much less
+    on it.
+  lista:
+  - >-
+    Peaks of observed richness in Colombia, Ecuador, Peru, Brazil, Bolivia, Mexico, Central America and the Caribbean.
+  - Observed richness is strongly correlated with record density (r = 0.7).
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: >-
+  Prioritizing areas for surveys and estimating the expected richness where there has been no collecting, with sampling
+  bias made explicit.

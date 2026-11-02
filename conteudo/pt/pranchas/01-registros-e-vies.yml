@@ -1,0 +1,157 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Registros e viés de coleta
+nome_curto: Registros e viés de coleta
+rotulo: Américas · Tese de doutorado, 2024 · parte 1 de 5
+titulo: 'Aranhas das Américas: onde estão os registros e quanto se coletou'
+resumo: >-
+  O ponto de partida da tese: 88 mil registros georreferenciados, a densidade e o esforço de coleta, e as 63 áreas
+  mais bem conhecidas do continente.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG (cap. 3)
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: QGIS · ArcGIS Pro · BioDinamica (Dinamica EGO) · R
+cartao:
+  titulo: 'Aranhas das Américas: onde estão os registros e quanto se coletou'
+  etiqueta: Américas · Tese, parte 1 de 5 · 88 mil registros
+  imagem: home_tese1.jpg
+  alt: 'Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral'
+  ajuste: cover
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: registros
+camadas:
+- id: registros
+  grupo: Dados
+  rotulo: Registros
+  texto: 88.684 registros de aranhas com precisão de pelo menos município, selecionados entre os 148.333 do SPIDBASE.
+  legenda:
+    itens:
+    - cor: '#4F6478'
+      texto: Registro de aranha
+  imagens:
+  - src: Records.jpg
+    alt: Mapa das Américas com os registros de aranhas em pontos
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: kd
+  grupo: Viés de coleta
+  rotulo: Densidade de registros
+  texto: >-
+    Densidade Kernel com área de influência de 100 km² em torno de cada registro. Os picos ficam em áreas urbanizadas
+    e com pesquisa ativa.
+  legenda:
+    titulo: Densidade de registros
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: KernelDensity.jpg
+    alt: Densidade Kernel dos registros de aranhas nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: se
+  grupo: Viés de coleta
+  rotulo: Esforço amostral
+  texto: >-
+    Esforço amostral calculado no BioDinamica, em células de 1°. Destaca o viés espacial da coleta, mais do que
+    a quantidade de registros.
+  legenda:
+    titulo: Esforço amostral
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SamplingEffort-1degree.jpg
+    alt: Esforço amostral para aranhas nas Américas, em células de 1 grau
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: comparar
+  grupo: Viés de coleta
+  rotulo: Densidade × esforço
+  proporcao: 2.4 / 1
+  texto: Os dois mapas lado a lado. Os padrões coincidem nos principais focos de coleta.
+  legenda:
+    titulo: Densidade ou esforço
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: KernelDensity.jpg
+    alt: Densidade de registros
+    legenda: Densidade de registros
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SamplingEffort-1degree.jpg
+    alt: Esforço amostral
+    legenda: Esforço amostral
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: melhores
+  grupo: Síntese
+  rotulo: Áreas mais conhecidas
+  texto: >-
+    63 áreas em 13 países onde esforço amostral alto e densidade alta se sobrepõem. Ligue Números e Nomes, no canto
+    do mapa, e passe o mouse sobre um número para ver a área.
+  legenda:
+    itens:
+    - cor: '#A21E3C'
+      texto: Esforço amostral alto
+    - cor: '#244868'
+      texto: Densidade de registros alta
+  imagens:
+  - src: BestKnownAreas.jpg
+    alt: Mapa das 63 áreas mais conhecidas para aranhas nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+    rotulos: areas-mais-conhecidas
+numeros:
+- valor: '148.333'
+  texto: registros de aranhas nas Américas no SPIDBASE
+- valor: '88.684'
+  texto: com precisão de pelo menos município, usados nas análises
+- valor: '63'
+  texto: áreas mais bem conhecidas, em 13 países
+- valor: r = 0,7
+  texto: entre a densidade de registros e o esforço amostral
+secoes:
+- titulo: O problema
+  texto: >-
+    Antes de mapear a diversidade, é preciso saber onde ela foi procurada. Os registros de aranhas se acumulam perto
+    de cidades, universidades e museus, e esse viés aparece em qualquer mapa feito com eles.
+- titulo: Os dados
+  texto: >-
+    Registros do SPIDBASE (prancha 6). Dos 148.333 registros nas Américas, ficaram 88.684 com coordenadas de pelo
+    menos município (nível 2 do GADM): o recorte que gerou os modelos mais consistentes num teste com nove combinações
+    de precisão geográfica.
+- titulo: O método
+  lista_numerada:
+  - Comparação de nove níveis de precisão geográfica por regressão, para escolher o recorte dos dados.
+  - Densidade Kernel, com área de influência de 100 km² por registro.
+  - Esforço amostral no BioDinamica (Dinamica EGO), em células de 1°.
+  - Autocorrelação espacial (I de Moran) e correlação entre os mapas no R.
+  - 'Áreas mais conhecidas: sobreposição de esforço e densidade altos.'
+- titulo: O resultado
+  destaque: >-
+    Os registros se concentram em áreas urbanizadas e com pesquisa ativa. Esse mapa de viés é a referência para
+    ler as quatro pranchas seguintes.
+  lista:
+  - A densidade de registros é muito agregada no espaço (I de Moran = 0,91).
+  - As 63 áreas mais conhecidas vão do Chile ao Canadá e se espalham por 13 países.
+  - 'Churchill, em Manitoba, é exceção: uma área muito estudada, apesar da baixa densidade populacional.'
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Diagnóstico de lacunas de dados antes de estudos de impacto e planejamento de inventários onde o conhecimento
+  é mais fraco.

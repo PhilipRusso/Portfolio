@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 2 — Species richness · Philip Russo</title>
+<meta name="description" content="Observed richness in 1° hexagons, interpolated by kriging and by spline, and predicted from the environment by five algorithms: GAM, GLM, MARS, Random Forest and SVM.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/riqueza.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/riqueza.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<a class="circulo" href="../../en/pranchas/registros-e-vies.html" aria-label="Previous plate">←</a><span>02 / 12</span>
+<a class="circulo" href="../../en/pranchas/endemicidade.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/riqueza.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/riqueza.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 2 · Americas · PhD thesis, 2024 · part 2 of 5</span>
+<h1 class="cabeca__titulo">Spider richness in the Americas: what is observed and what the environment predicts</h1>
+<p class="cabeca__resumo">Observed richness in 1° hexagons, interpolated by kriging and by spline, and predicted from the environment by five algorithms: GAM, GLM, MARS, Random Forest and SVM.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)</dd></div>
+<div><dt>Advisor</dt><dd>Adalberto J. dos Santos</dd></div>
+<div><dt>My role</dt><dd>Author: database, analyses and maps</dd></div>
+<div><dt>Tools</dt><dd>QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor data-ui='{"em": "at", "equador": "at the equator", "escala": "scale", "hem": "N S E W", "passe": "Move the cursor over the map", "rosa": "Compass rose: north is up"}'>
+<div class="visor__camada" id="camada-hex" data-camada="hex" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Hexagon.jpg" alt="Observed richness per 1-degree hexagon in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-krig" data-camada="krig" data-cols="1" data-geo-camada>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Kriging.jpg" alt="Observed richness interpolated by kriging in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-spline" data-camada="spline" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Spline.jpg" alt="Observed richness interpolated by spline in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-gam" data-camada="gam" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_GAM.jpg" alt="Richness predicted by GAM in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-glm" data-camada="glm" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_GLM.jpg" alt="Richness predicted by GLM in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-mars" data-camada="mars" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_MARS.jpg" alt="Richness predicted by MARS in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-rf" data-camada="rf" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_RF.jpg" alt="Richness predicted by Random Forest in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-svm" data-camada="svm" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_SVM.jpg" alt="Richness predicted by SVM in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_obs" data-camada="cmp_obs" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 2.547 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Hexagon.jpg" alt="Observed richness per hexagon" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Hexagons</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Kriging.jpg" alt="Richness interpolated by kriging" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Kriging</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Spline.jpg" alt="Richness interpolated by spline" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Spline</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-cmp_pred" data-camada="cmp_pred" data-cols="3" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 1.359 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichness_Kriging.jpg" alt="Observed richness, interpolated by kriging" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Observed · kriging</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_GAM.jpg" alt="Richness predicted by GAM" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GAM</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_GLM.jpg" alt="Richness predicted by GLM" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">GLM</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_MARS.jpg" alt="Richness predicted by MARS" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">MARS</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_RF.jpg" alt="Richness predicted by Random Forest" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Random Forest</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SpeciesRichnessPredicted_SVM.jpg" alt="Richness predicted by SVM" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">SVM</span></div>
+</div>
+</figure>
+</div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Map elements" aria-expanded="false" aria-controls="painel-riqueza" title="Coordinates, scale and compass rose" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Map elements</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-riqueza" role="group" aria-label="Map elements" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordinates</span><span class="interruptor__dica">Lat. and long. under the cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Scale</span><span class="interruptor__dica">Measured at the cursor’s latitude</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Compass rose</span><span class="interruptor__dica">North is up</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Area labels" data-areas hidden>
+<span class="areas__txt">Areas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Show the number of each area">Numbers</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Show the name when hovering over a number">Names</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Move the cursor over the map</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Observed">
+<span class="visor__grupo-rotulo">Observed</span>
+<button type="button" class="pilula" data-alvo="hex" aria-controls="camada-hex" aria-pressed="false">Hexagons</button>
+<button type="button" class="pilula" data-alvo="krig" aria-controls="camada-krig" aria-pressed="true">Kriging</button>
+<button type="button" class="pilula" data-alvo="spline" aria-controls="camada-spline" aria-pressed="false">Spline</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Predicted">
+<span class="visor__grupo-rotulo">Predicted</span>
+<button type="button" class="pilula" data-alvo="gam" aria-controls="camada-gam" aria-pressed="false">GAM</button>
+<button type="button" class="pilula" data-alvo="glm" aria-controls="camada-glm" aria-pressed="false">GLM</button>
+<button type="button" class="pilula" data-alvo="mars" aria-controls="camada-mars" aria-pressed="false">MARS</button>
+<button type="button" class="pilula" data-alvo="rf" aria-controls="camada-rf" aria-pressed="false">Random Forest</button>
+<button type="button" class="pilula" data-alvo="svm" aria-controls="camada-svm" aria-pressed="false">SVM</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Compare">
+<span class="visor__grupo-rotulo">Compare</span>
+<button type="button" class="pilula" data-alvo="cmp_obs" aria-controls="camada-cmp_obs" aria-pressed="false">Observed: all three</button>
+<button type="button" class="pilula" data-alvo="cmp_pred" aria-controls="camada-cmp_pred" aria-pressed="false">Observed × predicted</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="hex" hidden>
+<p>Observed richness per 1° hexagon, computed directly from the records. It is the starting data, before any interpolation.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="krig">
+<p>Observed richness interpolated by kriging from the hexagons: a continuous surface that accounts for spatial autocorrelation.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="spline" hidden>
+<p>Observed richness interpolated by spline, a deterministic interpolator that produces a smoother surface than kriging.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="gam" hidden>
+<p>Richness predicted by a generalized additive model (GAM), from the principal components of the environment.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="glm" hidden>
+<p>Richness predicted by a generalized linear model (GLM), from the principal components of the environment.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="mars" hidden>
+<p>Richness predicted by multivariate adaptive regression splines (MARS), from the principal components of the environment.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="rf" hidden>
+<p>Richness predicted by Random Forest, from the principal components of the environment.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="svm" hidden>
+<p>Richness predicted by a support vector machine (SVM), from the principal components of the environment.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="cmp_obs" hidden>
+<p>The three ways of mapping observed richness, side by side.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="cmp_pred" hidden>
+<p>Observed richness (kriging) and the five predictions, to compare where the algorithms agree.</p>
+<div class="legenda">
+<span class="mono-rotulo">Species richness</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">100+</span><span class="numero__texto">species per hexagon at the richness peaks</span></div>
+<div class="numero"><span class="numero__valor">3</span><span class="numero__texto">ways of mapping observed richness: hexagons, kriging and spline</span></div>
+<div class="numero"><span class="numero__valor">5</span><span class="numero__texto">prediction algorithms: GAM, GLM, MARS, Random Forest and SVM</span></div>
+<div class="numero"><span class="numero__valor">4</span><span class="numero__texto">principal components of the environment, with 97% of the variation</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Richness maps made only from records show both diversity and collecting effort. Predicting richness from the environment helps reveal where it should be high even where little has been collected.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">The 88,684 records from plate 1, aggregated in 1° hexagons. As predictors, a PCA of the 19 bioclimatic variables and altitude from WorldClim and actual evapotranspiration from USGS, at 2.5′ resolution; the first four components add up to 97% of the variation.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Observed richness per 1° hexagon in BioDinamica.</li><li>Interpolation of observed richness by kriging and by spline.</li><li>Prediction of richness by five algorithms (GAM, GLM, MARS, Random Forest and SVM), with the principal components of the environment as predictors.</li><li>Correlation with the bias maps of plate 1 and comparison between the predictions.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Observed richness follows collecting effort; predictions made from the environment depend much less on it.</p>
+<ul><li>Peaks of observed richness in Colombia, Ecuador, Peru, Brazil, Bolivia, Mexico, Central America and the Caribbean.</li><li>Observed richness is strongly correlated with record density (r = 0.7).</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publication</h2>
+<ul class="secao__corpo secao__pubs"><li><strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns. PhD thesis, Graduate Program in Zoology, UFMG.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Prioritizing areas for surveys and estimating the expected richness where there has been no collecting, with sampling bias made explicit.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/pranchas/registros-e-vies.html"><span class="mono-rotulo">← Plate 1</span><span class="vizinhas__nome">Records and sampling bias</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/endemicidade.html"><span class="mono-rotulo">Plate 3 →</span><span class="vizinhas__nome">Endemicity</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

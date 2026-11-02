@@ -1,0 +1,585 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Composição e regionalização
+nome_curto: Composição e regionalização
+rotulo: Américas · Tese de doutorado, 2024 · parte 5 de 5
+titulo: Composição e regionalização das aranhas nas Américas
+resumo: >-
+  Três modelos de diversidade beta, pelo espaço (SCI), pelo ambiente com a distância geográfica e só pelo ambiente
+  (GDM), e a regionalização do continente por três métodos de agrupamento.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG (cap. 3)
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: Composição e regionalização do continente
+  etiqueta: Américas · Tese, parte 5 de 5 · SCI · GDM · 3 regionalizações
+  imagem: SpeciesCompositionInterpolation.jpg
+  alt: Composição de espécies de aranhas nas Américas pelo SCI, em cores RGB
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  chave: '{modelo}_{mapa}'
+  facetas:
+    modelo: sci
+    mapa: rgb
+grupos:
+- rotulo: Modelo
+  botoes:
+  - rotulo: SCI · espaço
+    faceta: modelo
+    valor: sci
+  - rotulo: GDM · ambiente + distância
+    faceta: modelo
+    valor: geo
+  - rotulo: GDM · só ambiente
+    faceta: modelo
+    valor: amb
+  - rotulo: Os três lado a lado
+    faceta: modelo
+    valor: cmp
+- rotulo: Composição
+  botoes:
+  - rotulo: RGB
+    faceta: mapa
+    valor: rgb
+  - rotulo: Eixo 1
+    faceta: mapa
+    valor: r
+  - rotulo: Eixo 2
+    faceta: mapa
+    valor: g
+  - rotulo: Eixo 3
+    faceta: mapa
+    valor: b
+- rotulo: Regionalização
+  botoes:
+  - rotulo: CLARA
+    faceta: mapa
+    valor: clara
+  - rotulo: k-means
+    faceta: mapa
+    valor: kmeans
+  - rotulo: Random Forest
+    faceta: mapa
+    valor: rf
+camadas:
+- id: sci_rgb
+  rotulo: SCI · espaço · RGB
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Os três eixos do NMDS combinados
+    em vermelho, verde e azul: cores parecidas indicam composição de espécies parecida.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Eixo 1 → vermelho
+    - cor: '#4FAE63'
+      texto: Eixo 2 → verde
+    - cor: '#2171B5'
+      texto: Eixo 3 → azul
+  imagens:
+  - src: SpeciesCompositionInterpolation.jpg
+    alt: 'SCI · espaço: RGB da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_r
+  rotulo: SCI · espaço · Eixo 1
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Primeiro eixo do NMDS, o
+    canal vermelho do RGB.
+  legenda:
+    titulo: Eixo 1 do NMDS · canal vermelho
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Red.jpg
+    alt: 'SCI · espaço: Eixo 1 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_g
+  rotulo: SCI · espaço · Eixo 2
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Segundo eixo do NMDS, o canal
+    verde do RGB.
+  legenda:
+    titulo: Eixo 2 do NMDS · canal verde
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Green.jpg
+    alt: 'SCI · espaço: Eixo 2 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_b
+  rotulo: SCI · espaço · Eixo 3
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Terceiro eixo do NMDS, o
+    canal azul do RGB.
+  legenda:
+    titulo: Eixo 3 do NMDS · canal azul
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Blue.jpg
+    alt: 'SCI · espaço: Eixo 3 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_clara
+  rotulo: SCI · espaço · CLARA
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Regionalização por CLARA,
+    agrupamento por medoides feito para grandes conjuntos de dados.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseClara.jpg
+    alt: 'SCI · espaço: CLARA da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_kmeans
+  rotulo: SCI · espaço · k-means
+  texto: Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Regionalização por k-means.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseKmeans.jpg
+    alt: 'SCI · espaço: k-means da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_rf
+  rotulo: SCI · espaço · Random Forest
+  texto: >-
+    Composição interpolada no espaço (SCI), com a distância geográfica como preditora. Regionalização por classificação
+    com Random Forest.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseRF.jpg
+    alt: 'SCI · espaço: Random Forest da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_rgb
+  rotulo: GDM · ambiente + distância · RGB
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Os três
+    eixos do NMDS combinados em vermelho, verde e azul: cores parecidas indicam composição de espécies parecida.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Eixo 1 → vermelho
+    - cor: '#4FAE63'
+      texto: Eixo 2 → verde
+    - cor: '#2171B5'
+      texto: Eixo 3 → azul
+  imagens:
+  - src: GDM_GeographicalDistance.jpg
+    alt: 'GDM · ambiente + distância: RGB da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_r
+  rotulo: GDM · ambiente + distância · Eixo 1
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Primeiro
+    eixo do NMDS, o canal vermelho do RGB.
+  legenda:
+    titulo: Eixo 1 do NMDS · canal vermelho
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_GeographicalDistance_Red.jpg
+    alt: 'GDM · ambiente + distância: Eixo 1 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_g
+  rotulo: GDM · ambiente + distância · Eixo 2
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Segundo
+    eixo do NMDS, o canal verde do RGB.
+  legenda:
+    titulo: Eixo 2 do NMDS · canal verde
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_GeographicalDistance_Green.jpg
+    alt: 'GDM · ambiente + distância: Eixo 2 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_b
+  rotulo: GDM · ambiente + distância · Eixo 3
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Terceiro
+    eixo do NMDS, o canal azul do RGB.
+  legenda:
+    titulo: Eixo 3 do NMDS · canal azul
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_GeographicalDistance_Blue.jpg
+    alt: 'GDM · ambiente + distância: Eixo 3 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_clara
+  rotulo: GDM · ambiente + distância · CLARA
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Regionalização
+    por CLARA, agrupamento por medoides feito para grandes conjuntos de dados.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseClara.jpg
+    alt: 'GDM · ambiente + distância: CLARA da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_kmeans
+  rotulo: GDM · ambiente + distância · k-means
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Regionalização
+    por k-means.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseKmeans.jpg
+    alt: 'GDM · ambiente + distância: k-means da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_rf
+  rotulo: GDM · ambiente + distância · Random Forest
+  texto: >-
+    Modelo de dissimilaridade generalizado (GDM) com os gradientes ambientais e a distância geográfica. Regionalização
+    por classificação com Random Forest.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseRF.jpg
+    alt: 'GDM · ambiente + distância: Random Forest da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_rgb
+  rotulo: GDM · só ambiente · RGB
+  texto: >-
+    GDM só com os gradientes ambientais, sem a distância geográfica. Os três eixos do NMDS combinados em vermelho,
+    verde e azul: cores parecidas indicam composição de espécies parecida.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Eixo 1 → vermelho
+    - cor: '#4FAE63'
+      texto: Eixo 2 → verde
+    - cor: '#2171B5'
+      texto: Eixo 3 → azul
+  imagens:
+  - src: GDM_EnviromentalOnly.jpg
+    alt: 'GDM · só ambiente: RGB da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_r
+  rotulo: GDM · só ambiente · Eixo 1
+  texto: >-
+    GDM só com os gradientes ambientais, sem a distância geográfica. Primeiro eixo do NMDS, o canal vermelho do
+    RGB.
+  legenda:
+    titulo: Eixo 1 do NMDS · canal vermelho
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_EnviromentalOnly_Red.jpg
+    alt: 'GDM · só ambiente: Eixo 1 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_g
+  rotulo: GDM · só ambiente · Eixo 2
+  texto: GDM só com os gradientes ambientais, sem a distância geográfica. Segundo eixo do NMDS, o canal verde do
+    RGB.
+  legenda:
+    titulo: Eixo 2 do NMDS · canal verde
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_EnviromentalOnly_Green.jpg
+    alt: 'GDM · só ambiente: Eixo 2 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_b
+  rotulo: GDM · só ambiente · Eixo 3
+  texto: GDM só com os gradientes ambientais, sem a distância geográfica. Terceiro eixo do NMDS, o canal azul do
+    RGB.
+  legenda:
+    titulo: Eixo 3 do NMDS · canal azul
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: menor
+    max: maior
+  imagens:
+  - src: GDM_EnviromentalOnly_Blue.jpg
+    alt: 'GDM · só ambiente: Eixo 3 da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_clara
+  rotulo: GDM · só ambiente · CLARA
+  texto: >-
+    GDM só com os gradientes ambientais, sem a distância geográfica. Regionalização por CLARA, agrupamento por medoides
+    feito para grandes conjuntos de dados.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseClara.jpg
+    alt: 'GDM · só ambiente: CLARA da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_kmeans
+  rotulo: GDM · só ambiente · k-means
+  texto: GDM só com os gradientes ambientais, sem a distância geográfica. Regionalização por k-means.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseKmeans.jpg
+    alt: 'GDM · só ambiente: k-means da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_rf
+  rotulo: GDM · só ambiente · Random Forest
+  texto: >-
+    GDM só com os gradientes ambientais, sem a distância geográfica. Regionalização por classificação com Random
+    Forest.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseRF.jpg
+    alt: 'GDM · só ambiente: Random Forest da composição de espécies de aranhas nas Américas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_rgb
+  rotulo: Os três · RGB
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Os três eixos do NMDS
+    combinados em vermelho, verde e azul: cores parecidas indicam composição de espécies parecida.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Eixo 1 → vermelho
+    - cor: '#4FAE63'
+      texto: Eixo 2 → verde
+    - cor: '#2171B5'
+      texto: Eixo 3 → azul
+  imagens:
+  - src: SpeciesCompositionInterpolation.jpg
+    alt: 'SCI · espaço: RGB'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance.jpg
+    alt: 'GDM · ambiente + distância: RGB'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly.jpg
+    alt: 'GDM · só ambiente: RGB'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_r
+  rotulo: Os três · Eixo 1
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Primeiro eixo do NMDS,
+    o canal vermelho do RGB.
+  legenda:
+    titulo: Eixo 1 do NMDS · canal vermelho
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Red.jpg
+    alt: 'SCI · espaço: Eixo 1'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Red.jpg
+    alt: 'GDM · ambiente + distância: Eixo 1'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Red.jpg
+    alt: 'GDM · só ambiente: Eixo 1'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_g
+  rotulo: Os três · Eixo 2
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Segundo eixo do NMDS,
+    o canal verde do RGB.
+  legenda:
+    titulo: Eixo 2 do NMDS · canal verde
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Green.jpg
+    alt: 'SCI · espaço: Eixo 2'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Green.jpg
+    alt: 'GDM · ambiente + distância: Eixo 2'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Green.jpg
+    alt: 'GDM · só ambiente: Eixo 2'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_b
+  rotulo: Os três · Eixo 3
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Terceiro eixo do NMDS,
+    o canal azul do RGB.
+  legenda:
+    titulo: Eixo 3 do NMDS · canal azul
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesCompositionInterpolation_Blue.jpg
+    alt: 'SCI · espaço: Eixo 3'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Blue.jpg
+    alt: 'GDM · ambiente + distância: Eixo 3'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Blue.jpg
+    alt: 'GDM · só ambiente: Eixo 3'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_clara
+  rotulo: Os três · CLARA
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Regionalização por CLARA,
+    agrupamento por medoides feito para grandes conjuntos de dados.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseClara.jpg
+    alt: 'SCI · espaço: CLARA'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseClara.jpg
+    alt: 'GDM · ambiente + distância: CLARA'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseClara.jpg
+    alt: 'GDM · só ambiente: CLARA'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_kmeans
+  rotulo: Os três · k-means
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Regionalização por k-means.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseKmeans.jpg
+    alt: 'SCI · espaço: k-means'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseKmeans.jpg
+    alt: 'GDM · ambiente + distância: k-means'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseKmeans.jpg
+    alt: 'GDM · só ambiente: k-means'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_rf
+  rotulo: Os três · Random Forest
+  proporcao: 3.4 / 1
+  texto: >-
+    Os três modelos lado a lado: SCI, GDM com distância geográfica e GDM só com o ambiente. Regionalização por classificação
+    com Random Forest.
+  legenda:
+    nota: 'Cada cor é uma região biogeográfica. A cor só separa as regiões: não indica ordem nem valor.'
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseRF.jpg
+    alt: 'SCI · espaço: Random Forest'
+    legenda: SCI · espaço
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseRF.jpg
+    alt: 'GDM · ambiente + distância: Random Forest'
+    legenda: GDM · ambiente + distância
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseRF.jpg
+    alt: 'GDM · só ambiente: Random Forest'
+    legenda: GDM · só ambiente
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: '3'
+  texto: 'modelos de composição: SCI, GDM com distância geográfica e GDM só com o ambiente'
+- valor: '3'
+  texto: 'métodos de regionalização: CLARA, k-means e Random Forest'
+- valor: '21'
+  texto: 'mapas: RGB, três eixos e três regionalizações por modelo'
+secoes:
+- titulo: O problema
+  texto: >-
+    Riqueza e endemismo não dizem quais regiões têm faunas parecidas. Para regionalizar o continente sem depender
+    de fronteiras políticas, é preciso medir como a composição de espécies muda no espaço e ao longo do ambiente.
+- titulo: Os dados
+  texto: >-
+    Os registros da prancha 1 em hexágonos de 1°, e os componentes principais do ambiente usados nas previsões das
+    pranchas 2 e 3.
+- titulo: O método
+  lista_numerada:
+  - Dissimilaridade de Bray-Curtis entre hexágonos, resumida por NMDS em três eixos.
+  - 'SCI: interpolação da composição, com a distância geográfica como preditora.'
+  - 'GDM: composição modelada pelos gradientes ambientais, com e sem a distância geográfica.'
+  - Combinação dos três eixos em RGB.
+  - 'Regionalização por três métodos de agrupamento: CLARA, k-means e Random Forest.'
+- titulo: O resultado
+  destaque: >-
+    Comparar modelos e métodos mostra quais limites biogeográficos se repetem e quais dependem da escolha do método.
+  lista:
+  - A composição quase não se relaciona com densidade, esforço, riqueza ou endemicidade (r de no máximo 0,3).
+  - >-
+    Parte das regiões coincide com ecorregiões conhecidas, como a Floresta Atlântica, a Patagônia e os desertos
+    norte-americanos.
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Regionalizações para planejamento de conservação, escolha de áreas representativas para inventários e estudos
+  de impacto em escala regional.

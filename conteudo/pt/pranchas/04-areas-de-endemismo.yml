@@ -1,0 +1,173 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Áreas de endemismo
+nome_curto: Áreas de endemismo
+rotulo: Américas · Tese de doutorado, 2024 · parte 4 de 5
+titulo: 'Áreas de endemismo: 255 regiões com espécies de distribuição congruente'
+resumo: >-
+  Interpolação geográfica do endemismo (GIE) em nove classes de amplitude de distribuição: o consenso e as quatro
+  classes mais restritas.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG (cap. 3)
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Áreas de endemismo: 255 regiões no continente'
+  etiqueta: Américas · Tese, parte 4 de 5 · GIE
+  imagem: GIE_Consensus.jpg
+  alt: Consenso das áreas de endemismo de aranhas nas Américas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: consenso
+camadas:
+- id: consenso
+  grupo: Consenso
+  rotulo: Consenso
+  texto: 'Consenso das classes de amplitude: quanto mais escuro, mais áreas de endemismo se sobrepõem no mesmo lugar.'
+  legenda:
+    titulo: Sobreposição de áreas de endemismo
+    cores: '#EBEFFA, #DFE6EE, #C6D7E7, #A0B6CE, #35506B'
+    min: menor
+    max: maior
+  imagens:
+  - src: GIE_Consensus.jpg
+    alt: Consenso das áreas de endemismo de aranhas nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c1
+  grupo: Classes
+  rotulo: Classe 1
+  texto: >-
+    Classe 1: espécies com distribuição de até 50 km. São as áreas de endemismo mais restritas, pequenas e espalhadas
+    pelo continente.
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Área de endemismo da classe
+  imagens:
+  - src: GIE_Class01.jpg
+    alt: Áreas de endemismo da classe 1, de até 50 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c2
+  grupo: Classes
+  rotulo: Classe 2
+  texto: 'Classe 2: espécies com distribuição de 51 a 200 km.'
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Área de endemismo da classe
+  imagens:
+  - src: GIE_Class02.jpg
+    alt: Áreas de endemismo da classe 2, de 51 a 200 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c3
+  grupo: Classes
+  rotulo: Classe 3
+  texto: 'Classe 3: espécies com distribuição de 201 a 400 km.'
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Área de endemismo da classe
+  imagens:
+  - src: GIE_Class03.jpg
+    alt: Áreas de endemismo da classe 3, de 201 a 400 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c4
+  grupo: Classes
+  rotulo: Classe 4
+  texto: >-
+    Classe 4: espécies com distribuição de 401 a 600 km. Quanto maior a amplitude, maiores e mais contínuas as áreas.
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Área de endemismo da classe
+  imagens:
+  - src: GIE_Class04.jpg
+    alt: Áreas de endemismo da classe 4, de 401 a 600 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: comparar
+  grupo: Comparar
+  rotulo: Consenso e classes
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: >-
+    O consenso e as quatro classes mais restritas lado a lado: quanto mais restrita a classe, menores e mais numerosas
+    as áreas.
+  imagens:
+  - src: GIE_Consensus.jpg
+    alt: Consenso
+    legenda: Consenso
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class01.jpg
+    alt: Classe 1
+    legenda: Classe 1 · até 50 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class02.jpg
+    alt: Classe 2
+    legenda: Classe 2 · 51 a 200 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class03.jpg
+    alt: Classe 3
+    legenda: Classe 3 · 201 a 400 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class04.jpg
+    alt: Classe 4
+    legenda: Classe 4 · 401 a 600 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: '255'
+  texto: áreas de endemismo, somando as nove classes
+- valor: '9'
+  texto: classes de amplitude, de até 50 km a mais de 2.000 km
+- valor: 0,97
+  texto: 'de I de Moran no consenso: padrão muito agregado'
+- valor: r = 0,1
+  texto: entre a classe 1 e a densidade de registros
+secoes:
+- titulo: O problema
+  texto: >-
+    Áreas de endemismo são regiões onde várias espécies têm distribuição restrita e sobreposta. Delimitá-las exige
+    um método que não dependa de grades arbitrárias e que funcione com dados desiguais.
+- titulo: Os dados
+  texto: >-
+    Os registros da prancha 1. A amplitude de cada espécie é a distância entre o centroide da sua distribuição e
+    o ponto de ocorrência mais distante.
+- titulo: O método
+  lista_numerada:
+  - Interpolação geográfica do endemismo (GIE) no BioDinamica, com estimador de densidade Kernel.
+  - >-
+    Nove classes de amplitude: até 50 km, 51–200, 201–400, 401–600, 601–800, 801–1.000, 1.001–1.500, 1.501–2.000
+    e mais de 2.000 km.
+  - Mapa de consenso das classes e mapas por classe.
+  - Correlação com os mapas de viés, de riqueza e de endemicidade, e I de Moran por classe.
+- titulo: O resultado
+  destaque: >-
+    São 255 áreas de endemismo para aranhas nas Américas. Quanto mais fina a classe, mais áreas restritas aparecem.
+  lista:
+  - O sul e o sudeste do Brasil e a Amazônia brasileira concentram mais áreas de endemismo.
+  - As classes mais restritas quase não se relacionam com a densidade de registros (r = 0,1 na classe 1).
+  - 'A agregação espacial cresce com a amplitude: I de Moran de 0,08 na classe 1 e de 0,95 na classe 4.'
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Delimitação de áreas prioritárias e de unidades de conservação, e análise de impactos sobre espécies endêmicas.

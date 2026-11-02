@@ -41,7 +41,7 @@ ferramentas:
   - nome: ArcGIS Pro → QGIS converter
     texto: >-
       Reads the internal structure of .aprx files and rebuilds the project in QGIS with symbology, map themes and print
-      layouts. It converted the projects of plates 4 and 6, with 167 layers.
+      layouts. It converted the projects of plates 8 and 10, with 167 layers.
     tecnologias: PyQGIS · GDAL
   - nome: Regular grid generator
     texto: >-
@@ -59,7 +59,7 @@ publicacoes:
   - ano: '2024'
     texto: >-
       <strong>Russo P</strong>. Spider biogeography of the Americas: from literature data to diversity patterns.
-      PhD thesis, Graduate Program in Zoology, UFMG. <a href="/en/pranchas/tese.html">plate 1 →</a>
+      PhD thesis, Graduate Program in Zoology, UFMG. <a href="/en/pranchas/registros-e-vies.html">plates 1 to 5 →</a>
   - ano: '2021'
     texto: >-
       Macêdo RL, Franco ACS, <strong>Russo P</strong>, Collart T, Mammola S, Jeppesen E, Branco CWC, dos Santos LN,
@@ -75,7 +75,7 @@ publicacoes:
     texto: >-
       <strong>Russo P</strong>. Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
       araneoideas americanas. MSc dissertation, Graduate Program in Zoology, UFMG.
-      <a href="/en/pranchas/araneoidea-americas.html">plate 5 →</a>
+      <a href="/en/pranchas/araneoidea-americas.html">plate 9 →</a>
   - ano: '[year]'
     texto: >-
       Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna

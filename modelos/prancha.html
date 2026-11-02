@@ -27,14 +27,26 @@
 </dl>
 </section>
 
-<section class="largura visor" aria-label="{{ site.ui.mapa_interativo }}" data-visor>
+<section class="largura visor" aria-label="{{ site.ui.mapa_interativo }}" data-visor{% if p.visor.chave %} data-chave="{{ p.visor.chave }}" data-facetas='{{ p.visor.facetas | tojson }}'{% endif %} data-ui='{{ {"passe": site.ui.passe_cursor, "hem": site.ui.hemisferios, "escala": site.ui.escala_rotulo, "equador": site.ui.no_equador, "em": site.ui.em, "rosa": site.ui.rosa_aria} | tojson }}'>
 {% for c in p.camadas %}
-<div class="visor__camada" id="camada-{{ c.id }}" data-camada="{{ c.id }}"{{ '' if c.id == ini else ' hidden' }}>
+<div class="visor__camada" id="camada-{{ c.id }}" data-camada="{{ c.id }}" data-cols="{{ c._cols }}"{% if c._geo %} data-geo-camada{% endif %}{% if c._rot %} data-rotulos-camada{% endif %}{% if c._leg %} data-com-legendas{% endif %}{{ '' if c.id == ini else ' hidden' }}>
 <figure class="visor__quadro" style="background: {{ c.fundo | default('#FFFFFF') }}">
-<div class="visor__area" style="aspect-ratio: {{ c.proporcao | default(p.visor.proporcao) }}; padding: {{ p.visor.margem | default('0px') }}">
+<div class="visor__area" style="aspect-ratio: {{ c._prop }}; padding: {{ p.visor.margem | default('0px') }}; padding-top: {{ c._topo }}; grid-template-columns: repeat({{ c._cols }}, minmax(0, 1fr)); grid-template-rows: repeat({{ c._rows }}, minmax(0, 1fr))">
 {% for im in c.imagens %}
 <div class="visor__img">
-<img src="/assets/img/{{ im.src }}" alt="{{ im.alt }}"{{ '' if c.id == ini else ' loading="lazy"' }}>
+<div class="visor__slot">
+<div class="mapa{{ ' mapa--corta' if im.cortar else '' }}" style="--ar: {{ im.ar }}"{% if im.geo_txt %} data-geo="{{ im.geo_txt }}" data-canto="{{ im.canto }}"{% if not im.sem_elementos %} data-dir="{{ im.dir }}" data-base="{{ im.base }}" data-rosa="{{ im.rosa }}"{% endif %}{% if im.ultimo %} data-ultimo{% endif %}{% endif %}>
+<img class="mapa__img" src="/assets/img/{{ im.src }}" alt="{{ im.alt }}" style="left: {{ im.il }}; top: {{ im.it }}; width: {{ im.iw }}; height: {{ im.ih }}"{{ '' if c.id == ini else ' loading="lazy"' }}>
+{% if im.rot %}
+<div class="rotulos" style="--d: {{ im.rot.d }}cqw" data-rotulos hidden>
+<img class="rotulos__linhas" src="/assets/img/{{ im.rot.linhas }}" alt="" aria-hidden="true">
+{% for r in im.rot.itens %}
+<button type="button" class="rotulo rotulo--{{ r.lado }}" style="{{ 'left' if r.lado == 'd' else 'right' }}: {{ r.pos }}%; top: {{ r.y }}%; --mw: {{ r.mw }}cqw" aria-label="{{ site.ui.area }} {{ r.n }}: {{ r.nome }}" aria-expanded="false"><span class="rotulo__n">{{ r.n }}</span><span class="rotulo__nome" hidden>{{ r.nome }}</span></button>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+</div>
 {% if im.legenda %}<span class="visor__leg">{{ im.legenda }}</span>{% endif %}
 </div>
 {% endfor %}
@@ -43,14 +55,34 @@
 {% if c.legenda_figura %}<p class="visor__cap">{{ c.legenda_figura }}</p>{% endif %}
 </div>
 {% endfor %}
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="{{ site.ui.elementos }}" aria-expanded="false" aria-controls="painel-{{ p.slug }}" title="{{ site.ui.elementos_titulo }}" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">{{ site.ui.elementos }}</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-{{ p.slug }}" role="group" aria-label="{{ site.ui.elementos }}" hidden>
+{% for chave, rotulo, dica in [('coord', site.ui.coordenadas, site.ui.coordenadas_dica), ('escala', site.ui.escala, site.ui.escala_dica), ('rosa', site.ui.rosa, site.ui.rosa_dica)] %}
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="{{ chave }}"><span class="interruptor__textos"><span class="interruptor__rotulo">{{ rotulo }}</span><span class="interruptor__dica">{{ dica }}</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+{% endfor %}
+</div>
+</div>
+<div class="areas" role="group" aria-label="{{ site.ui.areas_grupo }}" data-areas hidden>
+<span class="areas__txt">{{ site.ui.areas }}</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="{{ site.ui.numeros_titulo }}">{{ site.ui.numeros_btn }}</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="{{ site.ui.nomes_titulo }}">{{ site.ui.nomes_btn }}</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">{{ site.ui.passe_cursor }}</div><div class="leitura__sis">{{ site.ui.sistema }}</div></div>
 <div class="visor__controles">
 <div class="visor__botoes">
 {% for g in p.grupos %}
 <div class="visor__grupo" role="group" aria-label="{{ g.rotulo }}">
 <span class="visor__grupo-rotulo">{{ g.rotulo }}</span>
+{% if g.botoes %}
+{% for b in g.botoes %}
+<button type="button" class="pilula" data-faceta="{{ b.faceta }}" data-valor="{{ b.valor }}" aria-pressed="{{ 'true' if b.ativo else 'false' }}">{{ b.rotulo }}</button>
+{% endfor %}
+{% else %}
 {% for c in g.camadas %}
 <button type="button" class="pilula" data-alvo="{{ c.id }}" aria-controls="camada-{{ c.id }}" aria-pressed="{{ 'true' if c.id == ini else 'false' }}">{{ c.rotulo }}</button>
 {% endfor %}
+{% endif %}
 </div>
 {% endfor %}
 </div>

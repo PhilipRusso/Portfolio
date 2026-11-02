@@ -1,0 +1,262 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Riqueza de espécies
+nome_curto: Riqueza de espécies
+rotulo: Américas · Tese de doutorado, 2024 · parte 2 de 5
+titulo: 'Riqueza de aranhas nas Américas: o que se observa e o que o ambiente prevê'
+resumo: >-
+  Riqueza observada em hexágonos de 1°, interpolada por krigagem e por spline, e prevista a partir do ambiente por
+  cinco algoritmos: GAM, GLM, MARS, Random Forest e SVM.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG (cap. 3)
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Riqueza de aranhas: observada e prevista pelo ambiente'
+  etiqueta: Américas · Tese, parte 2 de 5 · cinco algoritmos
+  imagem: SpeciesRichnessPredicted_RF.jpg
+  alt: Riqueza de espécies de aranhas prevista por Random Forest nas Américas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: krig
+camadas:
+- id: hex
+  grupo: Observada
+  rotulo: Hexágonos
+  texto: >-
+    Riqueza observada por hexágono de 1°, calculada direto dos registros. É o dado de partida, antes de qualquer
+    interpolação.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichness_Hexagon.jpg
+    alt: Riqueza observada por hexágono de 1 grau nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: krig
+  grupo: Observada
+  rotulo: Krigagem
+  texto: >-
+    Riqueza observada interpolada por krigagem a partir dos hexágonos: uma superfície contínua que leva em conta
+    a autocorrelação espacial.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Riqueza observada interpolada por krigagem nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: spline
+  grupo: Observada
+  rotulo: Spline
+  texto: >-
+    Riqueza observada interpolada por spline, um interpolador determinístico que gera uma superfície mais suave
+    que a krigagem.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichness_Spline.jpg
+    alt: Riqueza observada interpolada por spline nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: gam
+  grupo: Prevista
+  rotulo: GAM
+  texto: Riqueza prevista por modelo aditivo generalizado (GAM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichnessPredicted_GAM.jpg
+    alt: Riqueza prevista por GAM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: glm
+  grupo: Prevista
+  rotulo: GLM
+  texto: Riqueza prevista por modelo linear generalizado (GLM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichnessPredicted_GLM.jpg
+    alt: Riqueza prevista por GLM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: mars
+  grupo: Prevista
+  rotulo: MARS
+  texto: >-
+    Riqueza prevista por regressão multivariada por splines adaptativos (MARS), a partir dos componentes principais
+    do ambiente.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichnessPredicted_MARS.jpg
+    alt: Riqueza prevista por MARS nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: rf
+  grupo: Prevista
+  rotulo: Random Forest
+  texto: Riqueza prevista por Random Forest, a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichnessPredicted_RF.jpg
+    alt: Riqueza prevista por Random Forest nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: svm
+  grupo: Prevista
+  rotulo: SVM
+  texto: Riqueza prevista por máquina de vetores de suporte (SVM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichnessPredicted_SVM.jpg
+    alt: Riqueza prevista por SVM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_obs
+  grupo: Comparar
+  rotulo: 'Observada: as três'
+  proporcao: 3.4 / 1
+  texto: As três formas de mapear a riqueza observada, lado a lado.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichness_Hexagon.jpg
+    alt: Riqueza observada por hexágono
+    legenda: Hexágonos
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Riqueza interpolada por krigagem
+    legenda: Krigagem
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichness_Spline.jpg
+    alt: Riqueza interpolada por spline
+    legenda: Spline
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_pred
+  grupo: Comparar
+  rotulo: Observada × previstas
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: A riqueza observada (krigagem) e as cinco previsões, para comparar onde os algoritmos concordam.
+  legenda:
+    titulo: Riqueza de espécies
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: SpeciesRichness_Kriging.jpg
+    alt: Riqueza observada, interpolada por krigagem
+    legenda: Observada · krigagem
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_GAM.jpg
+    alt: Riqueza prevista por GAM
+    legenda: GAM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_GLM.jpg
+    alt: Riqueza prevista por GLM
+    legenda: GLM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_MARS.jpg
+    alt: Riqueza prevista por MARS
+    legenda: MARS
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_RF.jpg
+    alt: Riqueza prevista por Random Forest
+    legenda: Random Forest
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SpeciesRichnessPredicted_SVM.jpg
+    alt: Riqueza prevista por SVM
+    legenda: SVM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: 100+
+  texto: espécies por hexágono nos picos de riqueza
+- valor: '3'
+  texto: 'formas de mapear a riqueza observada: hexágonos, krigagem e spline'
+- valor: '5'
+  texto: 'algoritmos de previsão: GAM, GLM, MARS, Random Forest e SVM'
+- valor: '4'
+  texto: componentes principais do ambiente, com 97% da variação
+secoes:
+- titulo: O problema
+  texto: >-
+    Mapas de riqueza feitos só com registros mostram tanto a diversidade quanto o esforço de coleta. Prever a riqueza
+    a partir do ambiente ajuda a enxergar onde ela deve ser alta mesmo onde pouco se coletou.
+- titulo: Os dados
+  texto: >-
+    Os 88.684 registros da prancha 1, agregados em hexágonos de 1°. Como preditores, uma PCA das 19 variáveis bioclimáticas
+    e da altitude do WorldClim e da evapotranspiração real do USGS, com 2,5′ de resolução; os quatro primeiros componentes
+    somam 97% da variação.
+- titulo: O método
+  lista_numerada:
+  - Riqueza observada por hexágono de 1° no BioDinamica.
+  - Interpolação da riqueza observada por krigagem e por spline.
+  - >-
+    Previsão da riqueza por cinco algoritmos (GAM, GLM, MARS, Random Forest e SVM), com os componentes principais
+    do ambiente como preditores.
+  - Correlação com os mapas de viés da prancha 1 e comparação entre as previsões.
+- titulo: O resultado
+  destaque: >-
+    A riqueza observada acompanha o esforço de coleta; as previsões feitas a partir do ambiente dependem bem menos
+    dele.
+  lista:
+  - >-
+    Picos de riqueza observada na Colômbia, no Equador, no Peru, no Brasil, na Bolívia, no México, na América Central
+    e no Caribe.
+  - A riqueza observada tem correlação alta com a densidade de registros (r = 0,7).
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Priorização de áreas para inventário e estimativa da riqueza esperada onde não há coleta, com o viés de amostragem
+  explícito.

@@ -20,6 +20,28 @@ ui:
   voltar: Back
   fim: End of the plates
   voltar_atlas: Back to the atlas
+  elementos: Map elements
+  elementos_titulo: Coordinates, scale and compass rose
+  coordenadas: Coordinates
+  coordenadas_dica: Lat. and long. under the cursor
+  escala: Scale
+  escala_dica: Measured at the cursor’s latitude
+  rosa: Compass rose
+  rosa_dica: North is up
+  rosa_aria: 'Compass rose: north is up'
+  passe_cursor: Move the cursor over the map
+  sistema: EPSG:4326 · WGS 84
+  hemisferios: N S E W
+  escala_rotulo: scale
+  no_equador: at the equator
+  em: at
+  areas: Areas
+  areas_grupo: Area labels
+  numeros_btn: Numbers
+  numeros_titulo: Show the number of each area
+  nomes_btn: Names
+  nomes_titulo: Show the name when hovering over a number
+  area: Area
 legendas:
   ceratium:
     titulo: Climatic suitability

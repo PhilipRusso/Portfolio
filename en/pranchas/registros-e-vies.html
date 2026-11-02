@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plate 1 — Records and sampling bias · Philip Russo</title>
+<meta name="description" content="The starting point of the thesis: 88,000 georeferenced records, record density and sampling effort, and the 63 best-known areas of the continent.">
+<link rel="alternate" hreflang="pt-BR" href="../../pranchas/registros-e-vies.html">
+<link rel="alternate" hreflang="en" href="../../en/pranchas/registros-e-vies.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E5E4A'/%3E%3Cpath d='M10 7l4.5 2.6v5.2L10 17.4l-4.5-2.6V9.6zM20 7l4.5 2.6v5.2L20 17.4l-4.5-2.6V9.6zM15 15.4l4.5 2.6v5.2L15 25.8l-4.5-2.6V18z' fill='none' stroke='white' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topo">
+<div class="largura topo__linha">
+<a class="topo__voltar" href="../../en/index.html">← Project atlas</a>
+<nav class="paginador" aria-label="Plates">
+<span class="circulo circulo--off" aria-hidden="true">←</span><span>01 / 12</span>
+<a class="circulo" href="../../en/pranchas/riqueza.html" aria-label="Next plate">→</a></nav>
+<div class="idioma" role="group" aria-label="Language">
+<a href="../../pranchas/registros-e-vies.html" hreflang="pt-BR" lang="pt-BR">PT</a>
+<a href="../../en/pranchas/registros-e-vies.html" hreflang="en" lang="en" aria-current="true" class="ativo">EN</a>
+</div></div>
+</header>
+
+<main>
+<section class="largura cabeca">
+<span class="cabeca__rotulo">Plate 1 · Americas · PhD thesis, 2024 · part 1 of 5</span>
+<h1 class="cabeca__titulo">Spiders of the Americas: where the records are and how much has been collected</h1>
+<p class="cabeca__resumo">The starting point of the thesis: 88,000 georeferenced records, record density and sampling effort, and the 63 best-known areas of the continent.</p>
+<dl class="ficha">
+<div><dt>Deliverable</dt><dd>PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)</dd></div>
+<div><dt>Advisor</dt><dd>Adalberto J. dos Santos</dd></div>
+<div><dt>My role</dt><dd>Author: database, analyses and maps</dd></div>
+<div><dt>Tools</dt><dd>QGIS · ArcGIS Pro · BioDinamica (Dinamica EGO) · R</dd></div>
+</dl>
+</section>
+
+<section class="largura visor" aria-label="Interactive map" data-visor data-ui='{"em": "at", "equador": "at the equator", "escala": "scale", "hem": "N S E W", "passe": "Move the cursor over the map", "rosa": "Compass rose: north is up"}'>
+<div class="visor__camada" id="camada-registros" data-camada="registros" data-cols="1" data-geo-camada>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/Records.jpg" alt="Map of the Americas with spider records as points" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-kd" data-camada="kd" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/KernelDensity.jpg" alt="Kernel density of spider records in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-se" data-camada="se" data-cols="1" data-geo-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SamplingEffort-1degree.jpg" alt="Sampling effort for spiders in the Americas, in 1-degree cells" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-comparar" data-camada="comparar" data-cols="2" data-geo-camada data-com-legendas hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 1.803 / 1; padding: 12px; padding-top: 64px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5">
+<img class="mapa__img" src="../../assets/img/KernelDensity.jpg" alt="Record density" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Record density</span></div>
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa mapa--corta" style="--ar: 1.02000" data-geo="-179.0563,-30.0420,-61.3794,84.7130" data-canto="l" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/SamplingEffort-1degree.jpg" alt="Sampling effort" style="left: -7.8431%; top: -0.0000%; width: 130.7190%; height: 100.0000%" loading="lazy">
+</div>
+</div>
+<span class="visor__leg">Sampling effort</span></div>
+</div>
+</figure>
+</div>
+<div class="visor__camada" id="camada-melhores" data-camada="melhores" data-cols="1" data-geo-camada data-rotulos-camada hidden>
+<figure class="visor__quadro" style="background: #FFFFFF">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 12px; padding-top: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
+<div class="visor__img">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.33333" data-geo="-190.7437,4.0462,-61.3794,84.7130" data-canto="r" data-dir="3" data-base="0" data-rosa="5.5" data-ultimo>
+<img class="mapa__img" src="../../assets/img/BestKnownAreas.jpg" alt="Map of the 63 best-known areas for spiders in the Americas" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+<div class="rotulos" style="--d: 2.524cqw" data-rotulos hidden>
+<img class="rotulos__linhas" src="../../assets/img/BestKnownAreas_Leaders.png" alt="" aria-hidden="true">
+<button type="button" class="rotulo rotulo--e" style="right: 69.138%; top: 29.546%; --mw: 30.00cqw" aria-label="Area 01: Carbon County (Wyoming) · USA" aria-expanded="false"><span class="rotulo__n">01</span><span class="rotulo__nome" hidden>Carbon County (Wyoming) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 66.669%; top: 30.44%; --mw: 30.00cqw" aria-label="Area 02: Jackson County (Colorado) · USA" aria-expanded="false"><span class="rotulo__n">02</span><span class="rotulo__nome" hidden>Jackson County (Colorado) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 71.044%; top: 31.804%; --mw: 30.00cqw" aria-label="Area 03: Sonoma to Contra Costa counties (California) · USA" aria-expanded="false"><span class="rotulo__n">03</span><span class="rotulo__nome" hidden>Sonoma to Contra Costa counties (California) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 68.292%; top: 33.028%; --mw: 30.00cqw" aria-label="Area 04: Monterey County (California) · USA" aria-expanded="false"><span class="rotulo__n">04</span><span class="rotulo__nome" hidden>Monterey County (California) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 65.399%; top: 33.451%; --mw: 30.00cqw" aria-label="Area 05: Tulare County (California) · USA" aria-expanded="false"><span class="rotulo__n">05</span><span class="rotulo__nome" hidden>Tulare County (California) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 72.419%; top: 34.909%; --mw: 30.00cqw" aria-label="Area 06: Los Angeles to Riverside counties (California) · USA" aria-expanded="false"><span class="rotulo__n">06</span><span class="rotulo__nome" hidden>Los Angeles to Riverside counties (California) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 69.915%; top: 36.039%; --mw: 30.00cqw" aria-label="Area 07: Cochise County (Arizona) · USA" aria-expanded="false"><span class="rotulo__n">07</span><span class="rotulo__nome" hidden>Cochise County (Arizona) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 67.057%; top: 36.321%; --mw: 30.00cqw" aria-label="Area 08: Sonoran Desert (Sonora) · Mexico" aria-expanded="false"><span class="rotulo__n">08</span><span class="rotulo__nome" hidden>Sonoran Desert (Sonora) · Mexico</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 64.517%; top: 37.732%; --mw: 30.00cqw" aria-label="Area 09: Ensenada (Baja California) · Mexico" aria-expanded="false"><span class="rotulo__n">09</span><span class="rotulo__nome" hidden>Ensenada (Baja California) · Mexico</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 61.694%; top: 38.814%; --mw: 30.00cqw" aria-label="Area 10: Camargo and Manuel Benavides (Chihuahua) · Mexico" aria-expanded="false"><span class="rotulo__n">10</span><span class="rotulo__nome" hidden>Camargo and Manuel Benavides (Chihuahua) · Mexico</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 70.779%; top: 18.49%; --mw: 30.00cqw" aria-label="Area 11: Churchill (Manitoba) · Canada" aria-expanded="false"><span class="rotulo__n">11</span><span class="rotulo__nome" hidden>Churchill (Manitoba) · Canada</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 62.982%; top: 31.522%; --mw: 30.00cqw" aria-label="Area 12: Pike County (Missouri) · USA" aria-expanded="false"><span class="rotulo__n">12</span><span class="rotulo__nome" hidden>Pike County (Missouri) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 65.769%; top: 31.099%; --mw: 30.00cqw" aria-label="Area 13: Dickinson County (Kansas) · USA" aria-expanded="false"><span class="rotulo__n">13</span><span class="rotulo__nome" hidden>Dickinson County (Kansas) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 60.089%; top: 33.028%; --mw: 30.00cqw" aria-label="Area 14: Clay (Tennessee) and Cumberland (Kentucky) counties · USA" aria-expanded="false"><span class="rotulo__n">14</span><span class="rotulo__nome" hidden>Clay (Tennessee) and Cumberland (Kentucky) counties · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 71.026%; top: 35.051%; --mw: 30.00cqw" aria-label="Area 15: Ouachita County (Arkansas) · USA" aria-expanded="false"><span class="rotulo__n">15</span><span class="rotulo__nome" hidden>Ouachita County (Arkansas) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 68.521%; top: 35.85%; --mw: 30.00cqw" aria-label="Area 16: De Soto Parish (Louisiana) · USA" aria-expanded="false"><span class="rotulo__n">16</span><span class="rotulo__nome" hidden>De Soto Parish (Louisiana) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 62.665%; top: 37.591%; --mw: 30.00cqw" aria-label="Area 17: Lake County (Florida) · USA" aria-expanded="false"><span class="rotulo__n">17</span><span class="rotulo__nome" hidden>Lake County (Florida) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 66.016%; top: 37.215%; --mw: 30.00cqw" aria-label="Area 18: Bexar to Williamson counties (Texas) · USA" aria-expanded="false"><span class="rotulo__n">18</span><span class="rotulo__nome" hidden>Bexar to Williamson counties (Texas) · USA</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 59.878%; top: 38.532%; --mw: 30.00cqw" aria-label="Area 19: Alachua County (Florida) · USA" aria-expanded="false"><span class="rotulo__n">19</span><span class="rotulo__nome" hidden>Alachua County (Florida) · USA</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 62.118%; top: 43.425%; --mw: 30.00cqw" aria-label="Area 20: Tamazunchale (San Luis Potosí) · Mexico" aria-expanded="false"><span class="rotulo__n">20</span><span class="rotulo__nome" hidden>Tamazunchale (San Luis Potosí) · Mexico</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 59.401%; top: 44.789%; --mw: 30.00cqw" aria-label="Area 21: Pico de Orizaba (Veracruz) · Mexico" aria-expanded="false"><span class="rotulo__n">21</span><span class="rotulo__nome" hidden>Pico de Orizaba (Veracruz) · Mexico</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 56.614%; top: 45.354%; --mw: 30.00cqw" aria-label="Area 22: State of Mexico and Mexico City · Mexico" aria-expanded="false"><span class="rotulo__n">22</span><span class="rotulo__nome" hidden>State of Mexico and Mexico City · Mexico</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 53.757%; top: 48.036%; --mw: 30.00cqw" aria-label="Area 23: Quetzaltenango Department · Guatemala" aria-expanded="false"><span class="rotulo__n">23</span><span class="rotulo__nome" hidden>Quetzaltenango Department · Guatemala</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 52.522%; top: 51.188%; --mw: 30.00cqw" aria-label="Area 24: Heredia Province · Costa Rica" aria-expanded="false"><span class="rotulo__n">24</span><span class="rotulo__nome" hidden>Heredia Province · Costa Rica</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 49.770%; top: 51.941%; --mw: 30.00cqw" aria-label="Area 25: Bugaba District (Chiriquí) · Panama" aria-expanded="false"><span class="rotulo__n">25</span><span class="rotulo__nome" hidden>Bugaba District (Chiriquí) · Panama</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 46.912%; top: 52.364%; --mw: 30.00cqw" aria-label="Area 26: Panama Canal · Panama" aria-expanded="false"><span class="rotulo__n">26</span><span class="rotulo__nome" hidden>Panama Canal · Panama</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 69.897%; top: 45.401%; --mw: 30.00cqw" aria-label="Area 27: Enriquillo to Cibao Sur regions · Dominican Republic" aria-expanded="false"><span class="rotulo__n">27</span><span class="rotulo__nome" hidden>Enriquillo to Cibao Sur regions · Dominican Republic</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 43.667%; top: 55.046%; --mw: 30.00cqw" aria-label="Area 28: Quindío to Cundinamarca departments · Colombia" aria-expanded="false"><span class="rotulo__n">28</span><span class="rotulo__nome" hidden>Quindío to Cundinamarca departments · Colombia</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 58.872%; top: 56.74%; --mw: 30.00cqw" aria-label="Area 29: Barbacoas (Nariño) · Colombia" aria-expanded="false"><span class="rotulo__n">29</span><span class="rotulo__nome" hidden>Barbacoas (Nariño) · Colombia</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 55.767%; top: 58.198%; --mw: 30.00cqw" aria-label="Area 30: Orellana and Sucumbíos Provinces, along the Napo River · Ecuador" aria-expanded="false"><span class="rotulo__n">30</span><span class="rotulo__nome" hidden>Orellana and Sucumbíos Provinces, along the Napo River · Ecuador</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 52.275%; top: 58.01%; --mw: 30.00cqw" aria-label="Area 31: Manabí Province · Ecuador" aria-expanded="false"><span class="rotulo__n">31</span><span class="rotulo__nome" hidden>Manabí Province · Ecuador</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 49.558%; top: 58.527%; --mw: 30.00cqw" aria-label="Area 32: Santo Domingo de los Tsáchilas Province · Ecuador" aria-expanded="false"><span class="rotulo__n">32</span><span class="rotulo__nome" hidden>Santo Domingo de los Tsáchilas Province · Ecuador</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 46.665%; top: 58.81%; --mw: 30.00cqw" aria-label="Area 33: Napo Province · Ecuador" aria-expanded="false"><span class="rotulo__n">33</span><span class="rotulo__nome" hidden>Napo Province · Ecuador</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 44.019%; top: 60.268%; --mw: 30.00cqw" aria-label="Area 34: Iquitos (Loreto) · Peru" aria-expanded="false"><span class="rotulo__n">34</span><span class="rotulo__nome" hidden>Iquitos (Loreto) · Peru</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 80.057%; top: 59.61%; --mw: 26.42cqw" aria-label="Area 35: Guamá Region (PA) · Brazil" aria-expanded="false"><span class="rotulo__n">35</span><span class="rotulo__nome" hidden>Guamá Region (PA) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 82.950%; top: 59.233%; --mw: 23.53cqw" aria-label="Area 36: Melgaço (PA) · Brazil" aria-expanded="false"><span class="rotulo__n">36</span><span class="rotulo__nome" hidden>Melgaço (PA) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 86.231%; top: 59.845%; --mw: 20.25cqw" aria-label="Area 37: Juruti (PA) · Brazil" aria-expanded="false"><span class="rotulo__n">37</span><span class="rotulo__nome" hidden>Juruti (PA) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 89.054%; top: 60.08%; --mw: 17.42cqw" aria-label="Area 38: Manaus (AM) · Brazil" aria-expanded="false"><span class="rotulo__n">38</span><span class="rotulo__nome" hidden>Manaus (AM) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 84.397%; top: 62.385%; --mw: 22.08cqw" aria-label="Area 39: Parauapebas (PA) · Brazil" aria-expanded="false"><span class="rotulo__n">39</span><span class="rotulo__nome" hidden>Parauapebas (PA) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 81.645%; top: 64.314%; --mw: 24.83cqw" aria-label="Area 40: Paraíba to Alagoas · Brazil" aria-expanded="false"><span class="rotulo__n">40</span><span class="rotulo__nome" hidden>Paraíba to Alagoas · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 79.952%; top: 68.219%; --mw: 26.52cqw" aria-label="Area 41: Una (BA) · Brazil" aria-expanded="false"><span class="rotulo__n">41</span><span class="rotulo__nome" hidden>Una (BA) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 46.630%; top: 69.113%; --mw: 30.00cqw" aria-label="Area 42: Lake Titicaca (Puno) · Peru" aria-expanded="false"><span class="rotulo__n">42</span><span class="rotulo__nome" hidden>Lake Titicaca (Puno) · Peru</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 43.914%; top: 74.806%; --mw: 30.00cqw" aria-label="Area 43: Palmar (Salta) to Comandancia Frías (Chaco) · Argentina" aria-expanded="false"><span class="rotulo__n">43</span><span class="rotulo__nome" hidden>Palmar (Salta) to Comandancia Frías (Chaco) · Argentina</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 42.855%; top: 78.335%; --mw: 30.00cqw" aria-label="Area 44: Coquimbo Region · Chile" aria-expanded="false"><span class="rotulo__n">44</span><span class="rotulo__nome" hidden>Coquimbo Region · Chile</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 45.219%; top: 80.263%; --mw: 30.00cqw" aria-label="Area 45: Valparaíso Region · Chile" aria-expanded="false"><span class="rotulo__n">45</span><span class="rotulo__nome" hidden>Valparaíso Region · Chile</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 47.935%; top: 82.098%; --mw: 30.00cqw" aria-label="Area 46: Maule Region · Chile" aria-expanded="false"><span class="rotulo__n">46</span><span class="rotulo__nome" hidden>Maule Region · Chile</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 45.713%; top: 84.074%; --mw: 30.00cqw" aria-label="Area 47: Araucanía and Biobío Regions · Chile" aria-expanded="false"><span class="rotulo__n">47</span><span class="rotulo__nome" hidden>Araucanía and Biobío Regions · Chile</span></button>
+<button type="button" class="rotulo rotulo--e" style="right: 44.443%; top: 86.897%; --mw: 30.00cqw" aria-label="Area 48: Los Lagos Region · Chile" aria-expanded="false"><span class="rotulo__n">48</span><span class="rotulo__nome" hidden>Los Lagos Region · Chile</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 90.324%; top: 70.854%; --mw: 16.15cqw" aria-label="Area 49: Sooretama (ES) · Brazil" aria-expanded="false"><span class="rotulo__n">49</span><span class="rotulo__nome" hidden>Sooretama (ES) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 81.963%; top: 71.701%; --mw: 24.51cqw" aria-label="Area 50: Belo Horizonte Metropolitan Region (MG) · Brazil" aria-expanded="false"><span class="rotulo__n">50</span><span class="rotulo__nome" hidden>Belo Horizonte Metropolitan Region (MG) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 87.466%; top: 72.03%; --mw: 19.01cqw" aria-label="Area 51: Pains (MG) · Brazil" aria-expanded="false"><span class="rotulo__n">51</span><span class="rotulo__nome" hidden>Pains (MG) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 84.467%; top: 73.018%; --mw: 22.01cqw" aria-label="Area 52: Campinas and Sorocaba Metropolitan Regions (SP) · Brazil" aria-expanded="false"><span class="rotulo__n">52</span><span class="rotulo__nome" hidden>Campinas and Sorocaba Metropolitan Regions (SP) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 78.399%; top: 73.818%; --mw: 28.08cqw" aria-label="Area 53: Rio de Janeiro Metropolitan Region (RJ) · Brazil" aria-expanded="false"><span class="rotulo__n">53</span><span class="rotulo__nome" hidden>Rio de Janeiro Metropolitan Region (RJ) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 91.559%; top: 74.571%; --mw: 14.92cqw" aria-label="Area 54: São Paulo Metropolitan Region (SP) · Brazil" aria-expanded="false"><span class="rotulo__n">54</span><span class="rotulo__nome" hidden>São Paulo Metropolitan Region (SP) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 82.139%; top: 75.559%; --mw: 24.34cqw" aria-label="Area 55: Iguazú National Park · Brazil, Argentina and Paraguay" aria-expanded="false"><span class="rotulo__n">55</span><span class="rotulo__nome" hidden>Iguazú National Park · Brazil, Argentina and Paraguay</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 87.113%; top: 75.371%; --mw: 19.36cqw" aria-label="Area 56: Curitiba (PR) · Brazil" aria-expanded="false"><span class="rotulo__n">56</span><span class="rotulo__nome" hidden>Curitiba (PR) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 79.634%; top: 76.782%; --mw: 26.84cqw" aria-label="Area 57: Salto do Yucumã · Brazil and Argentina" aria-expanded="false"><span class="rotulo__n">57</span><span class="rotulo__nome" hidden>Salto do Yucumã · Brazil and Argentina</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 84.714%; top: 76.594%; --mw: 21.76cqw" aria-label="Area 58: Erechim (RS) and Concórdia (SC) · Brazil" aria-expanded="false"><span class="rotulo__n">58</span><span class="rotulo__nome" hidden>Erechim (RS) and Concórdia (SC) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 89.371%; top: 77.064%; --mw: 17.11cqw" aria-label="Area 59: Florianópolis Metropolitan Region (SC) · Brazil" aria-expanded="false"><span class="rotulo__n">59</span><span class="rotulo__nome" hidden>Florianópolis Metropolitan Region (SC) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 74.624%; top: 78.146%; --mw: 30.00cqw" aria-label="Area 60: Porto Alegre (RS) and Lages (SC) · Brazil" aria-expanded="false"><span class="rotulo__n">60</span><span class="rotulo__nome" hidden>Porto Alegre (RS) and Lages (SC) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 77.235%; top: 78.617%; --mw: 29.24cqw" aria-label="Area 61: Cachoeira do Sul (RS) · Brazil" aria-expanded="false"><span class="rotulo__n">61</span><span class="rotulo__nome" hidden>Cachoeira do Sul (RS) · Brazil</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 72.966%; top: 82.239%; --mw: 30.00cqw" aria-label="Area 62: Ciudad Autónoma de Buenos Aires · Argentina" aria-expanded="false"><span class="rotulo__n">62</span><span class="rotulo__nome" hidden>Ciudad Autónoma de Buenos Aires · Argentina</span></button>
+<button type="button" class="rotulo rotulo--d" style="left: 66.369%; top: 93.343%; --mw: 30.00cqw" aria-label="Area 63: Güer Aike Department (Santa Cruz) · Argentina" aria-expanded="false"><span class="rotulo__n">63</span><span class="rotulo__nome" hidden>Güer Aike Department (Santa Cruz) · Argentina</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Map elements" aria-expanded="false" aria-controls="painel-registros-e-vies" title="Coordinates, scale and compass rose" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Map elements</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-registros-e-vies" role="group" aria-label="Map elements" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordinates</span><span class="interruptor__dica">Lat. and long. under the cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Scale</span><span class="interruptor__dica">Measured at the cursor’s latitude</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Compass rose</span><span class="interruptor__dica">North is up</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Area labels" data-areas hidden>
+<span class="areas__txt">Areas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Show the number of each area">Numbers</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Show the name when hovering over a number">Names</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Move the cursor over the map</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
+<div class="visor__controles">
+<div class="visor__botoes">
+<div class="visor__grupo" role="group" aria-label="Data">
+<span class="visor__grupo-rotulo">Data</span>
+<button type="button" class="pilula" data-alvo="registros" aria-controls="camada-registros" aria-pressed="true">Records</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Collection bias">
+<span class="visor__grupo-rotulo">Collection bias</span>
+<button type="button" class="pilula" data-alvo="kd" aria-controls="camada-kd" aria-pressed="false">Record density</button>
+<button type="button" class="pilula" data-alvo="se" aria-controls="camada-se" aria-pressed="false">Sampling effort</button>
+<button type="button" class="pilula" data-alvo="comparar" aria-controls="camada-comparar" aria-pressed="false">Density × effort</button>
+</div>
+<div class="visor__grupo" role="group" aria-label="Synthesis">
+<span class="visor__grupo-rotulo">Synthesis</span>
+<button type="button" class="pilula" data-alvo="melhores" aria-controls="camada-melhores" aria-pressed="false">Best-known areas</button>
+</div>
+</div>
+<div class="visor__info" aria-live="polite">
+<span class="mono-rotulo">What you are seeing</span>
+<div data-texto="registros">
+<p>88,684 spider records with at least municipality-level precision, selected from the 148,333 in SPIDBASE.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #4F6478"></i>Spider record</span></span>
+</div>
+</div>
+<div data-texto="kd" hidden>
+<p>Kernel density with a 100 km² area of influence around each record. Peaks fall in urbanized areas with active research.</p>
+<div class="legenda">
+<span class="mono-rotulo">Record density</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="se" hidden>
+<p>Sampling effort calculated in BioDinamica, in 1° cells. It highlights the spatial bias of collecting rather than the number of records.</p>
+<div class="legenda">
+<span class="mono-rotulo">Sampling effort</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="comparar" hidden>
+<p>The two maps side by side. The patterns match in the main collecting hotspots.</p>
+<div class="legenda">
+<span class="mono-rotulo">Density or effort</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, #EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E)" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>lower</span><span>higher</span></span>
+</div>
+</div>
+<div data-texto="melhores" hidden>
+<p>63 areas in 13 countries where high sampling effort and high record density overlap. Turn on Numbers and Names in the corner of the map and hover over a number to see the area.</p>
+<div class="legenda">
+<span class="legenda__itens"><span><i class="legenda__cor" style="background: #A21E3C"></i>High sampling effort</span><span><i class="legenda__cor" style="background: #244868"></i>High record density</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="numeros" aria-label="Figures">
+<div class="largura numeros__linha">
+<div class="numero"><span class="numero__valor">148,333</span><span class="numero__texto">spider records from the Americas in SPIDBASE</span></div>
+<div class="numero"><span class="numero__valor">88,684</span><span class="numero__texto">with at least municipality-level precision, used in the analyses</span></div>
+<div class="numero"><span class="numero__valor">63</span><span class="numero__texto">best-known areas, in 13 countries</span></div>
+<div class="numero"><span class="numero__valor">r = 0.7</span><span class="numero__texto">between record density and sampling effort</span></div>
+</div>
+</section>
+
+<section class="largura secoes">
+<div class="secao">
+<h2>The problem</h2>
+<p class="secao__corpo">Before mapping diversity, you need to know where it was looked for. Spider records pile up near cities, universities and museums, and that bias shows up in any map made with them.</p>
+</div>
+<div class="secao">
+<h2>The data</h2>
+<p class="secao__corpo">Records from SPIDBASE (plate 6). Of the 148,333 records from the Americas, 88,684 had coordinates precise to at least the municipality (GADM level 2): the subset that produced the most consistent models in a test of nine combinations of geographic precision.</p>
+</div>
+<div class="secao">
+<h2>The method</h2>
+<ol class="secao__corpo"><li>Comparison of nine levels of geographic precision by regression, to choose the data subset.</li><li>Kernel density, with a 100 km² area of influence per record.</li><li>Sampling effort in BioDinamica (Dinamica EGO), in 1° cells.</li><li>Spatial autocorrelation (Moran’s I) and correlation between maps in R.</li><li>Best-known areas: overlap of high effort and high density.</li></ol>
+</div>
+<div class="secao">
+<h2>The result</h2>
+<div class="secao__corpo">
+<p class="secao__destaque">Records concentrate in urbanized areas with active research. This bias map is the reference for reading the next four plates.</p>
+<ul><li>Record density is highly clustered in space (Moran’s I = 0.91).</li><li>The 63 best-known areas run from Chile to Canada and are spread across 13 countries.</li><li>Churchill, in Manitoba, is an exception: a well-studied area despite its low population density.</li></ul></div>
+</div>
+<div class="secao">
+<h2>Publication</h2>
+<ul class="secao__corpo secao__pubs"><li><strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns. PhD thesis, Graduate Program in Zoology, UFMG.</li></ul>
+</div>
+<aside class="secao secao--aplica">
+<h2>Where this applies</h2>
+<p class="secao__corpo">Diagnosing data gaps before impact assessments and planning surveys where knowledge is weakest.</p>
+</aside>
+</section>
+
+<nav class="largura vizinhas" aria-label="Other plates">
+<a href="../../en/index.html"><span class="mono-rotulo">← Back</span><span class="vizinhas__nome">Project atlas</span></a>
+<a class="vizinhas--dir" href="../../en/pranchas/riqueza.html"><span class="mono-rotulo">Plate 2 →</span><span class="vizinhas__nome">Species richness</span></a>
+</nav>
+</main>
+<footer class="rodape">
+<div class="largura rodape__linha">
+<span>Philip Russo · Project atlas</span>
+<span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
+</div>
+</footer>
+<script src="../../assets/js/visor.js" defer></script></body>
+</html>

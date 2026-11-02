@@ -1,0 +1,155 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Records and sampling bias
+nome_curto: Records and sampling bias
+rotulo: Americas · PhD thesis, 2024 · part 1 of 5
+titulo: 'Spiders of the Americas: where the records are and how much has been collected'
+resumo: >-
+  The starting point of the thesis: 88,000 georeferenced records, record density and sampling effort, and the 63
+  best-known areas of the continent.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: QGIS · ArcGIS Pro · BioDinamica (Dinamica EGO) · R
+cartao:
+  titulo: 'Spiders of the Americas: where the records are and how much has been collected'
+  etiqueta: Americas · Thesis, part 1 of 5 · 88k records
+  imagem: home_tese1.jpg
+  alt: 'Three maps of the Americas: spider records, record density and sampling effort'
+  ajuste: cover
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: registros
+camadas:
+- id: registros
+  grupo: Data
+  rotulo: Records
+  texto: 88,684 spider records with at least municipality-level precision, selected from the 148,333 in SPIDBASE.
+  legenda:
+    itens:
+    - cor: '#4F6478'
+      texto: Spider record
+  imagens:
+  - src: Records.jpg
+    alt: Map of the Americas with spider records as points
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: kd
+  grupo: Collection bias
+  rotulo: Record density
+  texto: >-
+    Kernel density with a 100 km² area of influence around each record. Peaks fall in urbanized areas with active
+    research.
+  legenda:
+    titulo: Record density
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: KernelDensity.jpg
+    alt: Kernel density of spider records in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: se
+  grupo: Collection bias
+  rotulo: Sampling effort
+  texto: >-
+    Sampling effort calculated in BioDinamica, in 1° cells. It highlights the spatial bias of collecting rather
+    than the number of records.
+  legenda:
+    titulo: Sampling effort
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: SamplingEffort-1degree.jpg
+    alt: Sampling effort for spiders in the Americas, in 1-degree cells
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: comparar
+  grupo: Collection bias
+  rotulo: Density × effort
+  proporcao: 2.4 / 1
+  texto: The two maps side by side. The patterns match in the main collecting hotspots.
+  legenda:
+    titulo: Density or effort
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: KernelDensity.jpg
+    alt: Record density
+    legenda: Record density
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: SamplingEffort-1degree.jpg
+    alt: Sampling effort
+    legenda: Sampling effort
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: melhores
+  grupo: Synthesis
+  rotulo: Best-known areas
+  texto: >-
+    63 areas in 13 countries where high sampling effort and high record density overlap. Turn on Numbers and Names
+    in the corner of the map and hover over a number to see the area.
+  legenda:
+    itens:
+    - cor: '#A21E3C'
+      texto: High sampling effort
+    - cor: '#244868'
+      texto: High record density
+  imagens:
+  - src: BestKnownAreas.jpg
+    alt: Map of the 63 best-known areas for spiders in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+    rotulos: areas-mais-conhecidas
+numeros:
+- valor: 148,333
+  texto: spider records from the Americas in SPIDBASE
+- valor: 88,684
+  texto: with at least municipality-level precision, used in the analyses
+- valor: '63'
+  texto: best-known areas, in 13 countries
+- valor: r = 0.7
+  texto: between record density and sampling effort
+secoes:
+- titulo: The problem
+  texto: >-
+    Before mapping diversity, you need to know where it was looked for. Spider records pile up near cities, universities
+    and museums, and that bias shows up in any map made with them.
+- titulo: The data
+  texto: >-
+    Records from SPIDBASE (plate 6). Of the 148,333 records from the Americas, 88,684 had coordinates precise to
+    at least the municipality (GADM level 2): the subset that produced the most consistent models in a test of nine
+    combinations of geographic precision.
+- titulo: The method
+  lista_numerada:
+  - Comparison of nine levels of geographic precision by regression, to choose the data subset.
+  - Kernel density, with a 100 km² area of influence per record.
+  - Sampling effort in BioDinamica (Dinamica EGO), in 1° cells.
+  - Spatial autocorrelation (Moran’s I) and correlation between maps in R.
+  - 'Best-known areas: overlap of high effort and high density.'
+- titulo: The result
+  destaque: >-
+    Records concentrate in urbanized areas with active research. This bias map is the reference for reading the
+    next four plates.
+  lista:
+  - Record density is highly clustered in space (Moran’s I = 0.91).
+  - The 63 best-known areas run from Chile to Canada and are spread across 13 countries.
+  - 'Churchill, in Manitoba, is an exception: a well-studied area despite its low population density.'
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: Diagnosing data gaps before impact assessments and planning surveys where knowledge is weakest.

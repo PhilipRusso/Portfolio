@@ -1,0 +1,610 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Composition and regionalization
+nome_curto: Composition and regionalization
+rotulo: Americas · PhD thesis, 2024 · part 5 of 5
+titulo: Composition and regionalization of spiders in the Americas
+resumo: >-
+  Three beta-diversity models, through space (SCI), through the environment with geographic distance, and through
+  the environment alone (GDM), and the regionalization of the continent by three clustering methods.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: Composition and regionalization of the continent
+  etiqueta: Americas · Thesis, part 5 of 5 · SCI · GDM · 3 regionalizations
+  imagem: SpeciesCompositionInterpolation.jpg
+  alt: Spider species composition in the Americas by SCI, in RGB colours
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  chave: '{modelo}_{mapa}'
+  facetas:
+    modelo: sci
+    mapa: rgb
+grupos:
+- rotulo: Model
+  botoes:
+  - rotulo: SCI · space
+    faceta: modelo
+    valor: sci
+  - rotulo: GDM · environment + distance
+    faceta: modelo
+    valor: geo
+  - rotulo: GDM · environment only
+    faceta: modelo
+    valor: amb
+  - rotulo: All three side by side
+    faceta: modelo
+    valor: cmp
+- rotulo: Composition
+  botoes:
+  - rotulo: RGB
+    faceta: mapa
+    valor: rgb
+  - rotulo: Axis 1
+    faceta: mapa
+    valor: r
+  - rotulo: Axis 2
+    faceta: mapa
+    valor: g
+  - rotulo: Axis 3
+    faceta: mapa
+    valor: b
+- rotulo: Regionalization
+  botoes:
+  - rotulo: CLARA
+    faceta: mapa
+    valor: clara
+  - rotulo: k-means
+    faceta: mapa
+    valor: kmeans
+  - rotulo: Random Forest
+    faceta: mapa
+    valor: rf
+camadas:
+- id: sci_rgb
+  rotulo: SCI · space · RGB
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. The three NMDS axes combined
+    in red, green and blue: similar colours mean similar species composition.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Axis 1 → red
+    - cor: '#4FAE63'
+      texto: Axis 2 → green
+    - cor: '#2171B5'
+      texto: Axis 3 → blue
+  imagens:
+  - src: SpeciesCompositionInterpolation.jpg
+    alt: 'SCI · space: RGB of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_r
+  rotulo: SCI · space · Axis 1
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. First NMDS axis, the
+    red channel of the RGB.
+  legenda:
+    titulo: NMDS axis 1 · red channel
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Red.jpg
+    alt: 'SCI · space: Axis 1 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_g
+  rotulo: SCI · space · Axis 2
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. Second NMDS axis, the
+    green channel of the RGB.
+  legenda:
+    titulo: NMDS axis 2 · green channel
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Green.jpg
+    alt: 'SCI · space: Axis 2 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_b
+  rotulo: SCI · space · Axis 3
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. Third NMDS axis, the
+    blue channel of the RGB.
+  legenda:
+    titulo: NMDS axis 3 · blue channel
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Blue.jpg
+    alt: 'SCI · space: Axis 3 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_clara
+  rotulo: SCI · space · CLARA
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by CLARA,
+    medoid clustering designed for large datasets.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseClara.jpg
+    alt: 'SCI · space: CLARA of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_kmeans
+  rotulo: SCI · space · k-means
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by k-means.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseKmeans.jpg
+    alt: 'SCI · space: k-means of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: sci_rf
+  rotulo: SCI · space · Random Forest
+  texto: >-
+    Composition interpolated through space (SCI), with geographic distance as a predictor. Regionalization by Random
+    Forest classification.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseRF.jpg
+    alt: 'SCI · space: Random Forest of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_rgb
+  rotulo: GDM · environment + distance · RGB
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. The three NMDS axes
+    combined in red, green and blue: similar colours mean similar species composition.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Axis 1 → red
+    - cor: '#4FAE63'
+      texto: Axis 2 → green
+    - cor: '#2171B5'
+      texto: Axis 3 → blue
+  imagens:
+  - src: GDM_GeographicalDistance.jpg
+    alt: 'GDM · environment + distance: RGB of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_r
+  rotulo: GDM · environment + distance · Axis 1
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. First NMDS axis,
+    the red channel of the RGB.
+  legenda:
+    titulo: NMDS axis 1 · red channel
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_GeographicalDistance_Red.jpg
+    alt: 'GDM · environment + distance: Axis 1 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_g
+  rotulo: GDM · environment + distance · Axis 2
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Second NMDS axis,
+    the green channel of the RGB.
+  legenda:
+    titulo: NMDS axis 2 · green channel
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_GeographicalDistance_Green.jpg
+    alt: 'GDM · environment + distance: Axis 2 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_b
+  rotulo: GDM · environment + distance · Axis 3
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Third NMDS axis,
+    the blue channel of the RGB.
+  legenda:
+    titulo: NMDS axis 3 · blue channel
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_GeographicalDistance_Blue.jpg
+    alt: 'GDM · environment + distance: Axis 3 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_clara
+  rotulo: GDM · environment + distance · CLARA
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization
+    by CLARA, medoid clustering designed for large datasets.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseClara.jpg
+    alt: 'GDM · environment + distance: CLARA of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_kmeans
+  rotulo: GDM · environment + distance · k-means
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization
+    by k-means.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseKmeans.jpg
+    alt: 'GDM · environment + distance: k-means of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: geo_rf
+  rotulo: GDM · environment + distance · Random Forest
+  texto: >-
+    Generalized dissimilarity model (GDM) with environmental gradients and geographic distance. Regionalization
+    by Random Forest classification.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_GeographicalDistance_ClasseRF.jpg
+    alt: 'GDM · environment + distance: Random Forest of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_rgb
+  rotulo: GDM · environment only · RGB
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. The three NMDS axes combined in red, green
+    and blue: similar colours mean similar species composition.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Axis 1 → red
+    - cor: '#4FAE63'
+      texto: Axis 2 → green
+    - cor: '#2171B5'
+      texto: Axis 3 → blue
+  imagens:
+  - src: GDM_EnviromentalOnly.jpg
+    alt: 'GDM · environment only: RGB of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_r
+  rotulo: GDM · environment only · Axis 1
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. First NMDS axis, the red channel of the
+    RGB.
+  legenda:
+    titulo: NMDS axis 1 · red channel
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_EnviromentalOnly_Red.jpg
+    alt: 'GDM · environment only: Axis 1 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_g
+  rotulo: GDM · environment only · Axis 2
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. Second NMDS axis, the green channel of the
+    RGB.
+  legenda:
+    titulo: NMDS axis 2 · green channel
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_EnviromentalOnly_Green.jpg
+    alt: 'GDM · environment only: Axis 2 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_b
+  rotulo: GDM · environment only · Axis 3
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. Third NMDS axis, the blue channel of the
+    RGB.
+  legenda:
+    titulo: NMDS axis 3 · blue channel
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: lower
+    max: higher
+  imagens:
+  - src: GDM_EnviromentalOnly_Blue.jpg
+    alt: 'GDM · environment only: Axis 3 of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_clara
+  rotulo: GDM · environment only · CLARA
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. Regionalization by CLARA, medoid clustering
+    designed for large datasets.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseClara.jpg
+    alt: 'GDM · environment only: CLARA of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_kmeans
+  rotulo: GDM · environment only · k-means
+  texto: GDM with environmental gradients only, without geographic distance. Regionalization by k-means.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseKmeans.jpg
+    alt: 'GDM · environment only: k-means of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: amb_rf
+  rotulo: GDM · environment only · Random Forest
+  texto: >-
+    GDM with environmental gradients only, without geographic distance. Regionalization by Random Forest classification.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: GDM_EnviromentalOnly_ClasseRF.jpg
+    alt: 'GDM · environment only: Random Forest of spider species composition in the Americas'
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_rgb
+  rotulo: All three · RGB
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. The three
+    NMDS axes combined in red, green and blue: similar colours mean similar species composition.
+  legenda:
+    itens:
+    - cor: '#D13631'
+      texto: Axis 1 → red
+    - cor: '#4FAE63'
+      texto: Axis 2 → green
+    - cor: '#2171B5'
+      texto: Axis 3 → blue
+  imagens:
+  - src: SpeciesCompositionInterpolation.jpg
+    alt: 'SCI · space: RGB'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance.jpg
+    alt: 'GDM · environment + distance: RGB'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly.jpg
+    alt: 'GDM · environment only: RGB'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_r
+  rotulo: All three · Axis 1
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. First NMDS
+    axis, the red channel of the RGB.
+  legenda:
+    titulo: NMDS axis 1 · red channel
+    cores: '#FEF0EA, #F5A08A, #D13631, #A91015, #66000D'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Red.jpg
+    alt: 'SCI · space: Axis 1'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Red.jpg
+    alt: 'GDM · environment + distance: Axis 1'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Red.jpg
+    alt: 'GDM · environment only: Axis 1'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_g
+  rotulo: All three · Axis 2
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Second NMDS
+    axis, the green channel of the RGB.
+  legenda:
+    titulo: NMDS axis 2 · green channel
+    cores: '#EDF8EA, #A6D6A2, #4FAE63, #18813E, #00441B'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Green.jpg
+    alt: 'SCI · space: Axis 2'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Green.jpg
+    alt: 'GDM · environment + distance: Axis 2'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Green.jpg
+    alt: 'GDM · environment only: Axis 2'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_b
+  rotulo: All three · Axis 3
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Third NMDS
+    axis, the blue channel of the RGB.
+  legenda:
+    titulo: NMDS axis 3 · blue channel
+    cores: '#F0F7FD, #BED7ED, #6BAED6, #2171B5, #0B2F69'
+    min: lower
+    max: higher
+  imagens:
+  - src: SpeciesCompositionInterpolation_Blue.jpg
+    alt: 'SCI · space: Axis 3'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_Blue.jpg
+    alt: 'GDM · environment + distance: Axis 3'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_Blue.jpg
+    alt: 'GDM · environment only: Axis 3'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_clara
+  rotulo: All three · CLARA
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization
+    by CLARA, medoid clustering designed for large datasets.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseClara.jpg
+    alt: 'SCI · space: CLARA'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseClara.jpg
+    alt: 'GDM · environment + distance: CLARA'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseClara.jpg
+    alt: 'GDM · environment only: CLARA'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_kmeans
+  rotulo: All three · k-means
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization
+    by k-means.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseKmeans.jpg
+    alt: 'SCI · space: k-means'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseKmeans.jpg
+    alt: 'GDM · environment + distance: k-means'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseKmeans.jpg
+    alt: 'GDM · environment only: k-means'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_rf
+  rotulo: All three · Random Forest
+  proporcao: 3.4 / 1
+  texto: >-
+    The three models side by side: SCI, GDM with geographic distance and GDM with the environment only. Regionalization
+    by Random Forest classification.
+  legenda:
+    nota: >-
+      Each colour is a biogeographic region. The colour only separates the regions: it does not indicate order or
+      value.
+  imagens:
+  - src: SpeciesCompositionInterpolation_ClasseRF.jpg
+    alt: 'SCI · space: Random Forest'
+    legenda: SCI · space
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_GeographicalDistance_ClasseRF.jpg
+    alt: 'GDM · environment + distance: Random Forest'
+    legenda: GDM · environment + distance
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GDM_EnviromentalOnly_ClasseRF.jpg
+    alt: 'GDM · environment only: Random Forest'
+    legenda: GDM · environment only
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: '3'
+  texto: 'composition models: SCI, GDM with geographic distance and GDM with the environment only'
+- valor: '3'
+  texto: 'regionalization methods: CLARA, k-means and Random Forest'
+- valor: '21'
+  texto: 'maps: RGB, three axes and three regionalizations per model'
+secoes:
+- titulo: The problem
+  texto: >-
+    Richness and endemism do not say which regions have similar faunas. To regionalize the continent without relying
+    on political borders, you need to measure how species composition changes across space and along the environment.
+- titulo: The data
+  texto: >-
+    The records from plate 1 in 1° hexagons, and the principal components of the environment used in the predictions
+    of plates 2 and 3.
+- titulo: The method
+  lista_numerada:
+  - Bray-Curtis dissimilarity between hexagons, summarized by NMDS on three axes.
+  - 'SCI: interpolation of composition, with geographic distance as a predictor.'
+  - 'GDM: composition modelled by environmental gradients, with and without geographic distance.'
+  - Combination of the three axes in RGB.
+  - 'Regionalization by three clustering methods: CLARA, k-means and Random Forest.'
+- titulo: The result
+  destaque: >-
+    Comparing models and methods shows which biogeographic boundaries recur and which depend on the choice of method.
+  lista:
+  - Composition is barely related to density, effort, richness or endemicity (r of at most 0.3).
+  - Some regions match known ecoregions, such as the Atlantic Forest, Patagonia and the North American deserts.
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: >-
+  Regionalizations for conservation planning, choosing representative areas for surveys and regional-scale impact
+  studies.

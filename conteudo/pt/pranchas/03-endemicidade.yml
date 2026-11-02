@@ -1,0 +1,255 @@
+# Prancha do Atlas (português). Edite os textos à vontade; mantenha a indentação.
+# Campos com HTML simples (<em>, <strong>, <a>) aparecem formatados no site.
+# As imagens ficam em assets/img/. Depois de salvar, o GitHub regera o HTML sozinho.
+
+titulo_aba: Endemicidade
+nome_curto: Endemicidade
+rotulo: Américas · Tese de doutorado, 2024 · parte 3 de 5
+titulo: 'Endemicidade de aranhas: onde se concentram as espécies de distribuição restrita'
+resumo: >-
+  Endemismo ponderado observado, interpolado por krigagem e por spline, e previsto por cinco algoritmos: cada espécie
+  pesa o inverso da sua área de distribuição.
+ficha:
+- rotulo: Entrega
+  valor: Tese de doutorado, PPG Zoologia, UFMG (cap. 3)
+- rotulo: Orientação
+  valor: Adalberto J. dos Santos
+- rotulo: Meu papel
+  valor: 'Autor: banco de dados, análises e mapas'
+- rotulo: Ferramentas
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Endemicidade: onde vivem as espécies de distribuição restrita'
+  etiqueta: Américas · Tese, parte 3 de 5 · endemismo ponderado
+  imagem: WeightedEndemismPredicted_MARS.jpg
+  alt: Endemicidade de aranhas prevista por MARS nas Américas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: krig
+camadas:
+- id: hex
+  grupo: Observada
+  rotulo: Hexágonos
+  texto: >-
+    Endemicidade observada por hexágono de 1°, calculada direto dos registros. É o dado de partida, antes de qualquer
+    interpolação.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemism_Hexagon.jpg
+    alt: Endemicidade observada por hexágono de 1 grau nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: krig
+  grupo: Observada
+  rotulo: Krigagem
+  texto: >-
+    Endemicidade observada interpolada por krigagem a partir dos hexágonos: uma superfície contínua que leva em
+    conta a autocorrelação espacial.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemism_kriging.jpg
+    alt: Endemicidade observada interpolada por krigagem nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: spline
+  grupo: Observada
+  rotulo: Spline
+  texto: >-
+    Endemicidade observada interpolada por spline, um interpolador determinístico que gera uma superfície mais suave
+    que a krigagem.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemism_Spline.jpg
+    alt: Endemicidade observada interpolada por spline nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: gam
+  grupo: Prevista
+  rotulo: GAM
+  texto: Endemicidade prevista por modelo aditivo generalizado (GAM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemismPredicted_GAM.jpg
+    alt: Endemicidade prevista por GAM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: glm
+  grupo: Prevista
+  rotulo: GLM
+  texto: Endemicidade prevista por modelo linear generalizado (GLM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemismPredicted_GLM.jpg
+    alt: Endemicidade prevista por GLM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: mars
+  grupo: Prevista
+  rotulo: MARS
+  texto: >-
+    Endemicidade prevista por regressão multivariada por splines adaptativos (MARS), a partir dos componentes principais
+    do ambiente.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemismPredicted_MARS.jpg
+    alt: Endemicidade prevista por MARS nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: rf
+  grupo: Prevista
+  rotulo: Random Forest
+  texto: Endemicidade prevista por Random Forest, a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemismPredicted_RF.jpg
+    alt: Endemicidade prevista por Random Forest nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: svm
+  grupo: Prevista
+  rotulo: SVM
+  texto: >-
+    Endemicidade prevista por máquina de vetores de suporte (SVM), a partir dos componentes principais do ambiente.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemismPredicted_SVM.jpg
+    alt: Endemicidade prevista por SVM nas Américas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_obs
+  grupo: Comparar
+  rotulo: 'Observada: as três'
+  proporcao: 3.4 / 1
+  texto: As três formas de mapear a endemicidade observada, lado a lado.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemism_Hexagon.jpg
+    alt: Endemicidade observada por hexágono
+    legenda: Hexágonos
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemism_kriging.jpg
+    alt: Endemicidade interpolada por krigagem
+    legenda: Krigagem
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemism_Spline.jpg
+    alt: Endemicidade interpolada por spline
+    legenda: Spline
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_pred
+  grupo: Comparar
+  rotulo: Observada × previstas
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: A endemicidade observada (krigagem) e as cinco previsões, para comparar onde os algoritmos concordam.
+  legenda:
+    titulo: Endemismo ponderado
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: menor
+    max: maior
+  imagens:
+  - src: WeightedEndemism_kriging.jpg
+    alt: Endemicidade observada, interpolada por krigagem
+    legenda: Observada · krigagem
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_GAM.jpg
+    alt: Endemicidade prevista por GAM
+    legenda: GAM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_GLM.jpg
+    alt: Endemicidade prevista por GLM
+    legenda: GLM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_MARS.jpg
+    alt: Endemicidade prevista por MARS
+    legenda: MARS
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_RF.jpg
+    alt: Endemicidade prevista por Random Forest
+    legenda: Random Forest
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_SVM.jpg
+    alt: Endemicidade prevista por SVM
+    legenda: SVM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: r = 0,3
+  texto: entre endemicidade observada e densidade de registros
+- valor: r = 0,2
+  texto: entre endemicidade e riqueza observadas
+- valor: '3'
+  texto: formas de mapear a endemicidade observada
+- valor: '5'
+  texto: 'algoritmos de previsão: GAM, GLM, MARS, Random Forest e SVM'
+secoes:
+- titulo: O problema
+  texto: >-
+    A riqueza não mostra onde estão as espécies exclusivas de uma região. O endemismo ponderado dá mais peso às
+    espécies de distribuição restrita, as que mais pesam em decisões de conservação.
+- titulo: Os dados
+  texto: Os mesmos registros e preditores ambientais das pranchas 1 e 2, em hexágonos de 1°.
+- titulo: O método
+  lista_numerada:
+  - >-
+    Endemismo ponderado no BioDinamica: cada espécie recebe um valor inverso à sua área de distribuição, e cada
+    hexágono recebe a média corrigida.
+  - Interpolação por krigagem e por spline.
+  - Previsão por cinco algoritmos (GAM, GLM, MARS, Random Forest e SVM) com os componentes principais do ambiente.
+  - Correlação com os mapas de viés, com a riqueza e com as variáveis ambientais.
+- titulo: O resultado
+  destaque: 'A endemicidade depende pouco do esforço de coleta e da riqueza: é outro retrato da diversidade.'
+  lista:
+  - Há áreas de endemicidade alta em praticamente todos os países do continente.
+  - A correlação com a densidade de registros é baixa (r = 0,3), e com a riqueza, menor ainda (r = 0,2).
+- titulo: Publicação
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG.
+aplicacao: >-
+  Seleção de áreas prioritárias para conservação e avaliação de impactos sobre espécies de distribuição restrita.

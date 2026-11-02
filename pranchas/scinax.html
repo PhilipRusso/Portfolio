@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prancha 6 — Scinax aff. machadoi · Philip Russo</title>
+<title>Prancha 10 — Scinax aff. machadoi · Philip Russo</title>
 <meta name="description" content="Revisão de coleções, três algoritmos de aprendizado de máquina e um consenso para orientar o trabalho de campo numa região de mineração.">
 <link rel="alternate" hreflang="pt-BR" href="../pranchas/scinax.html">
 <link rel="alternate" hreflang="en" href="../en/pranchas/scinax.html">
@@ -18,7 +18,7 @@
 <div class="largura topo__linha">
 <a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
 <nav class="paginador" aria-label="Pranchas">
-<a class="circulo" href="../pranchas/araneoidea-americas.html" aria-label="Prancha anterior">←</a><span>06 / 08</span>
+<a class="circulo" href="../pranchas/araneoidea-americas.html" aria-label="Prancha anterior">←</a><span>10 / 12</span>
 <a class="circulo" href="../pranchas/bicudo.html" aria-label="Próxima prancha">→</a></nav>
 <div class="idioma" role="group" aria-label="Idioma">
 <a href="../pranchas/scinax.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
@@ -28,7 +28,7 @@
 
 <main>
 <section class="largura cabeca">
-<span class="cabeca__rotulo">Prancha 6 · Quadrilátero Ferrífero, MG · Modelagem de distribuição · 2021</span>
+<span class="cabeca__rotulo">Prancha 10 · Quadrilátero Ferrífero, MG · Modelagem de distribuição · 2021</span>
 <h1 class="cabeca__titulo"><em>Scinax</em> aff. <em>machadoi</em>: onde procurar novas populações de uma perereca endêmica</h1>
 <p class="cabeca__resumo">Revisão de coleções, três algoritmos de aprendizado de máquina e um consenso para orientar o trabalho de campo numa região de mineração.</p>
 <dl class="ficha">
@@ -39,61 +39,99 @@
 </dl>
 </section>
 
-<section class="largura visor" aria-label="Mapa interativo" data-visor>
-<div class="visor__camada" id="camada-relevo" data-camada="relevo" hidden>
+<section class="largura visor" aria-label="Mapa interativo" data-visor data-ui='{"em": "em", "equador": "no equador", "escala": "escala", "hem": "N S L O", "passe": "Passe o cursor sobre o mapa", "rosa": "Rosa dos ventos: o norte est\u00e1 para cima"}'>
+<div class="visor__camada" id="camada-relevo" data-camada="relevo" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_relevo.jpg" alt="Mapa hipsométrico do Quadrilátero Ferrífero com os registros da espécie" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.41525">
+<img class="mapa__img" src="../assets/img/qf_relevo.jpg" alt="Mapa hipsométrico do Quadrilátero Ferrífero com os registros da espécie" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-ann" data-camada="ann" hidden>
+<div class="visor__camada" id="camada-ann" data-camada="ann" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #F4F4EF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_ann.jpg" alt="Adequabilidade prevista pela rede neural artificial" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.32075">
+<img class="mapa__img" src="../assets/img/qf_ann.jpg" alt="Adequabilidade prevista pela rede neural artificial" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-svm" data-camada="svm" hidden>
+<div class="visor__camada" id="camada-svm" data-camada="svm" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #F4F4EF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_svm.jpg" alt="Adequabilidade prevista pela máquina de vetores de suporte" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.32075">
+<img class="mapa__img" src="../assets/img/qf_svm.jpg" alt="Adequabilidade prevista pela máquina de vetores de suporte" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-maxent" data-camada="maxent" hidden>
+<div class="visor__camada" id="camada-maxent" data-camada="maxent" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #F4F4EF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_maxent.jpg" alt="Adequabilidade prevista pelo MaxEnt" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.32075">
+<img class="mapa__img" src="../assets/img/qf_maxent.jpg" alt="Adequabilidade prevista pelo MaxEnt" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-consenso" data-camada="consenso">
+<div class="visor__camada" id="camada-consenso" data-camada="consenso" data-cols="1">
 <figure class="visor__quadro" style="background: #F4F4EF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_consenso.jpg" alt="Consenso de adequabilidade entre os três algoritmos">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.32075">
+<img class="mapa__img" src="../assets/img/qf_consenso.jpg" alt="Consenso de adequabilidade entre os três algoritmos" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-dist" data-camada="dist" hidden>
+<div class="visor__camada" id="camada-dist" data-camada="dist" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #F4F4EF">
-<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px">
+<div class="visor__area" style="aspect-ratio: 16 / 10; padding: 0px; padding-top: 0px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/qf_dist.jpg" alt="Distribuição potencial em presença e ausência" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.32075">
+<img class="mapa__img" src="../assets/img/qf_dist.jpg" alt="Distribuição potencial em presença e ausência" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Elementos do mapa" aria-expanded="false" aria-controls="painel-scinax" title="Coordenadas, escala e rosa dos ventos" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Elementos do mapa</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-scinax" role="group" aria-label="Elementos do mapa" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordenadas</span><span class="interruptor__dica">Lat. e long. sob o cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Escala</span><span class="interruptor__dica">Medida na latitude do cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Rosa dos ventos</span><span class="interruptor__dica">Norte para cima</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Rótulos das áreas" data-areas hidden>
+<span class="areas__txt">Áreas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Mostrar o número de cada área">Números</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Mostrar o nome ao passar o mouse sobre um número">Nomes</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Passe o cursor sobre o mapa</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
 <div class="visor__controles">
 <div class="visor__botoes">
 <div class="visor__grupo" role="group" aria-label="Dados">
@@ -194,8 +232,8 @@
 </section>
 
 <nav class="largura vizinhas" aria-label="Outras pranchas">
-<a href="../pranchas/araneoidea-americas.html"><span class="mono-rotulo">← Prancha 5</span><span class="vizinhas__nome">Araneoidea das Américas, 1757–2017</span></a>
-<a class="vizinhas--dir" href="../pranchas/bicudo.html"><span class="mono-rotulo">Prancha 7 →</span><span class="vizinhas__nome">Bicudo</span></a>
+<a href="../pranchas/araneoidea-americas.html"><span class="mono-rotulo">← Prancha 9</span><span class="vizinhas__nome">Araneoidea das Américas, 1757–2017</span></a>
+<a class="vizinhas--dir" href="../pranchas/bicudo.html"><span class="mono-rotulo">Prancha 11 →</span><span class="vizinhas__nome">Bicudo</span></a>
 </nav>
 </main>
 <footer class="rodape">

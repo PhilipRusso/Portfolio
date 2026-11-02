@@ -1,0 +1,174 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Areas of endemism
+nome_curto: Areas of endemism
+rotulo: Americas · PhD thesis, 2024 · part 4 of 5
+titulo: 'Areas of endemism: 255 regions with species of congruent distribution'
+resumo: >-
+  Geographic interpolation of endemism (GIE) in nine range-size classes: the consensus and the four most restricted
+  classes.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Areas of endemism: 255 regions on the continent'
+  etiqueta: Americas · Thesis, part 4 of 5 · GIE
+  imagem: GIE_Consensus.jpg
+  alt: Consensus of the areas of spider endemism in the Americas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: consenso
+camadas:
+- id: consenso
+  grupo: Consensus
+  rotulo: Consensus
+  texto: >-
+    Consensus of the range-size classes: the darker the colour, the more areas of endemism overlap in the same place.
+  legenda:
+    titulo: Overlap of areas of endemism
+    cores: '#EBEFFA, #DFE6EE, #C6D7E7, #A0B6CE, #35506B'
+    min: lower
+    max: higher
+  imagens:
+  - src: GIE_Consensus.jpg
+    alt: Consensus of the areas of spider endemism in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c1
+  grupo: Classes
+  rotulo: Class 1
+  texto: >-
+    Class 1: species with ranges of up to 50 km. These are the most restricted areas of endemism, small and scattered
+    across the continent.
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Area of endemism in the class
+  imagens:
+  - src: GIE_Class01.jpg
+    alt: Areas of endemism of class 1, up to 50 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c2
+  grupo: Classes
+  rotulo: Class 2
+  texto: 'Class 2: species with ranges of 51 to 200 km.'
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Area of endemism in the class
+  imagens:
+  - src: GIE_Class02.jpg
+    alt: Areas of endemism of class 2, 51 to 200 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c3
+  grupo: Classes
+  rotulo: Class 3
+  texto: 'Class 3: species with ranges of 201 to 400 km.'
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Area of endemism in the class
+  imagens:
+  - src: GIE_Class03.jpg
+    alt: Areas of endemism of class 3, 201 to 400 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: c4
+  grupo: Classes
+  rotulo: Class 4
+  texto: 'Class 4: species with ranges of 401 to 600 km. The larger the range, the larger and more continuous the
+    areas.'
+  legenda:
+    itens:
+    - cor: '#204868'
+      texto: Area of endemism in the class
+  imagens:
+  - src: GIE_Class04.jpg
+    alt: Areas of endemism of class 4, 401 to 600 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: comparar
+  grupo: Compare
+  rotulo: Consensus and classes
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: >-
+    The consensus and the four most restricted classes side by side: the more restricted the class, the smaller
+    and more numerous the areas.
+  imagens:
+  - src: GIE_Consensus.jpg
+    alt: Consensus
+    legenda: Consensus
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class01.jpg
+    alt: Class 1
+    legenda: Class 1 · up to 50 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class02.jpg
+    alt: Class 2
+    legenda: Class 2 · 51 to 200 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class03.jpg
+    alt: Class 3
+    legenda: Class 3 · 201 to 400 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: GIE_Class04.jpg
+    alt: Class 4
+    legenda: Class 4 · 401 to 600 km
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: '255'
+  texto: areas of endemism, adding up the nine classes
+- valor: '9'
+  texto: range-size classes, from up to 50 km to over 2,000 km
+- valor: '0.97'
+  texto: 'Moran’s I in the consensus: a highly clustered pattern'
+- valor: r = 0.1
+  texto: between class 1 and record density
+secoes:
+- titulo: The problem
+  texto: >-
+    Areas of endemism are regions where several species have restricted, overlapping ranges. Delimiting them requires
+    a method that does not depend on arbitrary grids and that works with uneven data.
+- titulo: The data
+  texto: >-
+    The records from plate 1. The range of each species is the distance between the centroid of its distribution
+    and its farthest occurrence point.
+- titulo: The method
+  lista_numerada:
+  - Geographic interpolation of endemism (GIE) in BioDinamica, with a kernel density estimator.
+  - >-
+    Nine range-size classes: up to 50 km, 51–200, 201–400, 401–600, 601–800, 801–1,000, 1,001–1,500, 1,501–2,000
+    and over 2,000 km.
+  - Consensus map of the classes and maps per class.
+  - Correlation with the bias, richness and endemicity maps, and Moran’s I per class.
+- titulo: The result
+  destaque: >-
+    There are 255 areas of endemism for spiders in the Americas. The finer the class, the more restricted areas
+    appear.
+  lista:
+  - Southern and south-eastern Brazil and the Brazilian Amazon concentrate the most areas of endemism.
+  - The most restricted classes are barely related to record density (r = 0.1 in class 1).
+  - 'Spatial clustering grows with range size: Moran’s I of 0.08 in class 1 and 0.95 in class 4.'
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: Delimiting priority areas and protected areas, and analysing impacts on endemic species.

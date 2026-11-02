@@ -20,6 +20,28 @@ ui:
   voltar: Voltar
   fim: Fim das pranchas
   voltar_atlas: Voltar ao atlas
+  elementos: Elementos do mapa
+  elementos_titulo: Coordenadas, escala e rosa dos ventos
+  coordenadas: Coordenadas
+  coordenadas_dica: Lat. e long. sob o cursor
+  escala: Escala
+  escala_dica: Medida na latitude do cursor
+  rosa: Rosa dos ventos
+  rosa_dica: Norte para cima
+  rosa_aria: 'Rosa dos ventos: o norte está para cima'
+  passe_cursor: Passe o cursor sobre o mapa
+  sistema: EPSG:4326 · WGS 84
+  hemisferios: N S L O
+  escala_rotulo: escala
+  no_equador: no equador
+  em: em
+  areas: Áreas
+  areas_grupo: Rótulos das áreas
+  numeros_btn: Números
+  numeros_titulo: Mostrar o número de cada área
+  nomes_btn: Nomes
+  nomes_titulo: Mostrar o nome ao passar o mouse sobre um número
+  area: Área
 legendas:
   ceratium:
     titulo: Adequabilidade climática

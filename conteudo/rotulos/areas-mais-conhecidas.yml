@@ -1,0 +1,449 @@
+# Rótulos das 63 áreas mais conhecidas (prancha 1). Numeração de norte a sul por grupo de rótulos.
+# x e y: centro do número, em % do mapa; lado: para onde o nome abre ao passar o mouse.
+# pt e en: nome mostrado em cada idioma; tese: número da área na tabela da tese.
+# linhas: imagem com as linhas de chamada (assets/img/); diametro: tamanho do círculo, em % da largura do mapa.
+
+linhas: BestKnownAreas_Leaders.png
+diametro: 2.524
+itens:
+- n: '01'
+  x: 29.6
+  y: 29.546
+  lado: esquerda
+  pt: Condado de Carbon (Wyoming) · EUA
+  en: Carbon County (Wyoming) · USA
+  tese: 62
+- n: '02'
+  x: 32.069
+  y: 30.44
+  lado: esquerda
+  pt: Condado de Jackson (Colorado) · EUA
+  en: Jackson County (Colorado) · USA
+  tese: 63
+- n: '03'
+  x: 27.694
+  y: 31.804
+  lado: esquerda
+  pt: Condados de Sonoma a Contra Costa (Califórnia) · EUA
+  en: Sonoma to Contra Costa counties (California) · USA
+  tese: 46
+- n: '04'
+  x: 30.446
+  y: 33.028
+  lado: esquerda
+  pt: Condado de Monterey (Califórnia) · EUA
+  en: Monterey County (California) · USA
+  tese: 45
+- n: '05'
+  x: 33.339
+  y: 33.451
+  lado: esquerda
+  pt: Condado de Tulare (Califórnia) · EUA
+  en: Tulare County (California) · USA
+  tese: 44
+- n: '06'
+  x: 26.319
+  y: 34.909
+  lado: esquerda
+  pt: Condados de Los Angeles a Riverside (Califórnia) · EUA
+  en: Los Angeles to Riverside counties (California) · USA
+  tese: 43
+- n: '07'
+  x: 28.823
+  y: 36.039
+  lado: esquerda
+  pt: Condado de Cochise (Arizona) · EUA
+  en: Cochise County (Arizona) · USA
+  tese: 47
+- n: 08
+  x: 31.681
+  y: 36.321
+  lado: esquerda
+  pt: Deserto de Sonora (Sonora) · México
+  en: Sonoran Desert (Sonora) · Mexico
+  tese: 41
+- n: 09
+  x: 34.221
+  y: 37.732
+  lado: esquerda
+  pt: Ensenada (Baja California) · México
+  en: Ensenada (Baja California) · Mexico
+  tese: 42
+- n: '10'
+  x: 37.044
+  y: 38.814
+  lado: esquerda
+  pt: Camargo e Manuel Benavides (Chihuahua) · México
+  en: Camargo and Manuel Benavides (Chihuahua) · Mexico
+  tese: 40
+- n: '11'
+  x: 72.041
+  y: 18.49
+  lado: direita
+  pt: Churchill (Manitoba) · Canadá
+  en: Churchill (Manitoba) · Canada
+  tese: 54
+- n: '12'
+  x: 64.244
+  y: 31.522
+  lado: direita
+  pt: Condado de Pike (Missouri) · EUA
+  en: Pike County (Missouri) · USA
+  tese: 52
+- n: '13'
+  x: 67.031
+  y: 31.099
+  lado: direita
+  pt: Condado de Dickinson (Kansas) · EUA
+  en: Dickinson County (Kansas) · USA
+  tese: 51
+- n: '14'
+  x: 61.351
+  y: 33.028
+  lado: direita
+  pt: Clay (Tennessee) e Cumberland (Kentucky) · EUA
+  en: Clay (Tennessee) and Cumberland (Kentucky) counties · USA
+  tese: 53
+- n: '15'
+  x: 72.288
+  y: 35.051
+  lado: direita
+  pt: Condado de Ouachita (Arkansas) · EUA
+  en: Ouachita County (Arkansas) · USA
+  tese: 50
+- n: '16'
+  x: 69.783
+  y: 35.85
+  lado: direita
+  pt: Condado de De Soto (Luisiana) · EUA
+  en: De Soto Parish (Louisiana) · USA
+  tese: 49
+- n: '17'
+  x: 63.927
+  y: 37.591
+  lado: direita
+  pt: Condado de Lake (Flórida) · EUA
+  en: Lake County (Florida) · USA
+  tese: 61
+- n: '18'
+  x: 67.278
+  y: 37.215
+  lado: direita
+  pt: Condados de Bexar a Williamson (Texas) · EUA
+  en: Bexar to Williamson counties (Texas) · USA
+  tese: 48
+- n: '19'
+  x: 61.14
+  y: 38.532
+  lado: direita
+  pt: Condado de Alachua (Flórida) · EUA
+  en: Alachua County (Florida) · USA
+  tese: 60
+- n: '20'
+  x: 36.62
+  y: 43.425
+  lado: esquerda
+  pt: Tamazunchale (San Luis Potosí) · México
+  en: Tamazunchale (San Luis Potosí) · Mexico
+  tese: 39
+- n: '21'
+  x: 39.337
+  y: 44.789
+  lado: esquerda
+  pt: Pico de Orizaba (Veracruz) · México
+  en: Pico de Orizaba (Veracruz) · Mexico
+  tese: 37
+- n: '22'
+  x: 42.124
+  y: 45.354
+  lado: esquerda
+  pt: Estado do México e Cidade do México · México
+  en: State of Mexico and Mexico City · Mexico
+  tese: 38
+- n: '23'
+  x: 44.981
+  y: 48.036
+  lado: esquerda
+  pt: Departamento de Quetzaltenango · Guatemala
+  en: Quetzaltenango Department · Guatemala
+  tese: 36
+- n: '24'
+  x: 46.216
+  y: 51.188
+  lado: esquerda
+  pt: Província de Heredia · Costa Rica
+  en: Heredia Province · Costa Rica
+  tese: 35
+- n: '25'
+  x: 48.968
+  y: 51.941
+  lado: esquerda
+  pt: Distrito de Bugaba (Chiriquí) · Panamá
+  en: Bugaba District (Chiriquí) · Panama
+  tese: 34
+- n: '26'
+  x: 51.826
+  y: 52.364
+  lado: esquerda
+  pt: Canal do Panamá · Panamá
+  en: Panama Canal · Panama
+  tese: 33
+- n: '27'
+  x: 71.159
+  y: 45.401
+  lado: direita
+  pt: Regiões de Enriquillo a Cibao Sur · República Dominicana
+  en: Enriquillo to Cibao Sur regions · Dominican Republic
+  tese: 59
+- n: '28'
+  x: 55.071
+  y: 55.046
+  lado: esquerda
+  pt: Departamentos de Quindío a Cundinamarca · Colômbia
+  en: Quindío to Cundinamarca departments · Colombia
+  tese: 58
+- n: '29'
+  x: 39.866
+  y: 56.74
+  lado: esquerda
+  pt: Barbacoas (Nariño) · Colômbia
+  en: Barbacoas (Nariño) · Colombia
+  tese: 32
+- n: '30'
+  x: 42.971
+  y: 58.198
+  lado: esquerda
+  pt: Províncias de Orellana e Sucumbíos, no rio Napo · Equador
+  en: Orellana and Sucumbíos Provinces, along the Napo River · Ecuador
+  tese: 28
+- n: '31'
+  x: 46.463
+  y: 58.01
+  lado: esquerda
+  pt: Província de Manabí · Equador
+  en: Manabí Province · Ecuador
+  tese: 31
+- n: '32'
+  x: 49.18
+  y: 58.527
+  lado: esquerda
+  pt: Província de Santo Domingo de los Tsáchilas · Equador
+  en: Santo Domingo de los Tsáchilas Province · Ecuador
+  tese: 30
+- n: '33'
+  x: 52.073
+  y: 58.81
+  lado: esquerda
+  pt: Província de Napo · Equador
+  en: Napo Province · Ecuador
+  tese: 29
+- n: '34'
+  x: 54.719
+  y: 60.268
+  lado: esquerda
+  pt: Iquitos (Loreto) · Peru
+  en: Iquitos (Loreto) · Peru
+  tese: 27
+- n: '35'
+  x: 81.319
+  y: 59.61
+  lado: direita
+  pt: Região do Guamá (PA) · Brasil
+  en: Guamá Region (PA) · Brazil
+  tese: 23
+- n: '36'
+  x: 84.212
+  y: 59.233
+  lado: direita
+  pt: Melgaço (PA) · Brasil
+  en: Melgaço (PA) · Brazil
+  tese: 24
+- n: '37'
+  x: 87.493
+  y: 59.845
+  lado: direita
+  pt: Juruti (PA) · Brasil
+  en: Juruti (PA) · Brazil
+  tese: 25
+- n: '38'
+  x: 90.316
+  y: 60.08
+  lado: direita
+  pt: Manaus (AM) · Brasil
+  en: Manaus (AM) · Brazil
+  tese: 26
+- n: '39'
+  x: 85.659
+  y: 62.385
+  lado: direita
+  pt: Parauapebas (PA) · Brasil
+  en: Parauapebas (PA) · Brazil
+  tese: 22
+- n: '40'
+  x: 82.907
+  y: 64.314
+  lado: direita
+  pt: Da Paraíba a Alagoas · Brasil
+  en: Paraíba to Alagoas · Brazil
+  tese: 57
+- n: '41'
+  x: 81.214
+  y: 68.219
+  lado: direita
+  pt: Una (BA) · Brasil
+  en: Una (BA) · Brazil
+  tese: 21
+- n: '42'
+  x: 52.108
+  y: 69.113
+  lado: esquerda
+  pt: Lago Titicaca (Puno) · Peru
+  en: Lake Titicaca (Puno) · Peru
+  tese: 56
+- n: '43'
+  x: 54.824
+  y: 74.806
+  lado: esquerda
+  pt: De Palmar (Salta) a Comandancia Frías (Chaco) · Argentina
+  en: Palmar (Salta) to Comandancia Frías (Chaco) · Argentina
+  tese: 7
+- n: '44'
+  x: 55.883
+  y: 78.335
+  lado: esquerda
+  pt: Região de Coquimbo · Chile
+  en: Coquimbo Region · Chile
+  tese: 5
+- n: '45'
+  x: 53.519
+  y: 80.263
+  lado: esquerda
+  pt: Região de Valparaíso · Chile
+  en: Valparaíso Region · Chile
+  tese: 4
+- n: '46'
+  x: 50.803
+  y: 82.098
+  lado: esquerda
+  pt: Região do Maule · Chile
+  en: Maule Region · Chile
+  tese: 3
+- n: '47'
+  x: 53.025
+  y: 84.074
+  lado: esquerda
+  pt: Regiões da Araucanía e do Biobío · Chile
+  en: Araucanía and Biobío Regions · Chile
+  tese: 2
+- n: '48'
+  x: 54.295
+  y: 86.897
+  lado: esquerda
+  pt: Região de Los Lagos · Chile
+  en: Los Lagos Region · Chile
+  tese: 1
+- n: '49'
+  x: 91.586
+  y: 70.854
+  lado: direita
+  pt: Sooretama (ES) · Brasil
+  en: Sooretama (ES) · Brazil
+  tese: 20
+- n: '50'
+  x: 83.225
+  y: 71.701
+  lado: direita
+  pt: Região Metropolitana de Belo Horizonte (MG) · Brasil
+  en: Belo Horizonte Metropolitan Region (MG) · Brazil
+  tese: 18
+- n: '51'
+  x: 88.728
+  y: 72.03
+  lado: direita
+  pt: Pains (MG) · Brasil
+  en: Pains (MG) · Brazil
+  tese: 19
+- n: '52'
+  x: 85.729
+  y: 73.018
+  lado: direita
+  pt: Regiões Metropolitanas de Campinas e Sorocaba (SP) · Brasil
+  en: Campinas and Sorocaba Metropolitan Regions (SP) · Brazil
+  tese: 16
+- n: '53'
+  x: 79.661
+  y: 73.818
+  lado: direita
+  pt: Região Metropolitana do Rio de Janeiro (RJ) · Brasil
+  en: Rio de Janeiro Metropolitan Region (RJ) · Brazil
+  tese: 17
+- n: '54'
+  x: 92.821
+  y: 74.571
+  lado: direita
+  pt: Região Metropolitana de São Paulo (SP) · Brasil
+  en: São Paulo Metropolitan Region (SP) · Brazil
+  tese: 15
+- n: '55'
+  x: 83.401
+  y: 75.559
+  lado: direita
+  pt: Parque Nacional do Iguaçu · Brasil, Argentina e Paraguai
+  en: Iguazú National Park · Brazil, Argentina and Paraguay
+  tese: 9
+- n: '56'
+  x: 88.375
+  y: 75.371
+  lado: direita
+  pt: Curitiba (PR) · Brasil
+  en: Curitiba (PR) · Brazil
+  tese: 14
+- n: '57'
+  x: 80.896
+  y: 76.782
+  lado: direita
+  pt: Salto do Yucumã · Brasil e Argentina
+  en: Salto do Yucumã · Brazil and Argentina
+  tese: 8
+- n: '58'
+  x: 85.976
+  y: 76.594
+  lado: direita
+  pt: Erechim (RS) e Concórdia (SC) · Brasil
+  en: Erechim (RS) and Concórdia (SC) · Brazil
+  tese: 12
+- n: '59'
+  x: 90.633
+  y: 77.064
+  lado: direita
+  pt: Região Metropolitana de Florianópolis (SC) · Brasil
+  en: Florianópolis Metropolitan Region (SC) · Brazil
+  tese: 13
+- n: '60'
+  x: 75.886
+  y: 78.146
+  lado: direita
+  pt: Porto Alegre (RS) e Lages (SC) · Brasil
+  en: Porto Alegre (RS) and Lages (SC) · Brazil
+  tese: 10
+- n: '61'
+  x: 78.497
+  y: 78.617
+  lado: direita
+  pt: Cachoeira do Sul (RS) · Brasil
+  en: Cachoeira do Sul (RS) · Brazil
+  tese: 11
+- n: '62'
+  x: 74.228
+  y: 82.239
+  lado: direita
+  pt: Ciudad Autónoma de Buenos Aires · Argentina
+  en: Ciudad Autónoma de Buenos Aires · Argentina
+  tese: 6
+- n: '63'
+  x: 67.631
+  y: 93.343
+  lado: direita
+  pt: Departamento de Güer Aike (Santa Cruz) · Argentina
+  en: Güer Aike Department (Santa Cruz) · Argentina
+  tese: 55

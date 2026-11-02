@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prancha 2 — SPIDBASE · Philip Russo</title>
+<title>Prancha 6 — SPIDBASE · Philip Russo</title>
 <meta name="description" content="Modelo entidade-relacionamento alinhado ao Darwin Core, com o histórico taxonômico de cada registro, gazetteer próprio e regras de integridade.">
 <link rel="alternate" hreflang="pt-BR" href="../pranchas/spidbase.html">
 <link rel="alternate" hreflang="en" href="../en/pranchas/spidbase.html">
@@ -18,7 +18,7 @@
 <div class="largura topo__linha">
 <a class="topo__voltar" href="../index.html">← Atlas de projetos</a>
 <nav class="paginador" aria-label="Pranchas">
-<a class="circulo" href="../pranchas/tese.html" aria-label="Prancha anterior">←</a><span>02 / 08</span>
+<a class="circulo" href="../pranchas/composicao.html" aria-label="Prancha anterior">←</a><span>06 / 12</span>
 <a class="circulo" href="../pranchas/ceratium.html" aria-label="Próxima prancha">→</a></nav>
 <div class="idioma" role="group" aria-label="Idioma">
 <a href="../pranchas/spidbase.html" hreflang="pt-BR" lang="pt-BR" aria-current="true" class="ativo">PT</a>
@@ -28,7 +28,7 @@
 
 <main>
 <section class="largura cabeca">
-<span class="cabeca__rotulo">Prancha 2 · Engenharia de dados · Tese, capítulos 1 e 2</span>
+<span class="cabeca__rotulo">Prancha 6 · Engenharia de dados · Tese, capítulos 1 e 2</span>
 <h1 class="cabeca__titulo">SPIDBASE: um banco relacional de 148 mil registros de aranhas extraídos da literatura</h1>
 <p class="cabeca__resumo">Modelo entidade-relacionamento alinhado ao Darwin Core, com o histórico taxonômico de cada registro, gazetteer próprio e regras de integridade.</p>
 <dl class="ficha">
@@ -39,70 +39,112 @@
 </dl>
 </section>
 
-<section class="largura visor" aria-label="Mapa interativo" data-visor>
-<div class="visor__camada" id="camada-er" data-camada="er">
+<section class="largura visor" aria-label="Mapa interativo" data-visor data-ui='{"em": "em", "equador": "no equador", "escala": "escala", "hem": "N S L O", "passe": "Passe o cursor sobre o mapa", "rosa": "Rosa dos ventos: o norte est\u00e1 para cima"}'>
+<div class="visor__camada" id="camada-er" data-camada="er" data-cols="1">
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_er.png" alt="Diagrama entidade-relacionamento do SPIDBASE">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.21032">
+<img class="mapa__img" src="../assets/img/spid_er.png" alt="Diagrama entidade-relacionamento do SPIDBASE" style="left: 0%; top: 0%; width: 100%; height: 100%">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-fluxo" data-camada="fluxo" hidden>
+<div class="visor__camada" id="camada-fluxo" data-camada="fluxo" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_fluxo.png" alt="Diagrama do fluxo de construção do SPIDBASE" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.77778">
+<img class="mapa__img" src="../assets/img/spid_fluxo.png" alt="Diagrama do fluxo de construção do SPIDBASE" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-familias" data-camada="familias" hidden>
+<div class="visor__camada" id="camada-familias" data-camada="familias" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_familias.jpg" alt="Gráfico de registros e espécimes por família de aranha" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.88014">
+<img class="mapa__img" src="../assets/img/spid_familias.jpg" alt="Gráfico de registros e espécimes por família de aranha" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-paises" data-camada="paises" hidden>
+<div class="visor__camada" id="camada-paises" data-camada="paises" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_paises.jpg" alt="Gráfico de registros e espécimes por país" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.88457">
+<img class="mapa__img" src="../assets/img/spid_paises.jpg" alt="Gráfico de registros e espécimes por país" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-mapa" data-camada="mapa" hidden>
+<div class="visor__camada" id="camada-mapa" data-camada="mapa" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/am_abundance.jpg" alt="Três mapas das Américas com famílias, espécies e ocorrências por país" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 2.59403">
+<img class="mapa__img" src="../assets/img/am_abundance.jpg" alt="Três mapas das Américas com famílias, espécies e ocorrências por país" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-vidaEsp" data-camada="vidaEsp" hidden>
+<div class="visor__camada" id="camada-vidaEsp" data-camada="vidaEsp" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_vida_especies.jpg" alt="Gráfico da vida útil das espécies por ano de descrição" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.72911">
+<img class="mapa__img" src="../assets/img/spid_vida_especies.jpg" alt="Gráfico da vida útil das espécies por ano de descrição" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
-<div class="visor__camada" id="camada-vidaReg" data-camada="vidaReg" hidden>
+<div class="visor__camada" id="camada-vidaReg" data-camada="vidaReg" data-cols="1" hidden>
 <figure class="visor__quadro" style="background: #FFFFFF">
-<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px">
+<div class="visor__area" style="aspect-ratio: 16 / 9; padding: 16px; padding-top: 16px; grid-template-columns: repeat(1, minmax(0, 1fr)); grid-template-rows: repeat(1, minmax(0, 1fr))">
 <div class="visor__img">
-<img src="../assets/img/spid_vida_registros.jpg" alt="Gráfico da vida útil dos registros de 1990 a 2021" loading="lazy">
+<div class="visor__slot">
+<div class="mapa" style="--ar: 1.79372">
+<img class="mapa__img" src="../assets/img/spid_vida_registros.jpg" alt="Gráfico da vida útil dos registros de 1990 a 2021" style="left: 0%; top: 0%; width: 100%; height: 100%" loading="lazy">
+</div>
+</div>
 </div>
 </div>
 </figure>
 </div>
+<div class="ferramentas" data-ferramentas hidden>
+<button type="button" class="ferramentas__botao" aria-label="Elementos do mapa" aria-expanded="false" aria-controls="painel-spidbase" title="Coordenadas, escala e rosa dos ventos" data-menu><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M13 4h1M2 12h1M7 12h7"/><circle cx="11" cy="4" r="1.8"/><circle cx="5" cy="12" r="1.8"/></svg><span class="ferramentas__txt">Elementos do mapa</span><span class="ferramentas__conta" aria-hidden="true" hidden>0</span><svg class="ferramentas__seta" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button>
+<div class="ferramentas__painel" id="painel-spidbase" role="group" aria-label="Elementos do mapa" hidden>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="coord"><span class="interruptor__textos"><span class="interruptor__rotulo">Coordenadas</span><span class="interruptor__dica">Lat. e long. sob o cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="escala"><span class="interruptor__textos"><span class="interruptor__rotulo">Escala</span><span class="interruptor__dica">Medida na latitude do cursor</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+<button type="button" role="switch" aria-checked="false" class="interruptor" data-chave="rosa"><span class="interruptor__textos"><span class="interruptor__rotulo">Rosa dos ventos</span><span class="interruptor__dica">Norte para cima</span></span><span class="interruptor__trilho" aria-hidden="true"><span></span></span></button>
+</div>
+</div>
+<div class="areas" role="group" aria-label="Rótulos das áreas" data-areas hidden>
+<span class="areas__txt">Áreas</span>
+<button type="button" aria-pressed="false" data-areas-btn="num" title="Mostrar o número de cada área">Números</button>
+<button type="button" aria-pressed="false" data-areas-btn="nome" title="Mostrar o nome ao passar o mouse sobre um número">Nomes</button>
+</div>
+<div class="leitura" aria-live="polite" data-leitura hidden><div class="leitura__coord">Passe o cursor sobre o mapa</div><div class="leitura__sis">EPSG:4326 · WGS 84</div></div>
 <div class="visor__controles">
 <div class="visor__botoes">
 <div class="visor__grupo" role="group" aria-label="Banco">
@@ -175,7 +217,7 @@
 <h2>O resultado</h2>
 <div class="secao__corpo">
 <p class="secao__destaque">16.679 espécies válidas nas Américas, cerca de 34% da diversidade mundial de aranhas, em 95 famílias e 48.593 localidades georreferenciadas.</p>
-<ul><li>Cada registro guarda o histórico taxonômico: sinonímias e mudanças de nome ao longo do tempo.</li><li>Entre a primeira coleta e a descrição de uma espécie passam em média 25 anos (mediana de 18), acima das estimativas anteriores para aranhas, de 15 a 17 anos. O atraso cresceu a partir dos anos 2000.</li><li>A base sustenta as análises de diversidade da prancha 1.</li></ul></div>
+<ul><li>Cada registro guarda o histórico taxonômico: sinonímias e mudanças de nome ao longo do tempo.</li><li>Entre a primeira coleta e a descrição de uma espécie passam em média 25 anos (mediana de 18), acima das estimativas anteriores para aranhas, de 15 a 17 anos. O atraso cresceu a partir dos anos 2000.</li><li>A base sustenta as análises de diversidade das pranchas 1 a 5.</li></ul></div>
 </div>
 <aside class="secao secao--aplica">
 <h2>Onde isso se aplica</h2>
@@ -184,8 +226,8 @@
 </section>
 
 <nav class="largura vizinhas" aria-label="Outras pranchas">
-<a href="../pranchas/tese.html"><span class="mono-rotulo">← Prancha 1</span><span class="vizinhas__nome">Biogeografia das aranhas das Américas</span></a>
-<a class="vizinhas--dir" href="../pranchas/ceratium.html"><span class="mono-rotulo">Prancha 3 →</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
+<a href="../pranchas/composicao.html"><span class="mono-rotulo">← Prancha 5</span><span class="vizinhas__nome">Composição e regionalização</span></a>
+<a class="vizinhas--dir" href="../pranchas/ceratium.html"><span class="mono-rotulo">Prancha 7 →</span><span class="vizinhas__nome"><em>Ceratium furcoides</em></span></a>
 </nav>
 </main>
 <footer class="rodape">

@@ -1,5 +1,17 @@
 {% set L = site.legendas %}
-{% if c.legenda == 'ceratium' %}
+{% if c.legenda is mapping %}
+<div class="legenda">
+{% if c.legenda.cores %}
+<span class="mono-rotulo">{{ c.legenda.titulo }}</span>
+<span class="legenda__barra" style="background: linear-gradient(90deg, {{ c.legenda.cores }})" aria-hidden="true"></span>
+<span class="legenda__extremos"><span>{{ c.legenda.min }}</span><span>{{ c.legenda.max }}</span></span>
+{% elif c.legenda.itens %}
+<span class="legenda__itens">{% for it in c.legenda.itens %}<span><i class="legenda__cor" style="background: {{ it.cor }}"></i>{{ it.texto }}</span>{% endfor %}</span>
+{% elif c.legenda.nota %}
+<p class="legenda__nota">{{ c.legenda.nota }}</p>
+{% endif %}
+</div>
+{% elif c.legenda == 'ceratium' %}
 <div class="legenda">
 <span class="mono-rotulo">{{ L.ceratium.titulo }}</span>
 <span class="legenda__barra legenda__barra--ceratium" aria-hidden="true"></span>

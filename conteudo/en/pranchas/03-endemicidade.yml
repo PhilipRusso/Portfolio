@@ -1,0 +1,254 @@
+# Atlas plate (English). Edit the text freely; keep the indentation.
+# Fields may contain simple HTML (<em>, <strong>, <a>).
+# Images live in assets/img/. After you save, GitHub rebuilds the HTML.
+
+titulo_aba: Endemicity
+nome_curto: Endemicity
+rotulo: Americas · PhD thesis, 2024 · part 3 of 5
+titulo: 'Spider endemicity: where range-restricted species concentrate'
+resumo: >-
+  Observed weighted endemism, interpolated by kriging and by spline, and predicted by five algorithms: each species
+  weighs the inverse of its range size.
+ficha:
+- rotulo: Deliverable
+  valor: PhD thesis, Graduate Program in Zoology, UFMG (ch. 3)
+- rotulo: Advisor
+  valor: Adalberto J. dos Santos
+- rotulo: My role
+  valor: 'Author: database, analyses and maps'
+- rotulo: Tools
+  valor: QGIS · BioDinamica (Dinamica EGO) · ArcGIS Pro · R
+cartao:
+  titulo: 'Endemicity: where range-restricted species live'
+  etiqueta: Americas · Thesis, part 3 of 5 · weighted endemism
+  imagem: WeightedEndemismPredicted_MARS.jpg
+  alt: Spider endemicity predicted by MARS in the Americas
+visor:
+  proporcao: 16 / 10
+  margem: 12px
+  inicial: krig
+camadas:
+- id: hex
+  grupo: Observed
+  rotulo: Hexagons
+  texto: >-
+    Observed endemicity per 1° hexagon, computed directly from the records. It is the starting data, before any
+    interpolation.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemism_Hexagon.jpg
+    alt: Observed endemicity per 1-degree hexagon in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: krig
+  grupo: Observed
+  rotulo: Kriging
+  texto: >-
+    Observed endemicity interpolated by kriging from the hexagons: a continuous surface that accounts for spatial
+    autocorrelation.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemism_kriging.jpg
+    alt: Observed endemicity interpolated by kriging in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: spline
+  grupo: Observed
+  rotulo: Spline
+  texto: >-
+    Observed endemicity interpolated by spline, a deterministic interpolator that produces a smoother surface than
+    kriging.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemism_Spline.jpg
+    alt: Observed endemicity interpolated by spline in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: gam
+  grupo: Predicted
+  rotulo: GAM
+  texto: Endemicity predicted by a generalized additive model (GAM), from the principal components of the environment.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemismPredicted_GAM.jpg
+    alt: Endemicity predicted by GAM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: glm
+  grupo: Predicted
+  rotulo: GLM
+  texto: Endemicity predicted by a generalized linear model (GLM), from the principal components of the environment.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemismPredicted_GLM.jpg
+    alt: Endemicity predicted by GLM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: mars
+  grupo: Predicted
+  rotulo: MARS
+  texto: >-
+    Endemicity predicted by multivariate adaptive regression splines (MARS), from the principal components of the
+    environment.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemismPredicted_MARS.jpg
+    alt: Endemicity predicted by MARS in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: rf
+  grupo: Predicted
+  rotulo: Random Forest
+  texto: Endemicity predicted by Random Forest, from the principal components of the environment.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemismPredicted_RF.jpg
+    alt: Endemicity predicted by Random Forest in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: svm
+  grupo: Predicted
+  rotulo: SVM
+  texto: Endemicity predicted by a support vector machine (SVM), from the principal components of the environment.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemismPredicted_SVM.jpg
+    alt: Endemicity predicted by SVM in the Americas
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_obs
+  grupo: Compare
+  rotulo: 'Observed: all three'
+  proporcao: 3.4 / 1
+  texto: The three ways of mapping observed endemicity, side by side.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemism_Hexagon.jpg
+    alt: Observed endemicity per hexagon
+    legenda: Hexagons
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemism_kriging.jpg
+    alt: Endemicity interpolated by kriging
+    legenda: Kriging
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemism_Spline.jpg
+    alt: Endemicity interpolated by spline
+    legenda: Spline
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+- id: cmp_pred
+  grupo: Compare
+  rotulo: Observed × predicted
+  proporcao: 1.8 / 1
+  colunas: 3
+  texto: Observed endemicity (kriging) and the five predictions, to compare where the algorithms agree.
+  legenda:
+    titulo: Weighted endemism
+    cores: '#EEF5FB, #BCD0E4, #7F9CBB, #4A6E90, #14324E'
+    min: lower
+    max: higher
+  imagens:
+  - src: WeightedEndemism_kriging.jpg
+    alt: Observed endemicity, interpolated by kriging
+    legenda: Observed · kriging
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_GAM.jpg
+    alt: Endemicity predicted by GAM
+    legenda: GAM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_GLM.jpg
+    alt: Endemicity predicted by GLM
+    legenda: GLM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_MARS.jpg
+    alt: Endemicity predicted by MARS
+    legenda: MARS
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_RF.jpg
+    alt: Endemicity predicted by Random Forest
+    legenda: Random Forest
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+  - src: WeightedEndemismPredicted_SVM.jpg
+    alt: Endemicity predicted by SVM
+    legenda: SVM
+    geo: [-190.7437, 4.0462, -61.3794, 84.713]
+    recorte: [0.06, 0.0, 0.825, 1.0]
+numeros:
+- valor: r = 0.3
+  texto: between observed endemicity and record density
+- valor: r = 0.2
+  texto: between observed endemicity and richness
+- valor: '3'
+  texto: ways of mapping observed endemicity
+- valor: '5'
+  texto: 'prediction algorithms: GAM, GLM, MARS, Random Forest and SVM'
+secoes:
+- titulo: The problem
+  texto: >-
+    Richness does not show where the species exclusive to a region are. Weighted endemism gives more weight to range-restricted
+    species, the ones that weigh most in conservation decisions.
+- titulo: The data
+  texto: The same records and environmental predictors as plates 1 and 2, in 1° hexagons.
+- titulo: The method
+  lista_numerada:
+  - >-
+    Weighted endemism in BioDinamica: each species receives a value inverse to its range size, and each hexagon
+    receives the corrected mean.
+  - Interpolation by kriging and by spline.
+  - >-
+    Prediction by five algorithms (GAM, GLM, MARS, Random Forest and SVM) with the principal components of the environment.
+  - Correlation with the bias maps, with richness and with the environmental variables.
+- titulo: The result
+  destaque: 'Endemicity depends little on collecting effort and on richness: it is another portrait of diversity.'
+  lista:
+  - There are areas of high endemicity in practically every country of the continent.
+  - The correlation with record density is low (r = 0.3), and with richness even lower (r = 0.2).
+- titulo: Publication
+  publicacoes:
+  - >-
+    <strong>Russo P.</strong> (2024). Spider biogeography of the Americas: from literature data to diversity patterns.
+    PhD thesis, Graduate Program in Zoology, UFMG.
+aplicacao: Selecting priority areas for conservation and assessing impacts on range-restricted species.

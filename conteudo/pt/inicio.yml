@@ -41,7 +41,7 @@ ferramentas:
   - nome: Conversor ArcGIS Pro → QGIS
     texto: >-
       Lê a estrutura interna dos arquivos .aprx e recria o projeto no QGIS com simbologia, temas e layouts de
-      impressão. Converteu os projetos das pranchas 4 e 6, com 167 camadas.
+      impressão. Converteu os projetos das pranchas 8 e 10, com 167 camadas.
     tecnologias: PyQGIS · GDAL
   - nome: Gerador de grades regulares
     texto: >-
@@ -59,7 +59,7 @@ publicacoes:
   - ano: '2024'
     texto: >-
       <strong>Russo P</strong>. Spider biogeography of the Americas: from literature data to diversity patterns.
-      Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG. <a href="/pranchas/tese.html">prancha 1 →</a>
+      Tese de doutorado, Programa de Pós-Graduação em Zoologia, UFMG. <a href="/pranchas/registros-e-vies.html">pranchas 1 a 5 →</a>
   - ano: '2021'
     texto: >-
       Macêdo RL, Franco ACS, <strong>Russo P</strong>, Collart T, Mammola S, Jeppesen E, Branco CWC, dos Santos LN,
@@ -75,7 +75,7 @@ publicacoes:
     texto: >-
       <strong>Russo P</strong>. Padrões biogeográficos e estruturação do conhecimento taxonômico das aranhas
       araneoideas americanas. Dissertação de mestrado, Programa de Pós-Graduação em Zoologia, UFMG.
-      <a href="/pranchas/araneoidea-americas.html">prancha 5 →</a>
+      <a href="/pranchas/araneoidea-americas.html">prancha 9 →</a>
   - ano: '[ano]'
     texto: >-
       Carvalho LS, <strong>Russo P</strong>, Brescovit AD, Oliveira-Tomasi M, Oliveira U, Santos AJ. The spider fauna
