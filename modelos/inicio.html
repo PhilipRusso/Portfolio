@@ -31,12 +31,19 @@
 <p class="atlas__local">{{ inicio.local }}</p>
 </div>
 
+<a class="banner" href="{{ url(lang, 'pranchas/' ~ pranchas[0].slug ~ '.html') }}">
+<span class="banner__img"><img src="/assets/img/{{ inicio.banner.imagem }}" alt="{{ inicio.banner.alt }}"></span>
+<span class="banner__legenda"><span class="cartao__titulo">{{ inicio.banner.titulo }}</span><span class="cartao__etiqueta">{{ inicio.banner.etiqueta }}</span></span>
+</a>
+</section>
+
+<section class="largura cartoes" aria-label="{{ site.ui.projetos }}">
 <div class="grade">
 {% for p in pranchas %}
 {% set c = p.cartao %}
-<a class="cartao{{ ' cartao--destaque' if loop.first else '' }}" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}">
+<a class="cartao" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}">
 <span class="cartao__img" style="background: {{ c.fundo | default('#FFFFFF') }}{{ '; border-color: transparent' if c.fundo == '#000000' else '' }}">
-<img src="/assets/img/{{ c.imagem }}" alt="{{ c.alt }}" style="object-fit: {{ c.ajuste | default('contain') }}; object-position: {{ c.posicao | default('50% 50%') }}"{{ '' if loop.first else ' loading="lazy"' }}>
+<img src="/assets/img/{{ c.miniatura | default(c.imagem) }}" alt="{{ c.alt }}" style="object-fit: {{ c.ajuste | default('contain') }}; object-position: {{ c.posicao | default('50% 50%') }}" loading="lazy">
 </span>
 <span class="cartao__legenda">
 <span class="selo">{{ p.numero }}</span>

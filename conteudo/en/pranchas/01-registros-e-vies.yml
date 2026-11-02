@@ -24,6 +24,7 @@ cartao:
   imagem: home_tese1.jpg
   alt: 'Three maps of the Americas: spider records, record density and sampling effort'
   ajuste: cover
+  miniatura: Records.jpg
 visor:
   proporcao: 16 / 10
   margem: 12px

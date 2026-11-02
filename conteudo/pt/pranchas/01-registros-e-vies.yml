@@ -24,6 +24,7 @@ cartao:
   imagem: home_tese1.jpg
   alt: 'Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral'
   ajuste: cover
+  miniatura: Records.jpg
 visor:
   proporcao: 16 / 10
   margem: 12px

@@ -11,6 +11,12 @@ cv_rotulo: Download CV (PDF)
 cv: ''
 local: Bauru, SP, Brazil · remote, or hybrid in the region.
 
+banner:
+  imagem: home_tese1.jpg
+  alt: 'Three maps of the Americas: spider records, record density and sampling effort'
+  titulo: 'Spiders of the Americas: where the records are and how much has been collected'
+  etiqueta: Americas · Thesis, part 1 of 5 · 88k records
+
 em_breve:
 - titulo: BioCarta
   etiqueta: Web application · PostgreSQL · Darwin Core

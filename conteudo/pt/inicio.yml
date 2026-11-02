@@ -11,6 +11,12 @@ cv_rotulo: Baixar CV (PDF)
 cv: ''
 local: Bauru, SP · remoto, ou híbrido na região.
 
+banner:
+  imagem: home_tese1.jpg
+  alt: 'Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral'
+  titulo: 'Aranhas das Américas: onde estão os registros e quanto se coletou'
+  etiqueta: Américas · Tese, parte 1 de 5 · 88 mil registros
+
 em_breve:
 - titulo: BioCarta
   etiqueta: Aplicação web · PostgreSQL · Darwin Core

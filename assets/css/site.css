@@ -236,3 +236,16 @@ ul.secao__pubs { padding-left: 0; list-style: none; gap: 14px; font-size: 15px; 
   html { scroll-behavior: auto; }
   .cartao__img img { transition: none; }
 }
+
+/* início: banner + cartões menores (teste) */
+.banner { flex: 999 1 620px; min-width: 0; display: flex; flex-direction: column; gap: 14px; text-decoration: none; }
+.banner__img { display: block; border: 1px solid #EDEDED; border-radius: 2px; overflow: hidden; }
+.banner__img img { width: 100%; display: block; aspect-ratio: 3.24 / 1; object-fit: cover; transition: transform .4s ease; }
+a.banner:hover .banner__img img { transform: scale(1.02); }
+a.banner:hover .cartao__titulo { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.banner__legenda { display: flex; flex-direction: column; gap: 4px; }
+.cartoes { padding-bottom: 72px; }
+.cartoes .grade { flex: none; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px 18px; }
+.cartoes .cartao { gap: 10px; }
+.cartoes .cartao__titulo { font-size: 15px; }
+.cartoes .cartao__etiqueta { font-size: 10.5px; }
