@@ -23,6 +23,8 @@ cartao:
   etiqueta: Americas · Thesis, part 2 of 5 · five algorithms
   imagem: SpeciesRichnessPredicted_RF.jpg
   alt: Spider species richness predicted by Random Forest in the Americas
+  banner: home_tese2.jpg
+  banner_alt: 'Three maps of the Americas: spider richness observed in hexagons, interpolated by kriging and predicted by Random Forest'
 visor:
   proporcao: 16 / 10
   margem: 12px

@@ -21,9 +21,10 @@ ficha:
 cartao:
   titulo: 'Aranhas das Américas: onde estão os registros e quanto se coletou'
   etiqueta: Américas · Tese, parte 1 de 5 · 88 mil registros
-  imagem: home_tese1.jpg
-  alt: 'Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral'
-  ajuste: cover
+  imagem: Records.jpg
+  alt: Registros de aranhas nas Américas
+  banner: home_tese1.jpg
+  banner_alt: 'Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral'
 visor:
   proporcao: 16 / 10
   margem: 12px

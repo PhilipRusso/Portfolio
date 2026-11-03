@@ -23,6 +23,8 @@ cartao:
   etiqueta: Américas · Tese, parte 2 de 5 · cinco algoritmos
   imagem: SpeciesRichnessPredicted_RF.jpg
   alt: Riqueza de espécies de aranhas prevista por Random Forest nas Américas
+  banner: home_tese2.jpg
+  banner_alt: 'Três mapas das Américas: riqueza de aranhas observada em hexágonos, interpolada por krigagem e prevista por Random Forest'
 visor:
   proporcao: 16 / 10
   margem: 12px

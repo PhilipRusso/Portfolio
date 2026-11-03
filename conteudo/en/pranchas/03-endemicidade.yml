@@ -23,6 +23,8 @@ cartao:
   etiqueta: Americas · Thesis, part 3 of 5 · weighted endemism
   imagem: WeightedEndemismPredicted_MARS.jpg
   alt: Spider endemicity predicted by MARS in the Americas
+  banner: home_tese3.jpg
+  banner_alt: 'Three maps of the Americas: spider weighted endemism observed in hexagons, interpolated by kriging and predicted by MARS'
 visor:
   proporcao: 16 / 10
   margem: 12px

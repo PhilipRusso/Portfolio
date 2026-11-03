@@ -23,6 +23,8 @@ cartao:
   etiqueta: Americas · Thesis, part 5 of 5 · SCI · GDM · 3 regionalizations
   imagem: SpeciesCompositionInterpolation.jpg
   alt: Spider species composition in the Americas by SCI, in RGB colours
+  banner: home_tese5.jpg
+  banner_alt: 'Three maps of the Americas in RGB colours: spider species composition by SCI and by the GDM models with geographic distance and with environment only'
 visor:
   proporcao: 16 / 10
   margem: 12px

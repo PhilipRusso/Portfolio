@@ -21,6 +21,11 @@ Dicas:
 - Dá para usar HTML simples nos textos: `<em>itálico</em>`, `<strong>negrito</strong>`, `<a href="...">link</a>`.
 - Se um texto tiver `: ` (dois-pontos seguido de espaço) no meio, coloque-o entre aspas simples.
 - **Imagens:** envie para `assets/img/` (*Add file → Upload files*) e use só o nome do arquivo no campo `src` ou `imagem`.
+- **Trocar uma imagem:** envie o arquivo novo com exatamente o mesmo nome. Se a proporção mudar, rode
+  *Actions → Gerar site → Run workflow* para o HTML recalcular o enquadramento.
+- **Banner da página inicial:** passa pelas pranchas na ordem, a cada 6 segundos. Cada slide usa o campo `banner` do
+  `cartao` (com o texto alternativo em `banner_alt`); sem ele, usa a `imagem` do cartão. As pranchas 1 a 5 usam
+  `home_tese1.jpg` a `home_tese5.jpg`, três mapas lado a lado.
 - **Nova prancha:** copie um arquivo de `pranchas/` com o próximo número (ex.: `13-novo.yml`) nas duas línguas.
   O número no início define a ordem; o resto do nome vira o endereço da página.
 - **Ordem das camadas:** segue a ordem da lista `camadas`; o campo `grupo` agrupa os botões; `inicial` escolhe a camada que abre primeiro.

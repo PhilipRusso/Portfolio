@@ -42,6 +42,13 @@ ui:
   nomes_btn: Names
   nomes_titulo: Show the name when hovering over a number
   area: Area
+  carrossel: Carousel
+  destaques: Featured projects
+  projeto_anterior: Previous project
+  proximo_projeto: Next project
+  pausar: Pause automatic rotation
+  retomar: Resume automatic rotation
+  projeto: Project
 legendas:
   ceratium:
     titulo: Climatic suitability

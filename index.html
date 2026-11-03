@@ -45,9 +45,154 @@
 </div>
 
 <div class="grade">
-<a class="cartao cartao--destaque" href="pranchas/registros-e-vies.html">
+<div class="carrossel" role="region" aria-roledescription="Carrossel" aria-label="Projetos em destaque" data-intervalo="6000">
+<div class="carrossel__quadro">
+<a class="carrossel__slide ativo" href="pranchas/registros-e-vies.html" style="background: #FFFFFF">
+<img src="assets/img/home_tese1.jpg" alt="Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral">
+</a>
+<a class="carrossel__slide" href="pranchas/riqueza.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/home_tese2.jpg" alt="Três mapas das Américas: riqueza de aranhas observada em hexágonos, interpolada por krigagem e prevista por Random Forest" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/endemicidade.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/home_tese3.jpg" alt="Três mapas das Américas: endemismo ponderado de aranhas observado em hexágonos, interpolado por krigagem e previsto por MARS" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/areas-de-endemismo.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/home_tese4.jpg" alt="Três mapas das Américas: consenso das áreas de endemismo de aranhas e as áreas das classes 3 e 4" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/composicao.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/home_tese5.jpg" alt="Três mapas das Américas em cores RGB: composição de espécies de aranhas pelo SCI e pelos modelos GDM com distância geográfica e só com ambiente" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/spidbase.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/spid_er.png" alt="Diagrama entidade-relacionamento do banco de dados SPIDBASE" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/ceratium.html" style="background: #000000" tabindex="-1" aria-hidden="true">
+<img src="assets/img/cf_all.jpg" alt="Adequabilidade climática de Ceratium furcoides nas Américas e na Europa, alta no sudeste da América do Sul" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/aranhas-mata-atlantica.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/af_nmds.jpg" alt="Composição de espécies de aranhas na Mata Atlântica em cores RGB a partir de eixos NMDS" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/araneoidea-americas.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/msc_comp2017.jpg" alt="Composição de espécies de aranhas araneoideas nas Américas em cores RGB" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/scinax.html" style="background: #F4F4EF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/qf_consenso.jpg" alt="Consenso de adequabilidade para Scinax aff. machadoi no Quadrilátero Ferrífero" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/bicudo.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/bi_maxent.jpg" alt="Adequabilidade climática para o bicudo no Brasil prevista pelo MaxEnt, com os registros" loading="lazy">
+</a>
+<a class="carrossel__slide" href="pranchas/mapas-de-localizacao.html" style="background: #FFFFFF" tabindex="-1" aria-hidden="true">
+<img src="assets/img/pub_puruzinho.jpg" alt="Mapa de localização do lago Puruzinho, no Amazonas, com pontos de coleta" loading="lazy">
+</a>
+<button type="button" class="carrossel__seta carrossel__seta--ant" aria-label="Projeto anterior" hidden><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5"/></svg></button>
+<button type="button" class="carrossel__seta carrossel__seta--prox" aria-label="Próximo projeto" hidden><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></button>
+<div class="carrossel__barra" hidden>
+<button type="button" class="carrossel__pausa" aria-label="Pausar a troca automática" data-pausar="Pausar a troca automática" data-retomar="Retomar a troca automática"><svg class="icone-pausa" width="11" height="11" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><rect x="3" y="2.5" width="2.6" height="9" rx="0.6"/><rect x="8.4" y="2.5" width="2.6" height="9" rx="0.6"/></svg><svg class="icone-play" width="11" height="11" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M4 2.5v9l7.5-4.5z"/></svg></button>
+<div class="carrossel__marcas">
+<button type="button" class="carrossel__marca" aria-label="Projeto 1" aria-current="true"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 2" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 3" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 4" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 5" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 6" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 7" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 8" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 9" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 10" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 11" aria-current="false"><span></span></button>
+<button type="button" class="carrossel__marca" aria-label="Projeto 12" aria-current="false"><span></span></button>
+</div>
+</div>
+</div>
+<div class="carrossel__legendas" aria-live="off">
+<a class="carrossel__legenda ativo" href="pranchas/registros-e-vies.html">
+<span class="selo">1</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Aranhas das Américas: onde estão os registros e quanto se coletou</span>
+<span class="carrossel__etiqueta">Américas · Tese, parte 1 de 5 · 88 mil registros</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/riqueza.html" tabindex="-1" aria-hidden="true">
+<span class="selo">2</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Riqueza de aranhas: observada e prevista pelo ambiente</span>
+<span class="carrossel__etiqueta">Américas · Tese, parte 2 de 5 · cinco algoritmos</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/endemicidade.html" tabindex="-1" aria-hidden="true">
+<span class="selo">3</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Endemicidade: onde vivem as espécies de distribuição restrita</span>
+<span class="carrossel__etiqueta">Américas · Tese, parte 3 de 5 · endemismo ponderado</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/areas-de-endemismo.html" tabindex="-1" aria-hidden="true">
+<span class="selo">4</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Áreas de endemismo: 255 regiões no continente</span>
+<span class="carrossel__etiqueta">Américas · Tese, parte 4 de 5 · GIE</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/composicao.html" tabindex="-1" aria-hidden="true">
+<span class="selo">5</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Composição e regionalização do continente</span>
+<span class="carrossel__etiqueta">Américas · Tese, parte 5 de 5 · SCI · GDM · 3 regionalizações</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/spidbase.html" tabindex="-1" aria-hidden="true">
+<span class="selo">6</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">SPIDBASE: banco relacional de registros de aranhas</span>
+<span class="carrossel__etiqueta">MySQL · Darwin Core · 13 entidades</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/ceratium.html" tabindex="-1" aria-hidden="true">
+<span class="selo">7</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo"><em>Ceratium furcoides</em>: expansão global de uma microalga invasora</span>
+<span class="carrossel__etiqueta">Mundo · MaxEnt · CMIP6 · 2 artigos</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/aranhas-mata-atlantica.html" tabindex="-1" aria-hidden="true">
+<span class="selo">8</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Aranhas da Mata Atlântica: diversidade e viés de amostragem</span>
+<span class="carrossel__etiqueta">Mata Atlântica · BioDinamica · GDM</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/araneoidea-americas.html" tabindex="-1" aria-hidden="true">
+<span class="selo">9</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Araneoidea das Américas: 260 anos de coleta no mapa</span>
+<span class="carrossel__etiqueta">Américas · Dissertação de mestrado · 1757–2017</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/scinax.html" tabindex="-1" aria-hidden="true">
+<span class="selo">10</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo"><em>Scinax</em> aff. <em>machadoi</em>: onde procurar novas populações</span>
+<span class="carrossel__etiqueta">Quadrilátero Ferrífero · ANN · SVM · MaxEnt</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/bicudo.html" tabindex="-1" aria-hidden="true">
+<span class="selo">11</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Bicudo: onze algoritmos para uma ave ameaçada com 22 registros</span>
+<span class="carrossel__etiqueta">Brasil · MaxEnt · openModeller</span>
+</span>
+</a>
+<a class="carrossel__legenda" href="pranchas/mapas-de-localizacao.html" tabindex="-1" aria-hidden="true">
+<span class="selo">12</span>
+<span class="cartao__textos">
+<span class="carrossel__titulo">Mapas de localização: reservatórios e um lago amazônico</span>
+<span class="carrossel__etiqueta">Brasil · ArcMap · Illustrator · sob demanda</span>
+</span>
+</a>
+</div>
+</div>
+<a class="cartao" href="pranchas/registros-e-vies.html">
 <span class="cartao__img" style="background: #FFFFFF">
-<img src="assets/img/home_tese1.jpg" alt="Três mapas das Américas: registros de aranhas, densidade de registros e esforço amostral" style="object-fit: cover; object-position: 50% 50%">
+<img src="assets/img/Records.jpg" alt="Registros de aranhas nas Américas" style="object-fit: contain; object-position: 50% 50%" loading="lazy">
 </span>
 <span class="cartao__legenda">
 <span class="selo">1</span>
@@ -271,5 +416,5 @@
 <span><a href="mailto:russo.bio@gmail.com">russo.bio@gmail.com</a> · <a href="https://www.linkedin.com/in/philip-russo1">LinkedIn</a></span>
 </div>
 </footer>
-</body>
+<script src="assets/js/carrossel.js" defer></script></body>
 </html>

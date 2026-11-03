@@ -23,6 +23,8 @@ cartao:
   etiqueta: Américas · Tese, parte 3 de 5 · endemismo ponderado
   imagem: WeightedEndemismPredicted_MARS.jpg
   alt: Endemicidade de aranhas prevista por MARS nas Américas
+  banner: home_tese3.jpg
+  banner_alt: 'Três mapas das Américas: endemismo ponderado de aranhas observado em hexágonos, interpolado por krigagem e previsto por MARS'
 visor:
   proporcao: 16 / 10
   margem: 12px
