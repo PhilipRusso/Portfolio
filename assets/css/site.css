@@ -218,39 +218,6 @@ ul.secao__pubs { padding-left: 0; list-style: none; gap: 14px; font-size: 15px; 
 .rodape__linha { padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; font-size: 14px; color: var(--suave); }
 .rodape a { color: var(--tinta); }
 
-/* início: banner rotativo (carrossel) no lugar do destaque */
-.carrossel { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.carrossel__quadro { position: relative; aspect-ratio: 16 / 9; border: 1px solid #EDEDED; border-radius: 2px; overflow: hidden; background: #FFFFFF; }
-.carrossel__slide { position: absolute; inset: 0; display: block; opacity: 0; pointer-events: none; transition: opacity .8s ease; }
-.carrossel__slide.ativo { opacity: 1; pointer-events: auto; }
-.carrossel__slide img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 50%; display: block; }
-.carrossel__seta, .carrossel__barra { opacity: 0; transition: opacity .25s ease; }
-.carrossel:hover .carrossel__seta, .carrossel:hover .carrossel__barra,
-.carrossel:focus-within .carrossel__seta, .carrossel:focus-within .carrossel__barra { opacity: 1; }
-@media (hover: none) { .carrossel__seta, .carrossel__barra { opacity: 1; } }
-.carrossel__seta { position: absolute; top: 50%; z-index: 2; width: 44px; height: 44px; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); color: var(--tinta); cursor: pointer; }
-.carrossel__seta:hover { background: rgba(255, 255, 255, 0.85); }
-.carrossel__seta--ant { left: 12px; }
-.carrossel__seta--prox { right: 12px; }
-.carrossel__barra { position: absolute; left: 50%; bottom: 12px; z-index: 2; transform: translateX(-50%); max-width: calc(100% - 24px); display: flex; align-items: center; gap: 6px; padding: 2px 12px 2px 4px; border-radius: 999px; background: rgba(255, 255, 255, 0.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); box-sizing: border-box; }
-.carrossel__pausa { flex: none; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 999px; background: transparent; color: var(--tinta); cursor: pointer; }
-.carrossel__pausa:hover { background: rgba(0, 0, 0, 0.06); }
-.carrossel__pausa .icone-play, .carrossel.pausado .carrossel__pausa .icone-pausa { display: none; }
-.carrossel.pausado .carrossel__pausa .icone-play { display: block; }
-.carrossel__marcas { display: flex; align-items: center; gap: 4px; }
-.carrossel__marca { flex: none; width: 8px; min-height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; display: inline-flex; align-items: center; transition: width .3s ease; }
-.carrossel__marca span { display: block; width: 100%; height: 6px; border-radius: 999px; background: #B8B8B8; transition: background .3s ease; }
-.carrossel__marca[aria-current="true"] { width: 22px; }
-.carrossel__marca[aria-current="true"] span { background: var(--acento); }
-.carrossel__legendas { display: grid; }
-.carrossel__legenda { grid-area: 1 / 1; display: flex; gap: 14px; align-items: flex-start; text-decoration: none; color: inherit; opacity: 0; pointer-events: none; transition: opacity .8s ease; }
-.carrossel__legenda.ativo { opacity: 1; pointer-events: auto; }
-.carrossel__legenda .selo { width: 30px; height: 30px; margin-top: 3px; font-size: 13px; }
-.carrossel__legenda .cartao__textos { gap: 6px; min-width: 0; }
-.carrossel__titulo { font-family: var(--serif); font-size: clamp(24px, 2.3vw, 32px); line-height: 1.15; font-weight: 500; letter-spacing: -0.01em; }
-.carrossel__etiqueta { font-family: var(--mono); font-size: 12px; line-height: 1.5; color: var(--suave); }
-a.carrossel__legenda:hover .carrossel__titulo { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-
 @media (max-width: 640px) {
   .visor__grupo-rotulo { flex-basis: 100%; }
   .ferramentas__txt, .areas__txt, .escala__zero { display: none; }
@@ -259,7 +226,6 @@ a.carrossel__legenda:hover .carrossel__titulo { text-decoration: underline; text
   .cabeca__resumo { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .carrossel__slide, .carrossel__legenda, .carrossel__seta, .carrossel__barra, .carrossel__marca, .carrossel__marca span { transition: none; }
   html { scroll-behavior: auto; }
   .cartao__img img { transition: none; }
 }

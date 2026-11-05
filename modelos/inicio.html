@@ -32,38 +32,6 @@
 </div>
 
 <div class="grade">
-<div class="carrossel" role="region" aria-roledescription="{{ site.ui.carrossel }}" aria-label="{{ site.ui.destaques }}" data-intervalo="6000">
-<div class="carrossel__quadro">
-{% for p in pranchas %}
-{% set c = p.cartao %}
-<a class="carrossel__slide{{ ' ativo' if loop.first else '' }}" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}" style="background: {{ c.fundo | default('#FFFFFF') }}"{{ '' if loop.first else ' tabindex="-1" aria-hidden="true"' }}>
-<img src="/assets/img/{{ c.banner | default(c.imagem) }}" alt="{{ c.banner_alt | default(c.alt) }}"{{ '' if loop.first else ' loading="lazy"' }}>
-</a>
-{% endfor %}
-<button type="button" class="carrossel__seta carrossel__seta--ant" aria-label="{{ site.ui.projeto_anterior }}" hidden><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5"/></svg></button>
-<button type="button" class="carrossel__seta carrossel__seta--prox" aria-label="{{ site.ui.proximo_projeto }}" hidden><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5"/></svg></button>
-<div class="carrossel__barra" hidden>
-<button type="button" class="carrossel__pausa" aria-label="{{ site.ui.pausar }}" data-pausar="{{ site.ui.pausar }}" data-retomar="{{ site.ui.retomar }}"><svg class="icone-pausa" width="11" height="11" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><rect x="3" y="2.5" width="2.6" height="9" rx="0.6"/><rect x="8.4" y="2.5" width="2.6" height="9" rx="0.6"/></svg><svg class="icone-play" width="11" height="11" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M4 2.5v9l7.5-4.5z"/></svg></button>
-<div class="carrossel__marcas">
-{% for p in pranchas %}
-<button type="button" class="carrossel__marca" aria-label="{{ site.ui.projeto }} {{ p.numero }}" aria-current="{{ 'true' if loop.first else 'false' }}"><span></span></button>
-{% endfor %}
-</div>
-</div>
-</div>
-<div class="carrossel__legendas" aria-live="off">
-{% for p in pranchas %}
-{% set c = p.cartao %}
-<a class="carrossel__legenda{{ ' ativo' if loop.first else '' }}" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}"{{ '' if loop.first else ' tabindex="-1" aria-hidden="true"' }}>
-<span class="selo">{{ p.numero }}</span>
-<span class="cartao__textos">
-<span class="carrossel__titulo">{{ c.titulo }}</span>
-<span class="carrossel__etiqueta">{{ c.etiqueta }}</span>
-</span>
-</a>
-{% endfor %}
-</div>
-</div>
 {% for p in pranchas %}
 {% set c = p.cartao %}
 <a class="cartao" href="{{ url(lang, 'pranchas/' ~ p.slug ~ '.html') }}">
@@ -142,4 +110,3 @@
 </section>
 </main>
 {% endblock %}
-{% block scripts %}<script src="/assets/js/carrossel.js" defer></script>{% endblock %}

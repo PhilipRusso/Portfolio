@@ -23,8 +23,6 @@ cartao:
   etiqueta: Américas · Tese, parte 5 de 5 · SCI · GDM · 3 regionalizações
   imagem: SpeciesCompositionInterpolation.jpg
   alt: Composição de espécies de aranhas nas Américas pelo SCI, em cores RGB
-  banner: home_tese5.jpg
-  banner_alt: 'Três mapas das Américas em cores RGB: composição de espécies de aranhas pelo SCI e pelos modelos GDM com distância geográfica e só com ambiente'
 visor:
   proporcao: 16 / 10
   margem: 12px

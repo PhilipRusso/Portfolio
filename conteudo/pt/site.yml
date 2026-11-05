@@ -42,13 +42,6 @@ ui:
   nomes_btn: Nomes
   nomes_titulo: Mostrar o nome ao passar o mouse sobre um número
   area: Área
-  carrossel: Carrossel
-  destaques: Projetos em destaque
-  projeto_anterior: Projeto anterior
-  proximo_projeto: Próximo projeto
-  pausar: Pausar a troca automática
-  retomar: Retomar a troca automática
-  projeto: Projeto
 legendas:
   ceratium:
     titulo: Adequabilidade climática
